@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import DonationForm from './components/DonationForm';
 import Home from './components/Home';
 import History from './History';
+import About from './components/About';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/history" element={<History />} />
         <Route path="/donate" element={<DonationForm />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>

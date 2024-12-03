@@ -5,7 +5,7 @@ import './DonationForm.css';
 const DonationForm = () => {
     const [amount, setAmount] = useState('');
     const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '' });
-    const [collected, setCollected] = useState(35);  // Assuming this comes from your API
+    const [collected, setCollected] = useState(70);  // Assuming this comes from our API
     
     const presetAmounts = [10, 25, 50, 100, 200, 250];
 
