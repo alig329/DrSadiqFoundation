@@ -133,31 +133,31 @@ const History = () => {
         <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: '500', lineHeight: '60px', marginTop: '10px', color: '#000000' }}>
            Vision for a Hospital
           </Typography>
-          <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '30px', md: '54px' }, color: '#000000', textAlign: 'left', padding: '10px 100px' }}>
+          <Typography sx = {{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '30px', md: '54px' }, color: '#000000', textAlign: 'left', padding: '10px 100px' }}>
           His vision extended further with plans for the Dr. Sadiq Foundation Hospital, a project aimed at providing quality healthcare services to underserved communities, embodying his lifelong commitment to uplifting those in need.
           </Typography>
       </Box>
       </Box>
 
       {/*Legacy and Final remembrance */}
-      <Box sx={{ backgroundColor: '#FFFFFF', padding: '20px', alignItems: 'stretch', marginBottom: '0px' }}>
-        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#000000', marginBottom: '40px' }}>
+      <Box        sx      = {{ backgroundColor: '#FFFFFF', padding: '20px', alignItems: 'stretch', marginBottom: '0px' }}>
+      <Typography variant = "h1" sx = {{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#000000', marginBottom: '40px' }}>
         Legacy and Final Remembrance
         </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'stretch', marginBottom: '0px' }}>
+      <Box sx = {{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'stretch', marginBottom: '0px' }}>
 
-        <Box sx={{ flex: 1, mb: { xs: '20px', md: 0 }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box sx = {{ flex: 1, mb: { xs: '20px', md: 0 }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         
-          <Typography variant="h2" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: '500', lineHeight: '60px', color: '#000000' }}>
+          <Typography variant = "h2" sx = {{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: '500', lineHeight: '60px', color: '#000000' }}>
             Passing and Public Mourning
           </Typography>
-          <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '30px', md: '54px' }, color: '#000000', textAlign: 'left' }}>
+          <Typography sx = {{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '30px', md: '54px' }, color: '#000000', textAlign: 'left' }}>
           On October 23, 2020, Dr. Muhammad Sadiq passed away, leaving an enduring legacy in the poultry industry and philanthropy. Thousands gathered to honor him at his burial in the H-11 Graveyard in Islamabad, Pakistan, paying tribute to a life of dedication and achievement.
           </Typography>
-          <Typography variant="h2" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: '500', lineHeight: '60px', color: '#000000' }}>
+          <Typography variant = "h2" sx = {{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: '500', lineHeight: '60px', color: '#000000' }}>
           A Legacy That Lives On
           </Typography>
-          <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '30px', md: '54px' }, color: '#000000', textAlign: 'left' }}>
+          <Typography sx = {{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '30px', md: '54px' }, color: '#000000', textAlign: 'left' }}>
           Dr. Sadiq’s contributions continue to inspire the industry and enrich communities. He is remembered for his dedication, innovative vision, and significant impact on poultry science and humanitarian efforts in Pakistan. May Almighty Allah grant him the highest rank in Jannah, and may his legacy serve as a guiding light for future generations.
           </Typography>
         </Box>
