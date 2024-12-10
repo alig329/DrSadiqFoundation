@@ -39,7 +39,7 @@ const ProjectsWithPurpose = () => {
         }
       }
     };
-    const interval = setInterval(scroll, 4000); // Adjust the interval as needed
+    const interval = setInterval(scroll, 5000); // Adjust the interval as needed
     return () => clearInterval(interval);
   }, []);
 
@@ -47,7 +47,7 @@ const ProjectsWithPurpose = () => {
     <Box
       sx={{
         width: "100%",
-        padding: "40px 0",
+        padding: "40px 0px",
         background: "#588BC6",
         color: "#FFFFFF",
       }}
@@ -59,7 +59,7 @@ const ProjectsWithPurpose = () => {
               width: "100%",
               fontFamily: "Poppins",
               fontSize: { xs: "32px", md: "48px" },
-              fontWeight: "300",
+              fontWeight: "500",
               lineHeight: "46px",
               textAlign: "left",
               padding: "100px 0px 0px 20px",
@@ -120,7 +120,7 @@ const ProjectsWithPurpose = () => {
                   display: "flex",
                   flexDirection: { xs: "column", md: "row" },
                   alignItems: "center",
-                  margin: "20px 0",
+                  margin: "20px 10px",
                   padding: "16px",
                   boxSizing: "border-box",
                 }}

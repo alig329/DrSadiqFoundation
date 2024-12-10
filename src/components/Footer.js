@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Link, TextField, Button, IconButton } from '@mui/material';
-import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Phone, Mail, LocationOn } from '@mui/icons-material';
+import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Phone, Email, LocationOn } from '@mui/icons-material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TikTokIcon from '@mui/icons-material/MusicNote'; // For TikTok icon (using a close alternative)
 
@@ -61,7 +61,7 @@ const Footer = () => {
               sx={{
                 fontFamily: 'Poppins',
                 fontSize: '16px',
-                fontWeight: '500',
+                fontWeight: 'bold',
               }}
             >
               Social Connects
@@ -131,12 +131,12 @@ const Footer = () => {
               flexDirection: 'column',
               alignItems: { xs: 'center', md: 'center' },
               flex: '1',
-              gap: 1,
+              gap: 2,
             }}
           >
             <Typography
               variant="h6"
-              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: '500' }}
+              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: 'bold' }}
             >
               Quick Links
             </Typography>
@@ -169,25 +169,83 @@ const Footer = () => {
           >
             <Typography
               variant="h6"
-              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: '500' }}
+              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: 'bold' }}
             >
               Contact Info
             </Typography>
 
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}><Phone sx={{ fontSize: '14px', marginRight: '10px' }} />Call Us</Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>051-111 500 505</Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>051-4927546</Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px', mt: 2 }}><Mail sx={{ fontSize: '14px', marginRight: '10px' }} />Mail Us</Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>
-              chairman@drsf.org
-            </Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>
-              secretary@drsf.org
-            </Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px', mt: 2 }}><LocationOn sx={{ fontSize: '14px', marginRight: '10px' }} />Visit Us</Typography>
-            <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>
-              33-C, Satellite Town, Iran Road, Chandni Chowk, Rawalpindi.
-            </Typography>
+            <Box sx={{ marginTop: "20px" }}>
+                        {/* Phone Section */}
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "10px",
+                                marginBottom: "20px",
+
+                            }}
+                        >
+                            <Box>
+                                <Phone sx={{
+                                    fontSize: 20,
+                                    color: "#fff"
+                                }} />
+                            </Box>
+
+                            <Typography variant="body1">
+                                <span  >Call Us <br /></span>
+                                051-111 500 505 | 051-4927546
+                            </Typography>
+                        </Box>
+
+                        {/* Email Section */}
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "10px",
+                                marginBottom: "20px",
+                            }}
+                        >
+                            <Box>
+                                <Email sx={{
+                                    fontSize: 20,
+                                    color: "#fff"
+                                }} />
+                            </Box>
+                            <Typography variant="body1">
+                                <span  >Mail Us <br /></span>
+                                secretary@drsf.org | chairman@drsf.org
+                            </Typography>
+                        </Box>
+
+                        {/* Location Section */}
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "10px",
+                                marginBottom: "20px",
+                            }}
+                        >
+                            <Box>
+                                <LocationOn sx={{
+                                    fontSize: 20,
+                                    color: "#fff"
+                                }} />
+                            </Box>
+                            <Typography variant="body1">
+                                <span  >Visit Us <br /></span>
+                                33-C,
+                                Iran Road,
+                                Near Chandni Chowk,
+                                Satellite Town,
+                                Rawalpindi,
+
+                                Pakistan
+                            </Typography>
+                        </Box>
+                    </Box>
           </Box>
           <Box
             sx={{

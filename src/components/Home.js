@@ -6,7 +6,6 @@ import CaregiversSection from '../CareGivers';
 import StoriesOfChange from '../StoriesOfChange';
 import CollaborationSection from './CollaborationSection';
 import ProjectsWithPurpose from './ProjectsPurpose';
-import ChangeMakersSection from './ChangeMakers';
 import BelovedSection from './BelovedSection';
 import StatSection from './StatSection';
 
@@ -349,7 +348,6 @@ const Homepage = () => {
       <StoriesOfChange/>
       <CaregiversSection/>
       <ProjectsWithPurpose/>
-      <ChangeMakersSection/>
     </div>
   );
 };

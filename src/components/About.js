@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  Box,
-
-  Typography,
-
-  Button, Grid
-} from '@mui/material';
+import {  Box, Typography, Button, Grid} from '@mui/material';
 import StatSection from './StatSection';
+import ChangeMakersSection from './ChangeMakers';
 
 const About = () => {
   return (
@@ -16,11 +11,8 @@ const About = () => {
 
       <Box sx={{
         backgroundColor: '#027D40',
-
         width: '100%',
-
         padding: '20px',
-
         margin: '10px'
       }}>
 
@@ -28,28 +20,19 @@ const About = () => {
 
         <Box sx={{
           width: '100%',
-
           opacity: 1,
-
           position: 'relative',
-
           paddingTop: '20px',
-
         }}>
           <Typography sx={{
             fontFamily: 'Poppins',
-
-            fontSize: '55px',
-
-            fontWeight: 400,
-
+            fontSize: '48px',
+            fontWeight: 500,
             textAlign: 'center',
-
             color: '#FFFFFF',
-
-            padding: '20px 50px 10px 50px'
+            padding: '20px 100px 10px 100px'
           }} >
-            Empowering Humanity with Compassion and Care
+            EMPOWERING HUMANITY WITH COMPASSION AND CARE
           </Typography>
         </Box>
 
@@ -57,29 +40,19 @@ const About = () => {
 
         <Box sx={{
           width: '100%',
-
           height: 'auto',
-
           opacity: 1,
-
           position: 'relative',
 
         }}>
           <Typography sx={{
             fontFamily: 'Poppins',
-
-            fontSize: '20px',
-
+            fontSize: '16px',
             fontWeight: 300,
-
             lineHeight: '34px',
-
             textAlign: 'center',
-
             color: '#FFFFFF',
-
             padding: '20px 50px 10px 50px',
-
             marginBottom: '80px'
           }} >
             Dr. Sadiq Foundation (DSF) dedicatedly serves humanity with kindness,
@@ -127,7 +100,7 @@ const About = () => {
             padding: '10px 50px 20px 50px',
 
           }} >
-            Our Leadership Today
+            OUR LEADERSHIP TODAY
           </Typography>
         </Box>
         <Box sx={{
@@ -144,7 +117,7 @@ const About = () => {
           <Typography sx={{
             fontFamily: 'Poppins',
 
-            fontSize: '20px',
+            fontSize: '16px',
 
             fontWeight: 500,
 
@@ -306,41 +279,20 @@ const About = () => {
       {/* Footer/Call to Action Section */}
       <Box sx={{
         width: '100%',
-
-
-        height: '231px',
-
-
         opacity: 1,
-
-
         position: 'relative',
-
-
       }}>
         <Typography
           sx={{
             fontFamily: 'Poppins',
-
-
             fontSize: '48px',
-
-
             fontWeight: 600,
-
-
             lineHeight: '75px',
-
-
             textAlign: 'center',
-
-
             color: '#000000',
-
-
-          }}
-        >
-          The Driving Force Behind our Vision
+            margin: '30px'
+          }}>
+          THE DRIVING FORCE BEHIND OUR VISION
         </Typography>
       </Box>
 
@@ -541,7 +493,7 @@ const About = () => {
           textAlign: 'center',
           marginBottom: '0px'
         }}>
-          Our Positive Impact
+          OUR POSITIVE IMPACT
         </Typography>
         <Typography sx={{
           fontFamily: 'Poppins',
@@ -594,7 +546,7 @@ const About = () => {
               lineHeight: '80px',
               color: '#FFFFFF'
             }}>
-              DSF-BBH Food Project
+              DSF-BBH FOOD PROJECT
             </Typography>
             <Typography sx={{
               fontFamily: 'Poppins',
@@ -662,7 +614,7 @@ const About = () => {
               lineHeight: '80px',
               color: '#FFFFFF'
             }}>
-              Free Dispensaries
+              FREE DISPENSARIES
             </Typography>
             <Typography sx={{
               fontFamily: 'Poppins',
@@ -729,7 +681,7 @@ const About = () => {
               lineHeight: '80px',
               color: '#FFFFFF'
             }}>
-              Vocational Education and Skill Development
+              VOCATIONAL EDUCATION AND SKILL DEVELOPMENT
             </Typography>
             <Typography sx={{
               fontFamily: 'Poppins',
@@ -795,7 +747,7 @@ const About = () => {
               lineHeight: '80px',
               color: '#FFFFFF'
             }}>
-              Education
+              EDUCATION
             </Typography>
             <Typography sx={{
               fontFamily: 'Poppins',
@@ -846,7 +798,7 @@ const About = () => {
       }}> <Typography sx={{
         fontFamily: 'Poppins',
 
-        fontSize: '60px',
+        fontSize: '48px',
 
         fontWeight: 500,
 
@@ -857,7 +809,7 @@ const About = () => {
         color: '#027D40',
 
       }} >
-          Heart of our story
+          HEART OF OUR STORY
 
         </Typography>
       </Box>
@@ -874,9 +826,9 @@ const About = () => {
 
       }}> <Typography sx={{
         fontFamily: 'Poppins',
-        fontSize: '20px',
+        fontSize: '18px',
         fontWeight: 500,
-        lineHeight: '54px',
+        lineHeight: '34px',
         textAlign: 'center',
         color: '#000000',
       }}>
@@ -885,7 +837,7 @@ const About = () => {
         <span style={{
           fontFamily: 'Poppins',
           fontSize: '20px',
-          fontWeight: 700,
+          fontWeight: 500,
           lineHeight: '54px',
           textAlign: 'center',
           textDecorationLine: 'underline',
@@ -904,191 +856,174 @@ const About = () => {
        </Box>
 
           {/* Text Thumbnails */}
-          <Box sx={{
-  backgroundColor: "#027D90", 
-  height: '500px',
+<Box sx={{
+  backgroundColor: "#FFFFFF", 
+  width: '90%',
   display: "flex", 
-  justifyContent: "space-between", // Align the boxes horizontally
+  justifyContent: "center", // Align the boxes horizontally
+  alignItems: 'center',
   flexDirection: 'row',
-  flexWrap: "wrap", // Ensure the boxes are responsive
-  padding: "20px", // Add some padding for better spacing
+  margin: '50px'
 }}>
   <Grid container sx={{ 
     width: "100%",
     display: 'flex',
+    justifyContent: 'space-evenly',
     flexDirection: 'row', // Ensure the grid items are displayed in a row on larger screens
-    gap: 10, // Add space between the boxes
   }}>
-    <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
+    <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
       {/* Box 1 - Our Mission */}
       <Box sx={{
         position: "relative",
-        width: "100%",
-        height: "450px",
+        height: '100%',
         overflow: "hidden",
         borderRadius: "10px",
         padding: "20px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: "#333", // Background color for better contrast
+        backgroundColor: "#863773BF",
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       }}>
         <Typography variant="h2" sx={{
-          width: "195px",
-          height: "75px",
-          fontFamily: "Poppins",
-          fontSize: "30px",
-          fontWeight: "500",
-          lineHeight: "75px",
-          textAlign: "left",
-          color: "#FFFFFF",
-          opacity: 1, // Set opacity to 1 to make the heading visible
-        }}>
-          Our Mission
-        </Typography>
-        <Typography variant="h2" sx={{
-          width: "456px",
-          height: "75px",
-          fontFamily: "Poppins",
-          fontSize: "48px",
-          fontWeight: "600",
-          lineHeight: "75px",
-          textAlign: "left",
-          color: "#FFFFFF",
-          opacity: 1,
-        }}>
-          Empowering Lives
-        </Typography>
-        <Typography variant="body1" sx={{
-          width: "473px",
-          height: "263px",
+          width: "100%",
           fontFamily: "Poppins",
           fontSize: "20px",
-          fontWeight: "500",
-          lineHeight: "44px",
+          fontWeight: "300",
+          lineHeight: "5px",
           textAlign: "center",
           color: "#FFFFFF",
           opacity: 1,
-          marginTop: "10px",
+        }}>
+          OUR MISSION
+        </Typography>
+        <Typography variant="h2" sx={{
+          width: "100%",
+          fontFamily: "Poppins",
+          fontSize: "28px",
+          fontWeight: "500",
+          lineHeight: "75px",
+          textAlign: "center",
+          color: "#FFFFFF",
+          opacity: 1,
+        }}>
+          EMPOWERING LIVES
+        </Typography>
+        <Typography variant="body1" sx={{
+          width: "100%",
+          fontFamily: "Poppins",
+          fontSize: "16px",
+          fontWeight: "300",
+          lineHeight: "30.5px",
+          textAlign: "center",
+          color: "#FFFFFF",
+          opacity: 1,
         }}>
           To improve the quality of life for deprived and underprivileged individuals by promoting education and health awareness, especially among youth and women. To also support those affected by natural disasters, conflicts, and internal displacement.
         </Typography>
       </Box>
     </Grid>
 
-    <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
+    <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
       {/* Box 2 - Our Vision */}
       <Box sx={{
         position: "relative",
-        width: "100%",
-        height: "450px",
+        height: '100%',
         overflow: "hidden",
         borderRadius: "10px",
         padding: "20px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: "#333", // Background color for better contrast
+        backgroundColor: "#009368",
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-        marginTop: "20px", // Spacing between boxes
       }}>
         <Typography variant="h2" sx={{
-          width: "195px",
-          height: "75px",
-          fontFamily: "Poppins",
-          fontSize: "30px",
-          fontWeight: "500",
-          lineHeight: "75px",
-          textAlign: "left",
-          color: "#FFFFFF",
-          opacity: 1,
-        }}>
-          Our Vision
-        </Typography>
-        <Typography variant="h2" sx={{
-          width: "456px",
-          height: "75px",
-          fontFamily: "Poppins",
-          fontSize: "48px",
-          fontWeight: "600",
-          lineHeight: "75px",
-          textAlign: "left",
-          color: "#FFFFFF",
-          opacity: 1,
-        }}>
-          Caring Community
-        </Typography>
-        <Typography variant="body1" sx={{
-          width: "473px",
-          height: "263px",
+          width: "100%",
           fontFamily: "Poppins",
           fontSize: "20px",
-          fontWeight: "500",
-          lineHeight: "44px",
+          fontWeight: "300",
+          lineHeight: "5px",
           textAlign: "center",
           color: "#FFFFFF",
           opacity: 1,
-          marginTop: "10px",
+        }}>
+          OUR VISION
+        </Typography>
+        <Typography variant="h2" sx={{
+          width: "100%",
+          fontFamily: "Poppins",
+          fontSize: "28px",
+          fontWeight: "500",
+          lineHeight: "75px",
+          textAlign: "center",
+          color: "#FFFFFF",
+          opacity: 1,
+        }}>
+          CARING COMMUNITY
+        </Typography>
+        <Typography variant="body1" sx={{
+          width: "100%",
+          fontFamily: "Poppins",
+          fontSize: "16px",
+          fontWeight: "300",
+          lineHeight: "35px",
+          textAlign: "center",
+          color: "#FFFFFF",
+          opacity: 1,
         }}>
           We envision a community where everyone has access to resources and support to thrive. This is the main reason we actively empower individuals to make a positive impact, providing holistic support, including counseling and guidance.
         </Typography>
       </Box>
     </Grid>
 
-    <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
+    <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
       {/* Box 3 - Our Methodology */}
       <Box sx={{
         position: "relative",
-        width: "100%",
-        height: "450px",
+        height: '100%',
         overflow: "hidden",
         borderRadius: "10px",
         padding: "20px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: "#333", // Background color for better contrast
+        backgroundColor: "#D6940DCC", // Background color for better contrast
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-        marginTop: "20px", // Spacing between boxes
       }}>
         <Typography variant="h2" sx={{
-          width: "195px",
-          height: "75px",
-          fontFamily: "Poppins",
-          fontSize: "30px",
-          fontWeight: "500",
-          lineHeight: "75px",
-          textAlign: "left",
-          color: "#FFFFFF",
-          opacity: 1,
-        }}>
-          Our Methodology
-        </Typography>
-        <Typography variant="h2" sx={{
-          width: "456px",
-          height: "75px",
-          fontFamily: "Poppins",
-          fontSize: "48px",
-          fontWeight: "600",
-          lineHeight: "75px",
-          textAlign: "left",
-          color: "#FFFFFF",
-          opacity: 1,
-        }}>
-          Personalized Care
-        </Typography>
-        <Typography variant="body1" sx={{
-          width: "473px",
-          height: "263px",
+          width: "100%",
           fontFamily: "Poppins",
           fontSize: "20px",
-          fontWeight: "500",
-          lineHeight: "44px",
+          fontWeight: "300",
+          lineHeight: "5px",
           textAlign: "center",
           color: "#FFFFFF",
           opacity: 1,
-          marginTop: "10px",
+        }}>
+          OUR METHODOLOGY
+        </Typography>
+        <Typography variant="h2" sx={{
+          width: "100%",
+          fontFamily: "Poppins",
+          fontSize: "28px",
+          fontWeight: "500",
+          lineHeight: "75px",
+          textAlign: "center",
+          color: "#FFFFFF",
+          opacity: 1,
+        }}>
+          PERSONALIZED CARE
+        </Typography>
+        <Typography variant="body1" sx={{
+          width: "100%",
+          fontFamily: "Poppins",
+          fontSize: "16px",
+          fontWeight: "300",
+          lineHeight: "35px",
+          textAlign: "center",
+          color: "#FFFFFF",
+          opacity: 1,
         }}>
           We take a personalized approach to care, identifying those in need and providing assistance without seeking publicity or funds. Our "Spot Verification" system ensures a thorough assessment of each applicant's circumstances.
         </Typography>
@@ -1096,10 +1031,7 @@ const About = () => {
     </Grid>
   </Grid>
 </Box>
-
-
-
-
+        <ChangeMakersSection/>
     </div>
   );
 };

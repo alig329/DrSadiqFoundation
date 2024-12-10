@@ -26,7 +26,6 @@ const BelovedSection = () => {
                 fontSize: { xs: '14px', md: '18px' },
                 lineHeight: '1.8',
                 color: '#FFFFFF',
-                mb: 2,
               }}
             >
               Meet our foundation’s generous heart!
@@ -65,28 +64,23 @@ const BelovedSection = () => {
           
           {/* Image Section */}
           <Grid item xs={12} md={6} sx={{ position: 'relative' }}>
-            <Box
-              sx={{
-                position: { xs: 'relative', md: 'absolute' },
-                top: 0,
-                right: { xs: 0, md: '-20%' },
-                height: '100%',
-                width: { xs: '100%', md: '80%' },
-                backgroundImage: 'url("/wave.svg")',
-                backgroundColor: '#027D40',
-                backgroundBlendMode: 'soft-light',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                borderRadius: '100px 0px 0px 0px',
-                zIndex: 0,
-              }}
-            >
+            
+            <Box sx={{ zIndex: 1, position: 'relative' }}>
+              <img
+                src="/DrSahb.jpg"
+                alt="Dr. Muhammad Sadiq"
+                style={{
+                  height: '460px',
+                  objectFit: 'auto',
+                  borderRadius: '8px',
+                }}
+              />
               <Box
                 sx={{
                   position: 'absolute',
-                  bottom: '10px',
-                  right: { xs: '10px', md: '10px' },
-                  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                  top: '20px',
+                  right: { xs: '-50px', md: '-50px' },
+                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
                   color: '#FFFFFF',
                   padding: '10px',
                   borderRadius: '10px',
@@ -97,19 +91,6 @@ const BelovedSection = () => {
                 <Typography variant="subtitle2">(Late)</Typography>
                 <Typography variant="subtitle2">Founding Chairman</Typography>
               </Box>
-            </Box>
-
-            <Box sx={{ zIndex: 1, position: 'relative' }}>
-              <img
-                src="/DrSahb.jpg"
-                alt="Dr. Muhammad Sadiq"
-                style={{
-                  width: '85%',
-                  height: '460px',
-                  objectFit: 'cover',
-                  borderRadius: '8px',
-                }}
-              />
             </Box>
 
           </Grid>

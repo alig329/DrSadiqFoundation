@@ -141,6 +141,7 @@ const StatSection = () => {
               textDecoration: 'underline', // Apply hover effect to text
             },
           }}
+          onClick={() => window.location.href = "member"}
         >
           Become a Member
           <svg
@@ -157,6 +158,7 @@ const StatSection = () => {
               strokeLinejoin="round"
               d="M9 5l7 7-7 7"
             />
+            
           </svg>
         </Button>
       </Box>

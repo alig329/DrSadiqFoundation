@@ -77,7 +77,7 @@ const Navbar = () => {
                 fontWeight: '500',
                 padding: '20px'
               }}
-              component={Link} to="/contact-us">Contact Us
+              component={Link} to="/contact">Contact Us
             </Button>
             <Button
               sx={{

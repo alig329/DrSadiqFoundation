@@ -6,6 +6,9 @@ import DonationForm from './components/DonationForm';
 import Home from './components/Home';
 import History from './History';
 import About from './components/About';
+import ContactUs from './components/ContactUs';
+import Certificates from './components/Certificates';
+import MembershipForm from './components/MembershipForm';
 
 function App() {
   return (
@@ -14,8 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/history" element={<History />} />
+        <Route path="/certificates" element={<Certificates />} />
+        <Route path="/member" element={<MembershipForm />} />
         <Route path="/donate" element={<DonationForm />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
     </Router>
