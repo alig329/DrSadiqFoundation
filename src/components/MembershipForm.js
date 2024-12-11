@@ -11,8 +11,8 @@ const MembershipForm = () => {
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "#027D40",
-      }}
-    >
+        margin: '20px'
+      }}>
       {/* Left Section - Form */}
       <Box
         sx={{
@@ -20,21 +20,23 @@ const MembershipForm = () => {
           padding: "40px",
           backgroundColor: "#fff",
           borderRadius: "8px 0 0 8px",
-          marginBottom: '10px'
+          marginBottom: '10px',
+          display: 'flex',
+          flexDirection: 'row'
         }}>
+        
+
+        <Grid container spacing={2}>
         <Typography
           variant="h4"
           gutterBottom
           sx={{
             fontWeight: "bold",
-            color: "#006600",
+            color: "#027D40",
             marginBottom: "20px",
-          }}
-        >
+          }}>
           BECOME A MEMBER TODAY!
         </Typography>
-
-        <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField fullWidth label="Name" variant="outlined" />
           </Grid>
@@ -62,44 +64,45 @@ const MembershipForm = () => {
           <Grid item xs={12}>
             <TextField fullWidth label="Area of Interest" variant="outlined" />
           </Grid>
-        </Grid>
-
-        <Button
+          <Button
           variant="contained"
           sx={{
             backgroundColor: "#027D40",
             color: "#fff",
-            marginTop: "20px",
-            padding: "10px",
-            fontSize: "16px",
+            marginTop: "10px",
+            padding: "1px",
+            fontSize: "12px",
+            borderRadius: '10px',
             "&:hover": {
-              backgroundColor: "#004d00",
+              backgroundColor: "#029D40",
             },
-          }}
-        >
+          }}>
           Submit
         </Button>
-      </Box>
+        </Grid>
 
-      {/* Right Section - Image */}
+        
+        {/* Right Section - Image */}
       <Box
         sx={{
-          width: "50%",
+          width: "100%",
           height: "100%",
           borderRadius: "0 8px 8px 0",
           overflow: "hidden",
-        }}
-      >
+          padding: '20px'
+        }}>
         <img
           src="member.png"
           alt="Membership"
           style={{
-            width: "100%",
-            height: "100%",
+            width: "500px",
+            height: "600px",
             objectFit: "cover",
-          }}
-        />
+          }}/>
       </Box>
+      </Box>
+
+      
     </Box>
   );
 };

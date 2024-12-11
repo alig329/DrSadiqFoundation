@@ -9,6 +9,7 @@ import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Certificates from './components/Certificates';
 import MembershipForm from './components/MembershipForm';
+import FAQScreen from './components/FaQs';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/member" element={<MembershipForm />} />
         <Route path="/donate" element={<DonationForm />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQScreen />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
