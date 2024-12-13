@@ -57,6 +57,7 @@ const BelovedSection = () => {
                 '&:hover': { backgroundColor: '#E68A00',
                  },
               }}
+              onClick={() => window.location.href = "history"}
             >
               Read More
             </Button>

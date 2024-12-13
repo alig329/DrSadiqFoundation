@@ -57,7 +57,7 @@ const Navbar = () => {
                 fontWeight: '500',
                 padding: '20px'
               }}
-              component={Link} to="/success-stories">Success Stories
+              component={Link} to="/stories">Success Stories
             </Button>
             <Button
               sx={{
