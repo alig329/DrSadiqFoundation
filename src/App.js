@@ -16,6 +16,11 @@ import FAQScreen from './components/FaQs';
 import SuccessStories from './components/SuccessStories';
 import Projects from './components/Projects';
 import Hospital from './Hospital';
+import Scholarships from './components/Scholarships';
+import Dispensaries from './components/Dispensaries';
+import FoodProjects from './components/FoodProjects';
+import Vocational from './components/Vocational';
+import NewsPage from './components/NewsPage';
 
 
 function App() {
@@ -33,7 +38,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQScreen />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/news" element={<NewsPage />} />
         <Route path="/hospital" element={<Hospital />} />
+        <Route path="/scholarships" element={<Scholarships />} />
+        <Route path="/dispensaries" element={<Dispensaries />} />
+        <Route path="/foodprojects" element={<FoodProjects />} />
+        <Route path="/vocational" element={<Vocational />} />
       </Routes>
       <Footer />
     </Router>

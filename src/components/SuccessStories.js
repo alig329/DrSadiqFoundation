@@ -11,27 +11,27 @@ const VideoCarousel = () => {
     const videoThumbnails = [
         {
             id: 1,
-            url: "https://www.youtube.com/embed/eEzD-Y97ges?si=n-d372xnfKyp4-iC&amp;start=3", 
+            url: "https://www.youtube.com/embed/xVrNzq3JurY?si=h8rQ93j9vC5XUGRe", 
             thumbnail: "https://via.placeholder.com/300x200",
         },
         {
             id: 2,
-            url: "https://www.youtube.com/embed/eEzD-Y97ges?si=n-d372xnfKyp4-iC&amp;start=3", 
+            url: "https://www.youtube.com/embed/UZq2VasXVDk?si=mZkRmR25J5KxoB_r", 
             thumbnail: "https://via.placeholder.com/300x200",
         },
         {
             id: 3,
-            url: "https://www.youtube.com/embed/eEzD-Y97ges?si=n-d372xnfKyp4-iC&amp;start=3", 
+            url: "https://www.youtube.com/embed/BDuJM8Yr4uo?si=OuAb97Y7kqGkwos0", 
             thumbnail: "https://via.placeholder.com/300x200",
         },
         {
             id: 3,
-            url: "https://www.youtube.com/embed/eEzD-Y97ges?si=n-d372xnfKyp4-iC&amp;start=3", 
+            url: "https://www.youtube.com/embed/cmIfYSh_gUk?si=lDmqkDY4_DBTzu4D", 
             thumbnail: "https://via.placeholder.com/300x200",
         },
         {
             id: 3,
-            url: "https://www.youtube.com/embed/eEzD-Y97ges?si=n-d372xnfKyp4-iC&amp;start=3", 
+            url: "https://www.youtube.com/embed/JY4Mp8o7BVo?si=q4x6LU2pKtN6uMnO", 
             thumbnail: "https://via.placeholder.com/300x200",
         },
     ];
@@ -116,6 +116,7 @@ const VideoCarousel = () => {
                             <iframe
                                 src={video.url}
                                 title={`Video ${video.id}`}
+                                start="5"
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 referrerPolicy="strict-origin-when-cross-origin" 

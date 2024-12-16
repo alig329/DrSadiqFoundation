@@ -16,8 +16,8 @@ const Footer = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: { xs: 4, md: 6 },
-        }}
-      >
+        }}>
+
         {/* Footer Main Section */}
         <Box
           sx={{
@@ -68,7 +68,7 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', gap: 2 }}>
               <Link
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/drsadiqfoundationdsf/"
                 target="_blank"
                 sx={{
                   color: 'white',
@@ -77,7 +77,7 @@ const Footer = () => {
                 <Facebook />
               </Link>
               <Link
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/drsadiqfoundation/"
                 target="_blank"
                 sx={{
                   color: 'white',
@@ -86,7 +86,7 @@ const Footer = () => {
                 <Instagram />
               </Link>
               <Link
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/drsadiqfoundation"
                 target="_blank"
                 sx={{
                   color: 'white',
@@ -95,7 +95,7 @@ const Footer = () => {
                 <LinkedIn />
               </Link>
               <Link
-                href="https://twitter.com"
+                href="https://x.com/drsadiqfdn"
                 target="_blank"
                 sx={{
                   color: 'white',
@@ -104,7 +104,7 @@ const Footer = () => {
                 <Twitter />
               </Link>
               <Link
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@drsadiqfoundation"
                 target="_blank"
                 sx={{
                   color: 'white',
@@ -113,7 +113,7 @@ const Footer = () => {
                 <TikTokIcon />
               </Link>
               <Link
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@DrSadiqFoundation"
                 target="_blank"
                 sx={{
                   color: 'white',

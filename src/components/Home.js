@@ -41,11 +41,10 @@ const Homepage = () => {
     return (
       <Box
         sx={{
-          height: '100vh',
+          height: '80vh',
         backgroundImage: 'url("/banner2.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        position: 'relative',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -233,7 +232,7 @@ const Homepage = () => {
           {/* First Carousel Item */}
           <Box
             sx={{
-              height: '100vh',
+              height: '80vh',
               backgroundImage: 'url("/banner.png")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -243,8 +242,8 @@ const Homepage = () => {
               sx={{
                 position: 'absolute',
                 width: '620px',
-                height: '50px',
-                top: '200px',
+                height: '30px',
+                top: '100px',
                 left: '50px',
                 fontWeight: 'bold',
                 color: '#FFFFFF',
@@ -265,7 +264,7 @@ const Homepage = () => {
                 Everyone deserves access to quality education, healthcare, and economic opportunities. At Dr. Sadiq Foundation, we
                 make this possible with empathy, kindness, and understanding.
               </Typography>
-              <a href="/new-screen" style={{ color: '#FFFFFF', textDecoration: 'underline', lineHeight: '80px' }}>Join Us in this kind act</a>
+              <a href="/donate" style={{ color: '#FFFFFF', textDecoration: 'underline', lineHeight: '80px' }}>Join Us in this kind act</a>
             </Box>
           </Box>
 
@@ -275,7 +274,7 @@ const Homepage = () => {
           {/* Third Carousel Item */}
           <Box
             sx={{
-              height: '100vh',
+              height: '80vh',
               backgroundImage: 'url("/banner3.png")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',

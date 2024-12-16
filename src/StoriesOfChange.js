@@ -8,18 +8,21 @@ const StoriesOfChange = () => {
         description:
           "DSF has offered 120 scholarships per annum to 11 public sector universities of Pakistan, spread over KPK...",
         buttonText: "Read More",
+        link: "/scholarships"
       },
       {
         image: "/sc2.jpg",
         description:
           "Transforming lives through various welfare projects and initiatives focused on education, health, and skill development.",
         buttonText: "Read More",
+        link: "/foodprojects"
       },
       {
         image: "/sc1.jpg",
         description:
           "Making a meaningful difference in the community by supporting underprivileged families and individuals.",
         buttonText: "Read More",
+        link: "/hospital"
       },
     ];
   
@@ -108,6 +111,7 @@ const StoriesOfChange = () => {
                       backgroundColor: "#457BA1",
                     },
                   }}
+                  onClick={() => window.location.href = story.link}
                 >
                   {story.buttonText}
                 </Button>

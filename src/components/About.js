@@ -181,14 +181,14 @@ const About = () => {
             padding: '80px'
           }}>
             <img
-              src="/ceo.png"
+              src="/ceo.jpeg"
               alt="Salman Sadiq"
               style={{
                 width: '100%',
 
                 height: '100%',
 
-                objectFit: 'initial',
+                objectFit: 'cover',
 
                 borderRadius: '30px',
 

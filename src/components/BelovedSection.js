@@ -12,7 +12,7 @@ const BelovedSection = () => {
               sx={{
                 fontFamily: 'Poppins',
                 fontSize: { xs: '24px', md: '40px' },
-                fontWeight: '600',
+                fontWeight: '500',
                 lineHeight: '1.4',
                 color: '#FFFFFF',
                 mb: 2,
