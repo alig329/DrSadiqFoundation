@@ -82,7 +82,7 @@ const Homepage = () => {
   const ThreeThumbnails = () => {
     const images = [
       {
-        src: "/thnail1.png",
+        src: "/thnail1.jpg",
         alt: "We Care",
 
         description:
@@ -198,6 +198,8 @@ const Homepage = () => {
                 </Typography>
               </Box>
             </Box>
+           
+           
             {/* Big Text */}
             <Typography variant="h6"
               sx={{
@@ -223,50 +225,85 @@ const Homepage = () => {
       <Box
         sx={{
           position: 'relative',
-          height: '100vh',
+          height: '85vh',
           width: '100%',
         }}
         className="hero-section"
       >
         <Carousel>
           {/* First Carousel Item */}
-          <Box
-            sx={{
-              height: '80vh',
-              backgroundImage: 'url("/banner.png")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
+         
+    <Box
+      sx={{
+        height: '80vh',
+        display: 'flex',
+        position: 'relative',
+      }}
+    >
+      {/* Typography Section */}
+      <Box
+        sx={{
+          width: '50%',
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          paddingLeft: '50px',
+          background: 'linear-gradient(to left, rgba(139, 69, 0, 0.9), rgba(70, 42, 85, 1))'
+
+        }}
+      >
+        <Typography variant="h3"
+         sx={{
+           fontWeight: 'bold', color: '#FFFFFF' 
+           }}>
+          FOUNDATION FOR A BRIGHTER NATION
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            width: '500px',
+            lineHeight: '50px',
+            color: '#FFFFFF',
+          }}
+        >
+          Everyone deserves access to quality education, healthcare, and economic opportunities. At Dr. Sadiq Foundation, we
+          make this possible with empathy, kindness, and understanding.
+        </Typography>
+        <a href="/donate" style={{
+           color: '#FFFFFF',
+            textDecoration: 'underline', 
+            lineHeight: '80px',
+            textAlign: 'justify',
+            fontSize: '24px'
+            }}>
+        Join Us in this kind act
+        </a>
+      </Box>
+
+      {/* Images Section */}
+      <Box sx={{ 
+        width: '100%'
+         }}>
+        
+          <Grid item xs={6} sx={{ 
+            height: '100%'
+            }}>
             <Box
+              component="img"
+              src="thnailm.png"
+              alt="Image 1"
               sx={{
-                position: 'absolute',
-                width: '620px',
-                height: '30px',
-                top: '100px',
-                left: '50px',
-                fontWeight: 'bold',
-                color: '#FFFFFF',
+                width: '100%',
+                height: '100%',
+                objectFit: 'fill',
               }}
-              className="hero-overlay"
-            >
-              <Typography variant="h3" className="hero-title">
-                FOUNDATION FOR A BRIGHTER NATION
-              </Typography>
-              <Typography
-                variant="body1"
-                className="hero-subtitle"
-                sx={{
-                  width: '500px',
-                  lineHeight: '80px'
-                }}
-              >
-                Everyone deserves access to quality education, healthcare, and economic opportunities. At Dr. Sadiq Foundation, we
-                make this possible with empathy, kindness, and understanding.
-              </Typography>
-              <a href="/donate" style={{ color: '#FFFFFF', textDecoration: 'underline', lineHeight: '80px' }}>Join Us in this kind act</a>
-            </Box>
-          </Box>
+            />
+          </Grid>
+        
+      </Box>
+    </Box>
+
 
           {/* Second Carousel Item */}
           <SecondCarouselItem />
@@ -275,8 +312,8 @@ const Homepage = () => {
           <Box
             sx={{
               height: '80vh',
-              backgroundImage: 'url("/banner3.png")',
-              backgroundSize: 'cover',
+              backgroundImage: 'url("/hosp11.jpg")',
+              backgroundSize: '100% 100%',
               backgroundPosition: 'center',
               position: 'relative',
             }}
@@ -284,7 +321,7 @@ const Homepage = () => {
             <Box
               sx={{
                 position: 'absolute',
-                top: '50%',
+                top: '70%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
@@ -296,9 +333,9 @@ const Homepage = () => {
                 variant="h1"
                 sx={{
                   fontFamily: 'Poppins',
-                  fontSize: '48px',
+                  fontSize: '38px',
                   fontWeight: '600',
-                  lineHeight: '46px',
+                  lineHeight: '36px',
                   textDecorationSkipInk: 'none',
                 }}
               >

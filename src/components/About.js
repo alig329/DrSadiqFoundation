@@ -251,7 +251,7 @@ const About = () => {
 
               justifyContent: 'center',
 
-              textAlign: 'left',
+              textAlign: 'justify',
 
               color: '#FFFFFF',
 

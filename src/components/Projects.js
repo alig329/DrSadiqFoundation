@@ -135,9 +135,9 @@ function Projects() {
               fontFamily: "Poppins",
               fontSize: "12px",
               color: "#FFFFFF",
-              backgroundColor: "#027D40",
+              backgroundColor: "#ECA30C",
               borderRadius: "10px",
-              "&:hover": { backgroundColor: "#029D40" },
+              "&:hover": { backgroundColor: "#cc8a09" },
               textAlign: "center",
               animationDuration: "0ms",
               margin: "10px"

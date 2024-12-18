@@ -36,8 +36,19 @@ const History = () => {
           Driven by a passion for healthcare, Dr. Sadiq completed his F.Sc. at Emerson University, Multan, scoring 623 out of 900. Although he aspired to study medicine, narrowly missing the MBBS entrance by seven marks, he chose veterinary sciences instead. He graduated in 1974 with a Doctor of Veterinary Medicine (DVM) degree from the University of Agriculture, Faisalabad, embarking on a career that would define the poultry industry in Pakistan.
           </Typography>
         </Box>
-        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'stretch' }}>
-          <img src='/DrSahb2.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '100%', objectFit: 'cover' }} />
+        <Box sx={{
+           flex: 1, 
+           display: 'flex',
+            flexDirection: 'column',
+             alignItems: 'center',
+              justifyContent: 'stretch' 
+              }}>
+          <img src='/DrSahb22.jpg'
+           alt="Dr. Muhammad Sadiq" 
+           style={{ width: '90%',
+            height: '100%', 
+            objectFit: 'scale-down'
+             }} />
         </Box>
       </Box>
 
@@ -128,7 +139,7 @@ const History = () => {
           
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'stretch' }}>
-          <img src='/hist5.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '100%', objectFit: 'cover' }} />
+          <img src='/dispp.jpg' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '100%', objectFit: 'cover' }} />
         </Box>
         <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: '500', lineHeight: '60px', marginTop: '10px', color: '#000000' }}>
            Vision for a Hospital
@@ -162,7 +173,7 @@ const History = () => {
           </Typography>
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'stretch' }}>
-          <img src='/DrSahb3.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '100%', objectFit: 'cover' }} />
+          <img src='/DrSahb3.jpg' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '100%', objectFit: 'cover' }} />
         </Box>
       </Box>
       </Box>

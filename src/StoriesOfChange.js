@@ -37,8 +37,8 @@ const StoriesOfChange = () => {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: { xs: "32px", md: "54px" },
-            fontWeight: "700",
+            fontSize: { xs: "32px", md: "50px" },
+            fontWeight: "600",
             lineHeight: "60px",
             color: "#000000",
             marginBottom: "20px",

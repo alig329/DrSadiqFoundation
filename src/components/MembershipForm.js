@@ -67,14 +67,14 @@ const MembershipForm = () => {
           <Button
           variant="contained"
           sx={{
-            backgroundColor: "#027D40",
+            backgroundColor: "#ECA30C",
             color: "#fff",
             marginTop: "10px",
             padding: "1px",
             fontSize: "12px",
             borderRadius: '10px',
             "&:hover": {
-              backgroundColor: "#029D40",
+              backgroundColor: "#cc8a09",
             },
           }}>
           Submit

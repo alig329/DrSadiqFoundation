@@ -11,11 +11,11 @@ const CollaborationSection = () => (
                    <Typography variant="h4"
                     sx={{
                        fontFamily: "Poppins",
-                         fontWeight: "700",
+                         fontWeight: "600",
                            textAlign: "center",
                             color: "#000000",
                             marginBottom: 3,
-                             fontSize: { xs: "24px", sm: "32px", md: "54px" },
+                             fontSize: { xs: "24px", sm: "32px", md: "50px" },
                              
                                     }} >
                                        Collaboration for Sustainable Progress 

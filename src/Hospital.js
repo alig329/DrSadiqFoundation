@@ -16,14 +16,36 @@ const Hospital = () => {
             <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'column' }, alignItems: 'stretch', marginBottom: '40px' }}>
 
 
-                <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center'  }}>
-                    <img src='/hosp1.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
+                <Box sx={{ 
+                    flex: 1, 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center'  
+                    }}>
+                    <img src='/hosp11.jpg'
+                     alt="DSF Hospital"
+                      style={{ 
+                        width: '90%', 
+                        height: '600px', 
+                        objectFit: 'cover'
+                         }} />
                 </Box>
-                <Box sx={{ flex: 1, mb: { xs: '20px', md: 0 }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box sx={{ 
+                    flex: 1,
+                     mb: { xs: '20px', md: 0 },
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      justifyContent: 'space-between'
+                       }}>
 
 
                     <Typography sx={{
-                        fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '24px', md: '34px' }, color: '#000000', textAlign: 'left',
+                        fontFamily: 'Poppins', 
+                        fontSize: { xs: '14px', sm: '16px', md: '18px' }, 
+                        fontWeight: '500', 
+                        lineHeight: { xs: '24px', md: '34px' }, 
+                        color: '#000000', 
+                        textAlign: 'left',
                         marginTop: '20px',
                         padding: '10px 100px 10px 100px'
                     }}>
@@ -32,7 +54,7 @@ const Hospital = () => {
                         <List>
                             <ListItem>
                                 <Typography variant="body1" sx={{ color: '#027D40', fontWeight: 'bold' }}>
-                                    Capacity:
+                                    Capacity:<br/>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: '#000000' }}>
                                     200 beds
@@ -40,7 +62,7 @@ const Hospital = () => {
                             </ListItem>
                             <ListItem>
                                 <Typography variant="body1" sx={{ color: '#027D40', fontWeight: 'bold' }}>
-                                    Specialized Services:
+                                    Specialized Services:<br/>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: '#000000' }}>
                                     Nine advanced medical disciplines
@@ -48,7 +70,7 @@ const Hospital = () => {
                             </ListItem>
                             <ListItem>
                                 <Typography variant="body1" sx={{ color: '#027D40', fontWeight: 'bold' }}>
-                                    Current Phase:
+                                    Current Phase:<br/>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: '#000000' }}>
                                     Construction underway, following approval from the Tehsil Municipal Administration (TMA) Rawalpindi
@@ -165,7 +187,21 @@ const Hospital = () => {
                 The DSF Hospital aims to deliver comprehensive healthcare services, including specialized treatments in cardiology, oncology, and neurology. It seeks to establish a robust medical education system to train healthcare professionals and support long-term sustainability. Ultimately, the hospital aspires to improve the quality of life in the region and serve as a hub for community development.
                 </Typography>
                 <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <img src='/banner3.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '450px', objectFit: 'cover' }} />
+                        <iframe
+                          width="90%"
+                          height="450px"
+                          src="https://www.youtube.com/embed/cmIfYSh_gUk?si=UQvxZjoVSLayXt7u?rel=0"
+                          frameBorder="0"
+                          allow="accelerometer;
+                           autoplay; 
+                           clipboard-write;
+                            encrypted-media; 
+                            gyroscope; 
+                            picture-in-picture"
+                          allowFullScreen
+                          title="YouTube Video"
+                          style={{ borderRadius: '1px' }}
+                        />
                     <Button
             sx={{
               width: "250px",
@@ -173,9 +209,9 @@ const Hospital = () => {
               fontSize: "18px",
               fontWeight: "500",
               color: "#FFFFFF",
-              backgroundColor: "#027D40",
+              backgroundColor: "#ECA30C",
               borderRadius: "10px",
-              "&:hover": { backgroundColor: "#029D40" },
+              "&:hover": { backgroundColor: "#cc8a09" },
               textAlign: "center",
               animationDuration: "0ms",
               margin: "20px 0px 0px 10px"

@@ -5,7 +5,7 @@ const BelovedSection = () => {
   return (
     <Box sx={{ backgroundColor: '#027D40' }}>
       <Container>
-        <Grid container spacing={1} alignItems="center">
+        <Grid container spacing={0} alignItems="center">
           {/* Text Section */}
           <Grid item xs={12} md={6}>
             <Typography
@@ -15,20 +15,28 @@ const BelovedSection = () => {
                 fontWeight: '500',
                 lineHeight: '1.4',
                 color: '#FFFFFF',
-                mb: 2,
+                textAlign: 'justify',
+                paddingRight: '30px'
               }}
             >
-              ONE PERSON'S GENEROSITY CAN SPARK A LEGACY OF KINDNESS
+              ONE PERSON'S GENEROSITY CAN SPARK<br/>
+               <Box component="span" sx={{
+                 color: '#ECA30C' 
+                 }}> 
+                A LEGACY OF KINDNESS 
+              </Box>
             </Typography>
             <Typography
               sx={{
                 fontFamily: 'Poppins',
                 fontSize: { xs: '14px', md: '18px' },
-                lineHeight: '1.8',
+                lineHeight: '2.8',
                 color: '#FFFFFF',
+                textDecoration: 'underline',
+                fontWeight: '700'
               }}
             >
-              Meet our foundation’s generous heart!
+              The heart of our foundation!
             </Typography>
             <Typography
               sx={{
@@ -36,7 +44,9 @@ const BelovedSection = () => {
                 fontSize: { xs: '12px', md: '16px' },
                 lineHeight: '1.8',
                 color: '#FFFFFF',
-                mb: 4,
+                textAlign: 'justify',
+                paddingRight: '40px',
+                mb: 2,
               }}
             >
               Dr. Muhammad Sadiq (1950-2020) was a kind and caring person who wanted
@@ -53,7 +63,6 @@ const BelovedSection = () => {
                 fontWeight: '500',
                 textTransform: 'none',
                 px: 4,
-                py: 1,
                 '&:hover': { backgroundColor: '#E68A00',
                  },
               }}
@@ -66,21 +75,22 @@ const BelovedSection = () => {
           {/* Image Section */}
           <Grid item xs={12} md={6} sx={{ position: 'relative' }}>
             
-            <Box sx={{ zIndex: 1, position: 'relative' }}>
+            <Box sx={{ zIndex: 0, position: 'relative' }}>
               <img
-                src="/DrSahb.jpg"
+                src="/DrSahb22.jpg"
                 alt="Dr. Muhammad Sadiq"
                 style={{
-                  height: '460px',
-                  objectFit: 'auto',
+                  height: '500px',
+                  objectFit: 'contain',
                   borderRadius: '8px',
+                  overflow: 'hidden'
                 }}
               />
               <Box
                 sx={{
                   position: 'absolute',
-                  top: '20px',
-                  right: { xs: '-50px', md: '-50px' },
+                  top: '10px',
+                  left: { xs: '5px', md: '5px' },
                   backgroundColor: 'rgba(0, 0, 0, 0.3)',
                   color: '#FFFFFF',
                   padding: '10px',

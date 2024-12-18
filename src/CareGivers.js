@@ -35,15 +35,15 @@ const CaregiversSection = () => {
         justifyContent: 'center',
         textAlign: 'center',
         color: '#FFFFFF',
-        animation: 'fadeIn 1s', // Add animation
+        animation: 'fadeIn 1s', // Added animation
       }}
     >
       <Typography
         sx={{
           width: { xs: '100%', md: '100%' },
           fontFamily: 'Poppins',
-          fontSize: { xs: '36px', md: '48px' }, // Responsive font size
-          fontWeight: '300',
+          fontSize: { xs: '36px', md: '50px' }, // Responsive font size
+          fontWeight: '600',
           lineHeight: '46px',
           marginBottom: '20px',
         }}

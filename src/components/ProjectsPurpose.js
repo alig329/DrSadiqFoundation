@@ -88,9 +88,9 @@ const ProjectsWithPurpose = () => {
               fontSize: "18px",
               fontWeight: "500",
               color: "#FFFFFF",
-              backgroundColor: "#027D40",
+              backgroundColor: "#ECA30C",
               borderRadius: "10px",
-              "&:hover": { backgroundColor: "#029D40" },
+              "&:hover": { backgroundColor: "#FCA90D" },
               textAlign: "center",
               animationDuration: "0ms",
               margin: "20px 0px 0px 10px"
@@ -144,8 +144,8 @@ const ProjectsWithPurpose = () => {
                       <Typography
                         sx={{
                           fontFamily: "Poppins",
-                          fontSize: { xs: "24px", md: "48px" },
-                          fontWeight: "bold",
+                          fontSize: { xs: "24px", md: "34px" },
+                          fontWeight: "300",
                           lineHeight: "60px",
                           marginBottom: "10px",
                           color: "#FFFFFF",
@@ -173,9 +173,10 @@ const ProjectsWithPurpose = () => {
                         sx={{
                           fontFamily: "Poppins",
                           fontSize: { xs: "24px", md: "48px" },
-                          fontWeight: "700",
-                          lineHeight: "60px",
+                          fontWeight: "500",
+                          lineHeight: "44px",
                           marginBottom: "10px",
+                          marginTop:'40px',
                           color: "#FFFFFF",
                         }}
                       >

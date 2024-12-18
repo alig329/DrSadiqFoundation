@@ -194,7 +194,8 @@ const Footer = () => {
 
                             <Typography variant="body1">
                                 <span  >Call Us <br /></span>
-                                051-111 500 505 | 051-4927546
+                                051-111 500 505 <br/>
+                                 051-4927546
                             </Typography>
                         </Box>
 
@@ -215,7 +216,7 @@ const Footer = () => {
                             </Box>
                             <Typography variant="body1">
                                 <span  >Mail Us <br /></span>
-                                secretary@drsf.org | chairman@drsf.org
+                                 chairman@drsf.org  <br/> admin@drsf.org
                             </Typography>
                         </Box>
 
@@ -302,11 +303,20 @@ const Footer = () => {
 
         <Box sx={{ 
           position: 'relative', 
-          bottom: '20px', 
-          left: '20px', 
-          zIndex: 1,  
+          bottom: '10px', 
+          right: '-95%', 
           }} > 
-          <IconButton color="primary" href="https://wa.me/+923055119550" target="_blank" sx={{ backgroundColor: 'whitesmoke', color: '#00ff55', boxShadow: '10px 10px 6px rgba(0, 0, 0, 0.3)' }} > <WhatsAppIcon style={{ fontSize: 40 }} /> </IconButton> </Box>
+          <IconButton color="primary"
+           href="https://wa.me/+923307000718" target="_blank" 
+           sx={{ 
+            backgroundColor: 'whitesmoke',
+             color: '#00ff55',
+              boxShadow: '10px 10px 6px rgba(0, 0, 0, 0.3)'
+               }} >
+                 <WhatsAppIcon style={{
+                   fontSize: 40 }} />
+                    </IconButton>
+                     </Box>
 
       </Box>
 

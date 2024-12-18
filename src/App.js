@@ -35,6 +35,7 @@ function App() {
         <Route path="/stories" element={<SuccessStories />} />
         <Route path="/member" element={<MembershipForm />} />
         <Route path="/donate" element={<DonationForm />} />
+        <Route path="/volunteer" element={<MembershipForm />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQScreen />} />
         <Route path="/contact" element={<ContactUs />} />
