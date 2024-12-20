@@ -8,14 +8,14 @@ const projectsData = {
     {
       title: "DSF Hospital",
       description: "DSFH has completed its documentation stage of 220-bedded hospital...",
-      image: "/banner3.png",
+      image: "/hosp1.png",
       link: "/hospital",
       raised: 80005,
       goal: 90000,
     },
     {
       title: "Scholarships",
-      description: "To Public Sector Universities of Pakistan, DSF has offered 120 scholarships...",
+      description: "To Public Sector Universities of Pakistan, DSF has offered scholarships...",
       image: "/edu.png",
       link: "/scholarships",
       raised: 75000,

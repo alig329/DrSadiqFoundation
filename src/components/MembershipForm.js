@@ -16,7 +16,7 @@ const MembershipForm = () => {
       {/* Left Section - Form */}
       <Box
         sx={{
-          width: "50%",
+          width: "70%",
           padding: "40px",
           backgroundColor: "#fff",
           borderRadius: "8px 0 0 8px",

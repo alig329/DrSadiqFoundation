@@ -9,7 +9,7 @@ const projects = [
   },
   {
     title: "Education Support",
-    description: "Every year, we offer 120 scholarships to students in 11 public universities across KPK, Punjab, and Sindh. The universities manage the selection process.",
+    description: "Every year, we offer scholarships to students in 11 public universities across KPK, Punjab, and Sindh. The universities manage the selection process.",
     image: "QMR2.png",
   },
   {

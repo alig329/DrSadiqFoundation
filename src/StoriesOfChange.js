@@ -4,9 +4,9 @@ import { Box, Typography, Button, Grid } from '@mui/material';
 const StoriesOfChange = () => {
     const stories = [
       {
-        image: "/sc3.jpg",
+        image: "/sc4.jpg",
         description:
-          "DSF has offered 120 scholarships per annum to 11 public sector universities of Pakistan, spread over KPK...",
+          "DSF has offered scholarships to public sector universities of Pakistan, spread over KPK...",
         buttonText: "Read More",
         link: "/scholarships"
       },
@@ -81,7 +81,7 @@ const StoriesOfChange = () => {
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    objectFit: "fill",
                   }}
                 />
               </Box>

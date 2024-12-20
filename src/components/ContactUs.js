@@ -371,7 +371,7 @@ const ContactUs = () => {
                 </Typography>
                 <Box sx={{
                     marginTop: "30px",
-                    backgroundColor: "#A46996",
+                    backgroundColor: "#1565c0",
                     padding: "20px",
                     borderRadius: "8px"
                 }}>

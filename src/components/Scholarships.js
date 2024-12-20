@@ -65,7 +65,7 @@ const Scholarships = () => {
         Our Work
       </Typography>
       <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '24px', md: '34px' }, color: '#000000', textAlign: 'justify', padding: '10px 100px' }}>
-      To address these challenges, DSF provides 120 annual scholarships to students from 11 public sector universities spread across KPK, Punjab, and Sindh. Students apply for financial assistance through a standardized form (S-1), which is submitted to their respective university for processing. The Heads or Deans of Faculties review the applications and forward them to DSF with their recommendations, ensuring that only eligible students are considered. <br/>
+      To address these challenges, DSF provides annual scholarships to students from public sector universities spread across KPK, Punjab, and Sindh. Students apply for financial assistance through a standardized form (S-1), which is submitted to their respective university for processing. The Heads or Deans of Faculties review the applications and forward them to DSF with their recommendations, ensuring that only eligible students are considered. <br/>
       Once approved, DSF issues cross cheques in the individual student's name and delivers them to the university management for distribution. This system ensures transparency and accountability in delivering financial aid directly to students. The universities currently benefiting from the DSF Scholarship include:
         </Typography>
       <Box sx={{ flex: 1, mb: { xs: '20px', md: 0 }, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '0 100px' }}>
@@ -126,9 +126,9 @@ const Scholarships = () => {
             fontSize: "18px",
             fontWeight: "500",
             color: "#FFFFFF",
-            backgroundColor: "#027D40",
+            backgroundColor: "#ECA30C",
             borderRadius: "10px",
-            "&:hover": { backgroundColor: "#029D40" },
+            "&:hover": { backgroundColor: "#ECA90D" },
             textAlign: "center",
             animationDuration: "0ms",
             margin: "20px 0px 0px 10px"

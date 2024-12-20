@@ -91,9 +91,9 @@ const FoodProjects = () => {
             fontSize: "18px",
             fontWeight: "500",
             color: "#FFFFFF",
-            backgroundColor: "#027D40",
+            backgroundColor: "#ECA30C",
             borderRadius: "10px",
-            "&:hover": { backgroundColor: "#029D40" },
+            "&:hover": { backgroundColor: "#ECA90D" },
             textAlign: "center",
             animationDuration: "0ms",
             margin: "20px 0px 0px 10px"

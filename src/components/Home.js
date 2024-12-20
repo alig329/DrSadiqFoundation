@@ -89,13 +89,13 @@ const Homepage = () => {
           "We care for those in need, empowering youth and women through education and health awareness. We support vulnerable communities, including widows and orphans, and help create joyful moments, like dignified weddings for orphan girls.",
       },
       {
-        src: "/thnail2.png",
+        src: "/thnail2.jpg",
         alt: "We See",
 
         description: "We build strong communities by understanding and meeting their future needs. Our support goes beyond just financial aid. We are actively providing guidance and counseling to everyone, regardless of their background or status.",
       },
       {
-        src: "/thnail3.png",
+        src: "/bbh3.png",
         alt: "We Serve",
 
         description: "We run a unique program, driven by our team's creative approach and commitment to social needs. We discreetly identify and support those in need, using a thorough verification process to ensure help reaches those who deserve it most.",
@@ -249,7 +249,7 @@ const Homepage = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           paddingLeft: '50px',
-          background: 'linear-gradient(to left, rgba(139, 69, 0, 0.9), rgba(70, 42, 85, 1))'
+          background: 'linear-gradient(to left, rgba(3, 53, 7, 0.9), rgba(70, 42, 85, 1))'
 
         }}
       >
@@ -291,7 +291,7 @@ const Homepage = () => {
             }}>
             <Box
               component="img"
-              src="thnailm.png"
+              src="Capture11.jpg"
               alt="Image 1"
               sx={{
                 width: '100%',
