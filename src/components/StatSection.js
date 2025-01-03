@@ -1,46 +1,57 @@
 // StatSection.js
-import React from 'react';
-import { Box, Grid, Typography, Button } from '@mui/material';
+import React from "react";
+import { Box, Grid, Typography, Button } from "@mui/material";
+import CountUp from "react-countup";
 
 const StatSection = () => {
   const stats = [
-    { number: '4852+', subtitle: 'Scholarships' },
-    { number: '2.2M+', subtitle: 'Beneficiaries' },
-    { number: '939M+', subtitle: 'Financial Assistance' },
-    { number: '5153+', subtitle: 'Families Supported' },
+    { number: 4852, subtitle: "Scholarships" },
+    { number: 2200000, subtitle: "Beneficiaries" },
+    { number: 939000000, subtitle: "Financial Assistance" },
+    { number: 5153, subtitle: "Families Supported" },
   ];
 
   return (
     <Box
       sx={{
-        boxShadow: '0px 10px 25px 0px #21343014',
-        backgroundColor: '#FFFFFF',
-        width: '100%',
-        color: '#588BC6',
-        display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        borderRadius: '10px 0px 0px 0px',
-        padding: '20px',
-        gap: '10px',
+        width: "98%",
+        color: "#588BC6",
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderRadius: "10px 0px 0px 0px",
+        padding: "20px",
+        gap: "10px",
+        margin: "0 auto",
+        marginTop: "20px",
+        backdropFilter: "blur(10px)",
+        border: "1px solid #21343014",
+        boxShadow: "0px 10px 25px 0px #21343014",
+        backgroundColor: "#F1F1F1",
       }}
     >
       {/* Stats Grid */}
-      <Grid container spacing={3} sx={{ flexGrow: 1 }}>
+      <Grid container spacing={1} sx={{ flexGrow: 1 }}>
         {stats.map((stat, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
-            <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ textAlign: "center" }}>
               <Typography
                 variant="h1"
                 sx={{
-                  fontSize: '46px',
-                  fontWeight: 'bold',
-                  position: 'relative',
-                  display: 'inline-block',
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  position: "relative",
+                  display: "inline-block",
                 }}
               >
-                {stat.number}
+                <CountUp
+                  start={0}
+                  end={stat.number}
+                  duration={5}
+                  separator=","
+                  style={{ color: "#588BC6" }}
+                />
                 {/* SVG Underline */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +60,10 @@ const StatSection = () => {
                   viewBox="0 0 60 4"
                   fill="none"
                   style={{
-                    position: 'absolute',
-                    bottom: '0px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
+                    position: "absolute",
+                    bottom: "0px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
                   }}
                 >
                   <rect
@@ -69,9 +80,9 @@ const StatSection = () => {
               <Typography
                 variant="subtitle1"
                 sx={{
-                  fontSize: '16px',
-                  fontWeight: 'bold',
-                  color: '#213430',
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  color: "#213430",
                 }}
               >
                 {stat.subtitle}
@@ -84,37 +95,37 @@ const StatSection = () => {
       {/* Achievements Button Section */}
       <Box
         sx={{
-          position: 'relative',
-          width: { xs: '100%', md: '310px' },
-          height: { xs: 'auto', md: '204px' },
-          borderRadius: '0px 10px 10px 0px',
-          backgroundColor: '#588BC6',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          padding: '15px',
-          gap: '10px',
+          position: "relative",
+          width: { xs: "100%", md: "310px" },
+          height: { xs: "auto", md: "150px" },
+          borderRadius: "0px 10px 10px 0px",
+          backgroundColor: "#588BC6",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          padding: "5px",
+          gap: "10px",
         }}
       >
         <Typography
           sx={{
-            fontFamily: 'Poppins',
-            fontSize: '28px',
-            fontWeight: '600',
-            lineHeight: '20px',
-            color: '#FFFFFF',
+            fontFamily: "Poppins",
+            fontSize: "24px",
+            fontWeight: "600",
+            lineHeight: "20px",
+            color: "#FFFFFF",
           }}
         >
           Achievements
         </Typography>
         <Typography
           sx={{
-            fontFamily: 'Poppins',
-            fontSize: '28px',
-            fontWeight: '600',
-            lineHeight: '20px',
-            color: '#FFFFFF',
+            fontFamily: "Poppins",
+            fontSize: "24px",
+            fontWeight: "600",
+            lineHeight: "20px",
+            color: "#FFFFFF",
           }}
         >
           in Numbers
@@ -122,26 +133,22 @@ const StatSection = () => {
         {/* Become a Member Button */}
         <Button
           sx={{
-            position: 'absolute',
-            bottom: '30px',
-            left: '5px',
-            width: '150px',
-            height: '34px',
-            backgroundColor: 'transparent',
-            color: '#FFFFFF',
-            fontSize: '18px',
-            fontWeight: 'bold',
-            borderRadius: '5px',
-            display: 'flex',
-            alignItems: 'left',
-            justifyContent: 'space-between',
-            padding: '0 10px',
-            textTransform: 'none',
-            '&:hover': {
-              textDecoration: 'underline', // Apply hover effect to text
+            position: "relative",
+            backgroundColor: "transparent",
+            color: "#FFFFFF",
+            fontSize: "18px",
+            fontWeight: "bold",
+            borderRadius: "5px",
+            display: "flex",
+            alignItems: "left",
+            justifyContent: "space-between",
+            padding: "0 10px",
+            textTransform: "none",
+            "&:hover": {
+              textDecoration: "underline", // Apply hover effect to text
             },
           }}
-          onClick={() => window.location.href = "member"}
+          onClick={() => (window.location.href = "member")}
         >
           Become a Member
           <svg
@@ -158,7 +165,6 @@ const StatSection = () => {
               strokeLinejoin="round"
               d="M9 5l7 7-7 7"
             />
-            
           </svg>
         </Button>
       </Box>

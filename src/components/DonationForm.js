@@ -1,14 +1,46 @@
-import React, { useState } from "react";
-import { Box, Button, TextField, Typography, LinearProgress, Grid, MenuItem, Select, InputLabel, FormControl,} from "@mui/material";
+import React, { useState, useEffect } from "react";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  LinearProgress,
+  Grid,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
 
 const DonationForm = () => {
   const [amount, setAmount] = useState(10);
   const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", field: "Education" });
-  const [collected, setCollected] = useState(35); // Progress percentage
-  const totalRaised = 14825.15; // Total raised
+  const [collected, setCollected] = useState(1); // Initial percentage
+  const [totalRaised, setTotalRaised] = useState(7114); // Initial raised amount
   const goal = 20000; // Goal amount
-
   const presetAmounts = [10, 25, 50, 100, 200, 250];
+
+  useEffect(() => {
+    // Gradually increase collected percentage and total raised
+    const interval = setInterval(() => {
+      setCollected((prevCollected) => {
+        if (prevCollected >= 55.15) {
+          clearInterval(interval); // Stop the interval when 100% is reached
+          return prevCollected;
+        }
+        return Math.min(prevCollected + 1, 100); // Increment by 1
+      });
+      setTotalRaised((prevRaised) => {
+        const increment = (goal - 14825.15) / 65; // Calculate increment based on the difference
+        if (prevRaised >= goal) {
+          clearInterval(interval); // Stop when the goal is reached
+          return prevRaised;
+        }
+        return Math.min(prevRaised + increment, goal);
+      });
+    }, 100); // Update every 100ms
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
 
   const handleAmountClick = (value) => {
     setAmount(value);
@@ -22,7 +54,6 @@ const DonationForm = () => {
     e.preventDefault();
     console.log({ ...formData, amount }); // to add API call logic here
   };
-  console.log(setCollected);
 
   return (
     <Box
@@ -66,10 +97,12 @@ const DonationForm = () => {
               borderRadius: 5,
               backgroundColor: "#e0e0e0",
               "& .MuiLinearProgress-bar": { backgroundColor: "#f9a825" },
-            }}/>
+            }}
+          />
           <Typography
             variant="caption"
-            sx={{ display: "block", mt: 1, color: "#4caf50", textAlign: "right" }}>
+            sx={{ display: "block", mt: 1, color: "#4caf50", textAlign: "right" }}
+          >
             ${totalRaised.toLocaleString()} of ${goal.toLocaleString()} raised
           </Typography>
         </Box>
@@ -90,7 +123,8 @@ const DonationForm = () => {
                     backgroundColor: "#f9a825",
                     color: "#fff",
                   },
-                }}>
+                }}
+              >
                 ${value}
               </Button>
             </Grid>
@@ -102,7 +136,8 @@ const DonationForm = () => {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               fullWidth
-              sx={{ backgroundColor: "#f5f5f5" }}/>
+              sx={{ backgroundColor: "#f5f5f5" }}
+            />
           </Grid>
         </Grid>
 
@@ -118,7 +153,8 @@ const DonationForm = () => {
               value={formData.firstName}
               onChange={handleChange}
               fullWidth
-              required/>
+              required
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -127,7 +163,8 @@ const DonationForm = () => {
               value={formData.lastName}
               onChange={handleChange}
               fullWidth
-              required/>
+              required
+            />
           </Grid>
           <Grid item xs={12}>
             <TextField
@@ -137,17 +174,18 @@ const DonationForm = () => {
               value={formData.email}
               onChange={handleChange}
               fullWidth
-              required/>
+              required
+            />
           </Grid>
           <Grid item xs={12}>
-          <InputLabel>Field of Donation</InputLabel>
+            <InputLabel>Field of Donation</InputLabel>
             <FormControl fullWidth>
-              
               <Select
                 name="field"
                 value={formData.field}
                 onChange={handleChange}
-                sx={{ backgroundColor: "#f5f5f5" }}>
+                sx={{ backgroundColor: "#f5f5f5" }}
+              >
                 <MenuItem value="Education">Education</MenuItem>
                 <MenuItem value="Health">Health</MenuItem>
                 <MenuItem value="Environment">Food</MenuItem>
@@ -179,7 +217,8 @@ const DonationForm = () => {
               "&:hover": {
                 backgroundColor: "#e6891b",
               },
-            }}>
+            }}
+          >
             Donate Now
           </Button>
         </Box>

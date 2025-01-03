@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Card, CardContent } from '@mui/material';
+import { Fade, Slide } from '@mui/material';
 
 const designations = [
   { name: 'Mr. Salman Sadiq', title: 'Chairman/Trustee' },
@@ -13,11 +14,13 @@ const designations = [
 
 const CaregiversSection = () => {
   const [currentDesignation, setCurrentDesignation] = useState(0);
+  const [direction, setDirection] = useState('left');
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setDirection('left');
       setCurrentDesignation((prev) => (prev + 1) % designations.length);
-    }, 3000); // Change designation every 3 seconds
+    }, 4000); // Change designation every 4 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -25,26 +28,22 @@ const CaregiversSection = () => {
     <Box
       sx={{
         width: '100%',
-        height: { xs: 'auto', md: '350px' }, // Responsive height
-        background: '#027D40',
-        margin: '40px auto',
-        padding: { xs: '20px', md: '0' },
+        minHeight: '400px',
+        background: 'linear-gradient(to right, #006400, #2e8b57)',
+        padding: { xs: '30px 20px', md: '50px 40px' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        color: "rgba(255, 255, 255, 0.8)",
         textAlign: 'center',
-        color: '#FFFFFF',
-        animation: 'fadeIn 1s', // Added animation
       }}
     >
       <Typography
         sx={{
-          width: { xs: '100%', md: '100%' },
           fontFamily: 'Poppins',
-          fontSize: { xs: '36px', md: '50px' }, // Responsive font size
-          fontWeight: '600',
-          lineHeight: '46px',
+          fontSize: { xs: '22px', md: '36px' },
+          fontWeight: '700',
           marginBottom: '20px',
         }}
       >
@@ -52,41 +51,75 @@ const CaregiversSection = () => {
       </Typography>
       <Typography
         sx={{
-          width: { xs: '100%', md: '100%' },
           fontFamily: 'Poppins',
-          fontSize: { xs: '24px', md: '32px' }, // Responsive font size
-          fontWeight: '300',
-          lineHeight: '60px',
+          fontSize: { xs: '18px', md: '24px' },
+          fontWeight: '500',
           textDecoration: 'underline',
-          marginBottom: '20px',
+          marginBottom: '30px',
         }}
       >
         Board of Trustees Dr. Sadiq Foundation
       </Typography>
-      <Box>
-        <Typography
+      <Slide direction={direction} in={true} timeout={600}>
+        <Card
           sx={{
-            width: { xs: '100%', md: '100%' },
-            fontFamily: 'Poppins',
-            fontSize: { xs: '28px', md: '30px' }, // Responsive font size
-            fontWeight: '600',
-            marginBottom: '10px',
-            animation: 'fadeIn 1s', // Add animation
+            width: { xs: '100%', sm: '60%', md: '40%' },
+            padding: '20px',
+            background: 'rgba(255, 255, 255, 0.8)',
+            borderRadius: '12px',
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+            color: "rgba(255, 255, 255, 0.8)",
           }}
         >
-          {designations[currentDesignation].name}
-        </Typography>
-        <Typography
-          sx={{
-            width: { xs: '100%', md: '100%' },
-            fontFamily: 'Poppins',
-            fontSize: { xs: '18px', md: '24px' }, // Responsive font size
-            fontWeight: '500',
-            animation: 'fadeIn 1s', // Add animation
-          }}
-        >
-          {designations[currentDesignation].title}
-        </Typography>
+          <CardContent>
+            <Fade in={true} timeout={600}>
+              <Typography
+                sx={{
+                  fontFamily: 'Poppins',
+                  fontSize: { xs: '20px', md: '28px' },
+                  fontWeight: '600',
+                  color: '#006400',
+                }}
+              >
+                {designations[currentDesignation].name}
+              </Typography>
+            </Fade>
+            <Fade in={true} timeout={800}>
+              <Typography
+                sx={{
+                  fontFamily: 'Poppins',
+                  fontSize: { xs: '16px', md: '20px' },
+                  fontWeight: '500',
+                  color: '#555555',
+                  marginTop: '10px',
+                }}
+              >
+                {designations[currentDesignation].title}
+              </Typography>
+            </Fade>
+          </CardContent>
+        </Card>
+      </Slide>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '20px',
+        }}
+      >
+        {designations.map((_, index) => (
+          <Box
+            key={index}
+            sx={{
+              width: '12px',
+              height: '12px',
+              borderRadius: '50%',
+              backgroundColor: index === currentDesignation ? '#006400' : '#CCCCCC',
+              margin: '0 5px',
+              transition: 'background-color 0.3s ease-in-out',
+            }}
+          ></Box>
+        ))}
       </Box>
     </Box>
   );

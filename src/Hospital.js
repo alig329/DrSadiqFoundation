@@ -22,7 +22,7 @@ const Hospital = () => {
                     flexDirection: 'column', 
                     alignItems: 'center'  
                     }}>
-                    <img src='/hosp11.jpg'
+                    <img src='/hosp11.png'
                      alt="DSF Hospital"
                       style={{ 
                         width: '90%', 

@@ -1,126 +1,124 @@
 import React from "react";
-import { Box, Typography, Button, Grid } from '@mui/material';
+import { Box, Typography, Tooltip, Grid } from "@mui/material";
 
 const StoriesOfChange = () => {
-    const stories = [
-      {
-        image: "/sc4.jpg",
-        description:
-          "DSF has offered scholarships to public sector universities of Pakistan, spread over KPK...",
-        buttonText: "Read More",
-        link: "/scholarships"
-      },
-      {
-        image: "/sc2.jpg",
-        description:
-          "Transforming lives through various welfare projects and initiatives focused on education, health, and skill development.",
-        buttonText: "Read More",
-        link: "/foodprojects"
-      },
-      {
-        image: "/sc1.jpg",
-        description:
-          "Making a meaningful difference in the community by supporting underprivileged families and individuals.",
-        buttonText: "Read More",
-        link: "/hospital"
-      },
-    ];
-  
-    return (
-      <Box
+  const stories = [
+    {
+      image: "/sc4.jpg",
+      description: "DSF has offered scholarships to public sector universities of Pakistan, spread over KPK, Punjab, Sindh and...",
+      link: "/scholarships",
+    },
+    {
+      image: "/sc2.jpg",
+      description: "Transforming lives through various welfare projects and initiatives focused on education, health, and skill development.",
+      link: "/foodprojects",
+    },
+    {
+      image: "/sc1.jpg",
+      description: "DSF has been providing free medical care to the underprivileged communities of Pakistan through its...",
+      link: "/hospital",
+    },
+    {
+      image: "/sc3.jpg",
+      description: "Making a meaningful difference in the community by supporting underprivileged families and individuals.",
+      link: "/medicalcamps",
+    },
+  ];
+
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        padding: "20px 0",
+        textAlign: "center",
+        paddingBottom: "50px",
+        backgroundColor: "#F1F1F1",
+      }}
+    >
+      {/* Title Section */}
+      <Typography
         sx={{
-          width: "100%",
-          padding: "20px 0",
-          textAlign: "center",
+          fontFamily: "Poppins",
+          fontSize: { xs: "18px", md: "34px" },
+          fontWeight: "700",
+          lineHeight: "30px",
+          color: "rgba(0, 0, 0, 0.7)",
+          marginBottom: "20px",
         }}
       >
-        <Typography
-          sx={{
-            fontFamily: "Poppins",
-            fontSize: { xs: "32px", md: "50px" },
-            fontWeight: "600",
-            lineHeight: "60px",
-            color: "#000000",
-            marginBottom: "20px",
-          }}
-        >
-          Stories of Change
-        </Typography>
-        <Typography
-          sx={{
-            fontFamily: "Poppins",
-            fontSize: "18px",
-            fontWeight: "500",
-            lineHeight: "1.5",
-            color: "#000000",
-            margin: "0 auto 40px",
-            maxWidth: "800px",
-          }}
-        >
-          Read here how Dr. Sadiq Foundation is transforming lives and making a
-          meaningful difference in the community.
-        </Typography>
-        <Grid container spacing={4}>
-          {stories.map((story, index) => (
-            <Grid item xs={12} sm={4} md={4} key={index}>
+        Stories of Change
+      </Typography>
+      <Typography
+        sx={{
+          fontFamily: "Poppins",
+          fontSize: "18px",
+          fontWeight: "500",
+          lineHeight: "1.5",
+          color: "rgba(0, 0, 0, 0.7)",
+          margin: "0 auto 30px",
+          maxWidth: "800px",
+        }}
+      >
+        Read here how Dr. Sadiq Foundation is transforming lives and making a meaningful difference in the community.
+      </Typography>
+
+      {/* Stories Grid */}
+      <Grid container spacing={2}>
+        {stories.map((story, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Tooltip title="Read More" arrow>
               <Box
                 sx={{
-                  width: "100%",
-                  height: "300px",
                   display: "flex",
-                  justifyContent: "center",
+                  flexDirection: "column",
                   alignItems: "center",
+                  justifyContent: "flex-start",
+                  padding: "16px",
+                  borderRadius: "12px",
+                  backgroundColor: "#FFFFFF",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                   overflow: "hidden",
-                  borderRadius: "8px",
-                  marginBottom: "16px",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-10px)",
+                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                    cursor: "pointer",
+                  },
                 }}
+                onClick={() => (window.location.href = story.link)}
               >
-                <img
+                {/* Image */}
+                <Box
+                  component="img"
                   src={story.image}
                   alt="Story"
-                  style={{
+                  sx={{
                     width: "100%",
-                    height: "100%",
-                    objectFit: "fill",
+                    height: "150px",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    marginBottom: "12px",
                   }}
                 />
-              </Box>
-              <Typography
-                sx={{
-                  fontFamily: "Poppins",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  lineHeight: "1.6",
-                  textAlign: "center",
-                  color: "#1E2022",
-                  marginBottom: "16px",
-                }}
-              >
-                {story.description}
-              </Typography>
-              <Box sx={{ textAlign: "center" }}>
-                <Button
+                {/* Description */}
+                <Typography
                   sx={{
-                    padding: "8px 16px",
                     fontFamily: "Poppins",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     fontWeight: "500",
-                    color: "#FFFFFF",
-                    backgroundColor: "#588BC6",
-                    "&:hover": {
-                      backgroundColor: "#457BA1",
-                    },
+                    textAlign: "center",
+                    color: "rgba(0, 0, 0, 0.7)",
                   }}
-                  onClick={() => window.location.href = story.link}
                 >
-                  {story.buttonText}
-                </Button>
+                  {story.description}
+                </Typography>
               </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    );
-  };
+            </Tooltip>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
 
-  export default StoriesOfChange;
+export default StoriesOfChange;

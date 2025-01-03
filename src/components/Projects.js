@@ -39,7 +39,7 @@ const projectsData = {
       },
       {
         title: "Dispensaries",
-        description: "Massa sed elementum tempus risus pretium quam. Bibendum neque egestas congue quisque egestas diam.",
+        description: "We operate two dispensaries in the Chakri Region, providing healthcare services to people in the region.",
         image: "/disp2.png",
         link: "/dispensaries",
         raised: 75000,

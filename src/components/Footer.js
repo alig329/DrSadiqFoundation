@@ -10,8 +10,8 @@ const Footer = () => {
       <Box
         sx={{
           width: '100%',
-          backgroundColor: '#027D40',
-          color: '#FFFFFF',
+          backgroundColor: '#333333',
+          color: "rgba(255, 255, 255, 0.8)",
           padding: { xs: 0, md: 0 },
           display: 'flex',
           flexDirection: 'column',
@@ -25,7 +25,7 @@ const Footer = () => {
             flexDirection: { xs: 'column', md: 'row' },
             mt: '20px',
             justifyContent: 'space-around',
-            gap: { xs: 4, md: 6 },
+            gap: { xs: 1, md: 2 },
           }}
         >
           {/* Logo, Mission, and Social Connects */}
@@ -35,8 +35,8 @@ const Footer = () => {
               flexDirection: 'column',
               alignItems: { xs: 'center', md: 'flex-start' },
               flex: '1',
-              gap: 2,
-              marginLeft: '30px'
+              gap: 1,
+              marginLeft: '50px',
             }}
           >
             <img
@@ -169,84 +169,84 @@ const Footer = () => {
           >
             <Typography
               variant="h6"
-              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: 'bold' }}
+              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: 'bold', textAlign: 'center' }}
             >
               Contact Info
             </Typography>
 
-            <Box sx={{ marginTop: "20px" }}>
-                        {/* Phone Section */}
-                        <Box
-                            sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "10px",
-                                marginBottom: "20px",
+            <Box sx={{ marginTop: "2px" }}>
+              {/* Phone Section */}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  marginBottom: "20px",
 
-                            }}
-                        >
-                            <Box>
-                                <Phone sx={{
-                                    fontSize: 20,
-                                    color: "#fff"
-                                }} />
-                            </Box>
+                }}
+              >
+                <Box>
+                  <Phone sx={{
+                    fontSize: 20,
+                    color: "#fff"
+                  }} />
+                </Box>
 
-                            <Typography variant="body1">
-                                <span  >Call Us <br /></span>
-                                051-111 500 505 <br/>
-                                 051-4927546
-                            </Typography>
-                        </Box>
+                <Typography variant="body1">
+                  <span  >Call Us <br /></span>
+                  051-111 500 505 |
+                  051-4927546
+                </Typography>
+              </Box>
 
-                        {/* Email Section */}
-                        <Box
-                            sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "10px",
-                                marginBottom: "20px",
-                            }}
-                        >
-                            <Box>
-                                <Email sx={{
-                                    fontSize: 20,
-                                    color: "#fff"
-                                }} />
-                            </Box>
-                            <Typography variant="body1">
-                                <span  >Mail Us <br /></span>
-                                 chairman@drsf.org  <br/> admin@drsf.org
-                            </Typography>
-                        </Box>
+              {/* Email Section */}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  marginBottom: "20px",
+                }}
+              >
+                <Box>
+                  <Email sx={{
+                    fontSize: 20,
+                    color: "#fff"
+                  }} />
+                </Box>
+                <Typography variant="body1">
+                  <span  >Mail Us <br /></span>
+                  chairman@drsf.org | admin@drsf.org
+                </Typography>
+              </Box>
 
-                        {/* Location Section */}
-                        <Box
-                            sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: "10px",
-                                marginBottom: "20px",
-                            }}
-                        >
-                            <Box>
-                                <LocationOn sx={{
-                                    fontSize: 20,
-                                    color: "#fff"
-                                }} />
-                            </Box>
-                            <Typography variant="body1">
-                                <span  >Visit Us <br /></span>
-                                33-C,
-                                Iran Road,
-                                Near Chandni Chowk,
-                                Satellite Town,
-                                Rawalpindi,
+              {/* Location Section */}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  marginBottom: "20px",
+                }}
+              >
+                <Box>
+                  <LocationOn sx={{
+                    fontSize: 20,
+                    color: "#fff"
+                  }} />
+                </Box>
+                <Typography variant="body1">
+                  <span  >Visit Us <br /></span>
+                  33-C,
+                  Iran Road,
+                  Near Chandni Chowk,
+                  Satellite Town,
+                  Rawalpindi,
 
-                                Pakistan
-                            </Typography>
-                        </Box>
-                    </Box>
+                  Pakistan
+                </Typography>
+              </Box>
+            </Box>
           </Box>
           <Box
             sx={{
@@ -280,6 +280,9 @@ const Footer = () => {
                   borderRadius: '5px 0 0 0',
                   backgroundColor: '#027D40',
                   borderColor: 'white',
+                  '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'white',
+                  },
                 }}
                 placeholder="Enter your email"
                 variant="outlined"
@@ -301,22 +304,25 @@ const Footer = () => {
           </Box>
         </Box>
 
-        <Box sx={{ 
-          position: 'relative', 
-          bottom: '10px', 
-          right: '-95%', 
-          }} > 
+        <Box sx={{
+          position: 'fixed',
+          bottom: '10px',
+          right: '10px',
+          zIndex: 1000
+        }} >
           <IconButton color="primary"
-           href="https://wa.me/+923307000718" target="_blank" 
-           sx={{ 
-            backgroundColor: 'whitesmoke',
-             color: '#00ff55',
+            href="https://wa.me/+923307000718" target="_blank"
+            sx={{
+              backgroundColor: 'whitesmoke',
+              color: '#00ff55',
               boxShadow: '10px 10px 6px rgba(0, 0, 0, 0.3)'
-               }} >
-                 <WhatsAppIcon style={{
-                   fontSize: 40 }} />
-                    </IconButton>
-                     </Box>
+            }} >
+            <WhatsAppIcon style={{
+              fontSize: 40
+            }} />
+          </IconButton>
+        </Box>
+
 
       </Box>
 
@@ -324,7 +330,7 @@ const Footer = () => {
       <Box
         sx={{
           textAlign: 'center',
-          height: '50px',
+          height: '20px',
           width: '100%',
           background: '#FFD15C',
           display: 'flex',
@@ -334,7 +340,7 @@ const Footer = () => {
       >
         <Typography
           variant="body2"
-          sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: '500' }}
+          sx={{ fontFamily: 'Poppins', fontSize: '12px', fontWeight: '500' }}
         >
           Dr. Sadiq Foundation&copy; 2024 All Rights Reserved.
         </Typography>

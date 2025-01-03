@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Box, Typography, Button, Grid, useTheme, useMediaQuery } from '@mui/material';
+import React, { useEffect, useState } from "react";
+import { Box, Typography, Button, Grid } from "@mui/material";
 
 const projects = [
   {
@@ -21,191 +21,175 @@ const projects = [
     title: "Social Empowerment",
     description: "We support women's empowerment by offering vocational education in rural areas of Rawalpindi district. We partner with local institutions to promote economic sustainability.",
     image: "QMR4.png",
-  }
+  },
 ];
-
 const ProjectsWithPurpose = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  const scrollRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  // Auto-scroll effect
   useEffect(() => {
-    const scroll = () => {
-      const current = scrollRef.current;
-      if (current) {
-        current.scrollLeft += current.offsetWidth;
-        if (current.scrollLeft >= current.scrollWidth - current.offsetWidth) {
-          current.scrollLeft = 0;
-        }
-      }
-    };
-    const interval = setInterval(scroll, 5000); // Adjust the interval as needed
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    }, 5000); // Change card every 5 seconds
     return () => clearInterval(interval);
   }, []);
+
+  const handleScrollForward = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const handleScrollBack = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <Box
       sx={{
         width: "100%",
-        padding: "40px 0px",
         background: "#588BC6",
         color: "#FFFFFF",
+        overflow: "hidden",
+        padding: "20px",
       }}
     >
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <Typography
             sx={{
-              width: "100%",
               fontFamily: "Poppins",
-              fontSize: { xs: "32px", md: "48px" },
+              fontSize: { xs: "24px", md: "34px" },
               fontWeight: "500",
-              lineHeight: "46px",
+              lineHeight: "44px",
               textAlign: "left",
-              padding: "100px 0px 0px 20px",
+              padding: "60px 20px 0px 20px",
+              color: "rgba(255, 255, 255, 0.8)", // Mild and transparent color
             }}
           >
             Projects with a Purpose!
           </Typography>
           <Typography
             sx={{
-              width: "100%",
               fontFamily: "Poppins",
               fontSize: { xs: "16px", md: "18px" },
-              fontWeight: "100",
-              lineHeight: "39px",
+              fontWeight: "300",
+              lineHeight: "30px",
               textAlign: "left",
-              marginTop: "20px",
-              padding: "0px 0px 0px 20px",
+              marginTop: "10px",
+              padding: "0px 20px",
+              color: "rgba(255, 255, 255, 0.7)", // Mild and transparent color
             }}
           >
-            Our Foundation has a history of supporting those in need with kindness and care. We are making a positive difference, one compassionate project at a time.
+            Our Foundation has a history of supporting those in need with
+            kindness and care. We are making a positive difference, one
+            compassionate project at a time.
           </Typography>
           <Button
             sx={{
-              width: "150px",
+              width: "140px",
               fontFamily: "Poppins",
-              fontSize: "18px",
-              fontWeight: "500",
+              fontSize: "14px",
+              fontWeight: "700",
               color: "#FFFFFF",
               backgroundColor: "#ECA30C",
-              borderRadius: "10px",
+              borderRadius: "8px",
+              margin: "20px 0px 0px 20px",
               "&:hover": { backgroundColor: "#FCA90D" },
-              textAlign: "center",
-              animationDuration: "0ms",
-              margin: "20px 0px 0px 10px"
             }}
-            onClick={() => window.location.href = "donate"}
+            onClick={() => (window.location.href = "donate")}
           >
             Donate Now
           </Button>
         </Grid>
         <Grid item xs={12} md={8}>
           <Box
-            ref={scrollRef}
             sx={{
-              overflowX: "hidden",
-              scrollSnapType: "x mandatory",
               display: "flex",
-              background: "#497CB7",
-              padding: "20px"
+              gap: "20px",
+              padding: "20px",
+              overflowX: "scroll",
+              scrollSnapType: "x mandatory",
+              "&::-webkit-scrollbar": { display: "none" }, // Hide scrollbar
+              position: "relative",
             }}
           >
             {projects.map((project, index) => (
               <Box
                 key={index}
                 sx={{
-                  flex: "0 0 100%",
+                  display: activeIndex === index ? "block" : "none",
+                  flex: "80%", 
                   scrollSnapAlign: "center",
-                  display: "flex",
-                  flexDirection: { xs: "column", md: "row" },
-                  alignItems: "center",
-                  margin: "20px 10px",
-                  padding: "16px",
-                  boxSizing: "border-box",
+                  background: "#FFFFFF",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                  transition: "transform 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                  },
                 }}
               >
-                {isSmallScreen ? (
-                  <>
-                    <Box
-                      sx={{
-                        flex: "1",
-                        background: `url(${project.image}) no-repeat center center`,
-                        backgroundSize: "cover",
-                        height: "100%",
-                        width: "100%",
-                        maxHeight: { xs: "200px", md: "300px" },
-                        maxWidth: { xs: "100%", md: "50%" },
-                        borderRadius: "20px",
-                        marginBottom: "16px",
-                      }}
-                    />
-                    <Box sx={{ flex: "1", textAlign: "left" }}>
-                      <Typography
-                        sx={{
-                          fontFamily: "Poppins",
-                          fontSize: { xs: "24px", md: "34px" },
-                          fontWeight: "300",
-                          lineHeight: "60px",
-                          marginBottom: "10px",
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        {project.title}
-                      </Typography>
-                      <Typography
-                        sx={{
-                          fontFamily: "Poppins",
-                          fontSize: { xs: "14px", md: "18px" },
-                          fontWeight: "500",
-                          lineHeight: "39px",
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        {project.description}
-                      </Typography>
-                    </Box>
-                  </>
-                ) : (
-                  <>
-                    <Box sx={{ flex: "1", textAlign: "left", marginRight: { md: "16px" } }}>
-                      <Typography
-                        sx={{
-                          fontFamily: "Poppins",
-                          fontSize: { xs: "24px", md: "48px" },
-                          fontWeight: "500",
-                          lineHeight: "44px",
-                          marginBottom: "10px",
-                          marginTop:'40px',
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        {project.title}
-                      </Typography>
-                      <Typography
-                        sx={{
-                          fontFamily: "Poppins",
-                          fontSize: { xs: "14px", md: "18px" },
-                          fontWeight: "500",
-                          lineHeight: "39px",
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        {project.description}
-                      </Typography>
-                    </Box>
-                    <Box
-                      sx={{
-                        flex: "1",
-                        background: `url(${project.image}) no-repeat center center`,
-                        backgroundSize: "cover",
-                        height: { xs: "200px", md: "300px" },
-                        width: "100%",
-                        borderRadius: "20px",
-                      }}
-                    />
-                  </>
-                )}
+                <Box
+                  sx={{
+                    background: `url(${project.image}) center center / cover no-repeat`,
+                    width: "100%",
+                    height: "250px",
+                  }}
+                />
+                <Box sx={{ padding: "16px", textAlign: "left" }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Poppins",
+                      fontSize: { xs: "20px", md: "24px" },
+                      fontWeight: "600",
+                      lineHeight: "30px",
+                      marginBottom: "8px",
+                      color: "rgba(51, 51, 51, 0.8)", // Mild and transparent color
+                    }}
+                  >
+                    {project.title}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: "Poppins",
+                      fontSize: { xs: "14px", md: "16px" },
+                      fontWeight: "400",
+                      lineHeight: "24px",
+                      color: "rgba(85, 85, 85, 0.7)", // Mild and transparent color
+                    }}
+                  >
+                    {project.description}
+                  </Typography>
+                  <Button
+                    sx={{
+                      position: "absolute",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      zIndex: 1,
+                      backgroundColor: "#CCCCCC",
+                      "&:hover": { backgroundColor: "#FCA90D" },
+                    }}
+                    onClick={handleScrollBack}
+                  >
+                    {"<"}
+                  </Button>
+                  <Button
+                    sx={{
+                      position: "absolute",
+                      top: "50%",
+                      right: "10px",
+                      transform: "translateY(-50%)",
+                      zIndex: 1,
+                      backgroundColor: "#CCCCCC",
+                      "&:hover": { backgroundColor: "#FCA90D" },
+                    }}
+                    onClick={handleScrollForward}
+                  >
+                    {">"}
+                  </Button>
+                </Box>
               </Box>
             ))}
           </Box>
