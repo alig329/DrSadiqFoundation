@@ -8,16 +8,16 @@ import CollaborationSection from './CollaborationSection';
 import ProjectsWithPurpose from './ProjectsPurpose';
 import BelovedSection from './BelovedSection';
 import StatSection from './StatSection';
-import { keyframes } from '@mui/system'; 
+import { keyframes } from '@mui/system';
 
 const slideUp = keyframes`
  0% { 
  transform: translateY(-100%);
-  opacity: 0;
+ opacity  : 0;
    }
    100% { 
-   transform: translateY(0); 
-   opacity: 1;
+   transform: translateY(0);
+   opacity  : 1;
     } 
    `;
 
@@ -32,14 +32,14 @@ const Homepage = () => {
     ];
 
     const [currentLine, setCurrentLine] = useState(0);
-    const [isFadingIn, setIsFadingIn] = useState(true);
+    const [isFadingIn, setIsFadingIn]   = useState(true);
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setIsFadingIn(true); // Start with fade-in
-        setTimeout(() => setIsFadingIn(false), 3000); // Then fade-out
+        setIsFadingIn(true);                              // Start with fade-in
+        setTimeout   (() => setIsFadingIn(false), 3000);  // Then fade-out
 
-        // Move to the next line or loop back to the start
+          // Move to the next line or loop back to the start
         setTimeout(() => setCurrentLine((prev) => (prev + 1) % textLines.length), 3000);
       }, 4000);
 
@@ -49,35 +49,35 @@ const Homepage = () => {
     return (
       <Box
         sx={{
-          height: '60vh',
-          backgroundImage: 'url("/banner2.png")',
-          backgroundSize: 'cover',
+          height            : '60vh',
+          backgroundImage   : 'url("/banner2.png")',
+          backgroundSize    : 'cover',
           backgroundPosition: 'center',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: '#fff',
-          textAlign: 'center',
+          display           : 'flex',
+          justifyContent    : 'center',
+          alignItems        : 'center',
+          color             : '#fff',
+          textAlign         : 'center',
         }}
       >
         <Box
           sx={{
-            position: "absolute",
-            top: "80%",
-            left: "50%",
+            position : "absolute",
+            top      : "80%",
+            left     : "50%",
             transform: "translate(-50%, -50%)",
             textAlign: "center",
           }}
         >
-          <Typography variant="h4" sx={{ mb: 2, fontWeight: "bold" }}>
+          <Typography variant = "h4" sx = {{ mb: 2, fontWeight: "bold" }}>
             Compassion drives our Multiple Welfare Projects
           </Typography>
           <Typography
-            key={currentLine}
-            sx={{
-              opacity: isFadingIn ? 1 : 0,
-              transition: "opacity 1s 1s ease-in-out", // Smooth fade-in and fade-out
-              mb: 1,
+            key = {currentLine}
+            sx  = {{
+              opacity   : isFadingIn ? 1             : 0,
+              transition: "opacity 1s 1s ease-in-out",     // Smooth fade-in and fade-out
+              mb        : 1,
             }}
           >
             {textLines[currentLine]}
@@ -87,134 +87,191 @@ const Homepage = () => {
     );
   };
 
-  const ThreeThumbnails = () => { 
-    const images = [ 
-      { 
-        src: "/thnail2.jpg", 
-        alt: "WE SEE!", 
+  const ThreeThumbnails = () => {
+    const images = [
+      {
+        src        : "/thnail2.jpg",
+        alt        : "WE SEE!",
         description: "We build strong communities by understanding and meeting their future needs. Our support goes beyond just financial aid. We are actively providing guidance and counseling to everyone, regardless of their background or status.",
-       }, 
-       { 
-        src: "/QMR2.png", 
-        alt: "WE CARE!", 
+      },
+      {
+        src        : "/QMR2.png",
+        alt        : "WE CARE!",
         description: "We care for those in need, empowering youth and women through education and health awareness. We support vulnerable communities, including widows and orphans, and help create joyful moments, like dignified weddings for orphan girls.",
-       },
-        { 
-          src: "/bbh3.png",
-           alt: "WE SERVE!", 
-           description: "We run a unique program, driven by our team's creative approach and commitment to social needs. We support those in need, using a thorough verification process to ensure help reaches those who deserve it most.",
-           },
-           ]; 
+      },
+      {
+        src        : "/bbh3.png",
+        alt        : "WE SERVE!",
+        description: "We run a unique program, driven by our team's creative approach and commitment to social needs. We support those in need, using a thorough verification process to ensure help reaches those who deserve it most.",
+      },
+    ];
 
-  const overlayStyles = [ {
-     backgroundColor: "rgba(0, 128, 0, 0.6)" }, 
-     { backgroundColor: "rgba(0, 128, 0, 0.6)" }, 
-     { backgroundColor: "rgba(0, 128, 0, 0.6)" },
-     ]; 
-  return ( 
-  <Container sx={{
-     backgroundColor: "#f9f9f9", py: 0 }}> 
-     <Grid container spacing={0}> 
-      {images.map((image, index) => ( 
-        <Grid item xs={12} sm={6} md={4} key={index}> 
-        <Box sx={{ position: "relative", height: "300px", overflow: "hidden", borderRadius: "0px", 
-        animation: `${slideUp} 1s ${index * 0.2}s ease-in-out forwards`, }} > 
-       <Box component="img" src={image.src} alt={image.alt} sx={{ width: "98%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease-in-out", "&:hover": { transform: "scale(1.05)" }, }} /> <Box sx={{ position: "absolute", top: 0, left: 0, width: "90%", height: "100%", ...overlayStyles[index], display: "flex", flexDirection: "column", justifyContent: "flex-end", p: 2, textAlign: "center", opacity: 1, transition: "opacity 0.3s ease-in-out", "&:hover": { opacity: 0 }, }} > <Typography variant="body2" sx={{ color: "#FFFFFF", fontFamily: "Poppins, sans-serif", fontSize: "16px", fontWeight: "500", lineHeight: 1.5, mb: 2 }}> {image.description} </Typography> <Typography variant="h4" sx={{ color: "#FFFFFF", fontFamily: "Poppins, sans-serif", fontSize: "24px", fontWeight: "bold", mb: 3 }}> {image.alt} </Typography> </Box> </Box> 
-       </Grid> ))} 
-       </Grid> 
-       </Container> ); };
+    const overlayStyles = [{
+      backgroundColor: "rgba(0, 128, 0, 0.6)"
+    },
+    { backgroundColor: "rgba(0, 128, 0, 0.6)" },
+    { backgroundColor: "rgba(0, 128, 0, 0.6)" },
+    ];
+    return (
+      <Container sx={{
+        backgroundColor: "#f9f9f9",
+        py             : 0
+      }}>
+        <Grid container spacing = {0}>
+          {images.map((image, index) => (
+            <Grid item xs = {12} sm = {6} md = {4} key = {index}>
+            <Box  sx      = {{
+                position    : "relative",
+                height      : "300px",
+                overflow    : "hidden",
+                borderRadius: "0px",
+                animation   : `${slideUp} 1s ${index * 0.2}s ease-in-out forwards`,
+              }} >
+                <Box
+                  component = "img"
+                  src       = {image.src}
+                  alt       = {image.alt}
+                  sx        = {{
+                    width     : "98%",
+                    height    : "100%",
+                    objectFit : "cover",
+                    transition: "transform 0.3s ease-in-out",
+                    "&:hover" : { transform: "scale(1.05)" },
+                  }} />
+                <Box sx={{
+                  position: "absolute",
+                  top     : 0,
+                  left    : 0,
+                  width   : "90%",
+                  height  : "100%",
+                  ...overlayStyles[index],
+                  display       : "flex",
+                  flexDirection : "column",
+                  justifyContent: "flex-end",
+                  p             : 2,
+                  textAlign     : "center",
+                  opacity       : 1,
+                  transition    : "opacity 0.3s ease-in-out",
+                  "&:hover"     : { opacity: 0 },
+                }} >
+                  <Typography variant = "body2"
+                              sx      = {{
+                      color     : "#FFFFFF",
+                      fontFamily: "Poppins, sans-serif",
+                      fontSize  : "16px",
+                      fontWeight: "500",
+                      lineHeight: 1.5,
+                      mb        : 2
+                    }}>
+                    {image.description}
+                  </Typography>
+                  <Typography variant="h4" sx={{
+                    color     : "#FFFFFF",
+                    fontFamily: "Poppins, sans-serif",
+                    fontSize  : "24px",
+                    fontWeight: "bold",
+                    mb        : 3
+                  }}>
+                    {image.alt}
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>))}
+        </Grid>
+      </Container>);
+  };
 
   return (
     <div>
       {/* Hero Section */}
-      <Box sx={{ 
-        position: 'relative', 
-        height: '300px', 
-        width: '97%',
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        margin: 'auto', 
-        marginTop: '0px', 
-        marginBottom: '20vh'
-       }} className="hero-section">
+      <Box sx={{
+        position      : 'relative',
+        height        : '300px',
+        width         : '97%',
+        justifyContent: 'center',
+        alignItems    : 'center',
+        margin        : 'auto',
+        marginTop     : '0px',
+        marginBottom  : '20vh'
+      }} className="hero-section">
         <Carousel
-        navButtonsProps={{
-          style: {
-            opacity: 0.5,
-          },
-        }}
-        indicatorContainerProps={{
-          style: {
-            display: 'none',
-          },
-        }}
+          navButtonsProps={{
+            style: {
+              opacity: 0.5,
+            },
+          }}
+          indicatorContainerProps={{
+            style: {
+              display: 'none',
+            },
+          }}
         >
-          <Box sx={{ height: '60vh', position: 'relative' }}>
-  {/* Image Section */}
-  <Box
-    component="img"
-    src="1.jpg"
-    alt="Image 1"
-    sx={{
-      width: '100%',
-      height: '100%',
-      objectFit: 'auto',
-    }}
-  />
+          <Box sx = {{ height: '60vh', position: 'relative' }}>
+            {/* Image Section */}
+            <Box
+              component = "img"
+              src       = "1.jpg"
+              alt       = "Image 1"
+              sx        = {{
+                width    : '100%',
+                height   : '100%',
+                objectFit: 'auto',
+              }}
+            />
 
-  {/* Typography Section */}
-  <Box
-    sx={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: { xs: '100%', md: '40%' },
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      p: { xs: 2, md: 4 },
-    }}
-  >
-    <Typography
-      variant="h2"
-      sx={{
-        fontWeight: 'bold',
-        color: '#FFFFFF',
-        mb: 2,
-        fontSize: { xs: '24px', md: '34px' },
-      }}
-    >
-      FOUNDATION FOR A BRIGHTER NATION
-    </Typography>
-    <Typography
-      variant="body1"
-      sx={{
-        lineHeight: '1.6',
-        color: '#FFFFFF',
-        mb: 2,
-        fontSize: { xs: '14px', md: '18px' },
-      }}
-    >
-      Everyone deserves access to quality education, healthcare,
-      <br />
-      and economic opportunities. At Dr. Sadiq Foundation, we 
-      <br />
-      make this possible with empathy, kindness, and understanding.
-    </Typography>
-    <a
-      href="/donate"
-      style={{
-        color: '#FFFFFF',
-        textDecoration: 'underline',
-        fontSize: '16px',
-        fontWeight: '500',
-      }}
-    >
-      Join Us in this kind act
-    </a>
-  </Box>
-</Box>
+            {/* Typography Section */}
+            <Box
+              sx={{
+                position      : 'absolute',
+                top           : 0,
+                left          : 0,
+                width         : { xs: '100%', md: '40%' },
+                height        : '100%',
+                display       : 'flex',
+                flexDirection : 'column',
+                justifyContent: 'center',
+                p             : { xs: 2, md: 4 },
+              }}
+            >
+              <Typography
+                variant = "h2"
+                sx      = {{
+                  fontWeight: 'bold',
+                  color     : '#FFFFFF',
+                  mb        : 2,
+                  fontSize  : { xs: '24px', md: '34px' },
+                }}
+              >
+                FOUNDATION FOR A BRIGHTER NATION
+              </Typography>
+              <Typography
+                variant = "body1"
+                sx      = {{
+                  lineHeight: '1.6',
+                  color     : '#FFFFFF',
+                  mb        : 2,
+                  fontSize  : { xs: '14px', md: '18px' },
+                }}
+              >
+                Everyone deserves access to quality education, healthcare,
+                <br />
+                and economic opportunities. At Dr. Sadiq Foundation, we
+                <br />
+                make this possible with empathy, kindness, and understanding.
+              </Typography>
+              <a
+                href  = "/donate"
+                style = {{
+                  color         : '#FFFFFF',
+                  textDecoration: 'underline',
+                  fontSize      : '16px',
+                  fontWeight    : '500',
+                }}
+              >
+                Join Us in this kind act
+              </a>
+            </Box>
+          </Box>
 
 
 
@@ -223,42 +280,43 @@ const Homepage = () => {
 
           {/* Third Carousel Item */}
           <Box sx={{
-             height: '60vh',
-              backgroundImage: 'url("/hospital.png")',
-               backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                 position: 'relative'
-                  }}>
+            height            : '60vh',
+            backgroundImage   : 'url("/hospital.png")',
+            backgroundSize    : 'cover',
+            backgroundPosition: 'center',
+            position          : 'relative'
+          }}>
             <Box sx={{
-              position: 'absolute',
-               top: '80%',
-                left: '50%',
-                 transform: 'translate(-50%, -50%)',
-                  textAlign: 'center',
-                   color: '#FFFFFF',
-                    width: { xs: '90%', md: '60%' } }}>
+              position : 'absolute',
+              top      : '80%',
+              left     : '50%',
+              transform: 'translate(-50%, -50%)',
+              textAlign: 'center',
+              color    : '#FFFFFF',
+              width    : { xs: '90%', md: '60%' }
+            }}>
               <Typography variant="h4" sx={{
-                 fontFamily: 'Poppins',
-                  fontWeight: '600',
-                   mb: 1 
-                   }}>
+                fontFamily: 'Poppins',
+                fontWeight: '600',
+                mb        : 1
+              }}>
                 Let’s Heal & Help!
               </Typography>
               <Typography variant="body1" sx={{
-                 fontFamily: 'Poppins',
-                  fontSize: '18px',
-                   fontWeight: '500',
-                    lineHeight: '1.5',
-                     mb: 2
-                      }}>
+                fontFamily: 'Poppins',
+                fontSize  : '18px',
+                fontWeight: '500',
+                lineHeight: '1.5',
+                mb        : 2
+              }}>
                 DSF Hospital project
               </Typography>
               <Typography variant="body1" sx={{
-                 fontFamily: 'Poppins',
-                  fontSize: '18px',
-                   fontWeight: '500',
-                    lineHeight: '1.5'
-                     }}>
+                fontFamily: 'Poppins',
+                fontSize  : '18px',
+                fontWeight: '500',
+                lineHeight: '1.5'
+              }}>
                 Support the DSF Hospital project and help us heal and comfort other souls. Your donation will help bring quality healthcare closer to home.
               </Typography>
             </Box>
