@@ -74,7 +74,7 @@ const BelovedSection = () => {
                   py: 1,
                   '&:hover': { backgroundColor: '#E68A00' },
                 }}
-                onClick={() => window.location.href = "history"}
+                onClick={() => window.location.href = "read"}
               >
                 Read More
               </Button>

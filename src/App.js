@@ -4,8 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import DonationForm from './components/DonationForm';
 import Home from './components/Home';
-import History from './History';
+import DsfHistory from './components/DsfHistory';
 import About from './components/About';
+import History from './History';
 import ContactUs from './components/ContactUs';
 import Certificates from './components/Certificates';
 import MembershipForm from './components/MembershipForm';
@@ -26,12 +27,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/history" element={<History />} />
+        <Route path="/history" element={<DsfHistory />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/stories" element={<SuccessStories />} />
         <Route path="/member" element={<MembershipForm />} />
         <Route path="/donate" element={<DonationForm />} />
+        <Route path="/read" element={<History />} />
         <Route path="/volunteer" element={<MembershipForm />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQScreen />} />

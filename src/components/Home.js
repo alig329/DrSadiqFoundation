@@ -281,7 +281,7 @@ const Homepage = () => {
           {/* Third Carousel Item */}
           <Box sx={{
             height            : '60vh',
-            backgroundImage   : 'url("/hospital.png")',
+            backgroundImage   : 'url("/hospital.jpg")',
             backgroundSize    : 'cover',
             backgroundPosition: 'center',
             position          : 'relative'

@@ -5,12 +5,12 @@ const projects = [
   {
     title: "Health & Wellness",
     description: "We operate two dispensaries in the Chakri Region, providing healthcare services to people in the region and surrounding areas.",
-    image: "QMR.png",
+    image: "sc1.jpg",
   },
   {
     title: "Education Support",
     description: "Every year, we offer scholarships to students in 11 public universities across KPK, Punjab, and Sindh. The universities manage the selection process.",
-    image: "QMR2.png",
+    image: "thnail1.jpg",
   },
   {
     title: "Community Help",
@@ -54,7 +54,7 @@ const ProjectsWithPurpose = () => {
         padding: "20px",
       }}
     >
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         <Grid item xs={12} md={4}>
           <Typography
             sx={{
@@ -102,7 +102,7 @@ const ProjectsWithPurpose = () => {
             Donate Now
           </Button>
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={6}>
           <Box
             sx={{
               display: "flex",
@@ -133,7 +133,7 @@ const ProjectsWithPurpose = () => {
               >
                 <Box
                   sx={{
-                    background: `url(${project.image}) center center / cover no-repeat`,
+                    background: `url(${project.image}) center center / 100% 100% no-repeat`,
                     width: "100%",
                     height: "250px",
                   }}
@@ -166,10 +166,11 @@ const ProjectsWithPurpose = () => {
                     sx={{
                       position: "absolute",
                       top: "50%",
+                      left : "10px",
                       transform: "translateY(-50%)",
                       zIndex: 1,
-                      backgroundColor: "#CCCCCC",
-                      "&:hover": { backgroundColor: "#FCA90D" },
+                      backgroundColor: "#CCD5",
+                      "&:hover": { backgroundColor: "#CCCCCC" },
                     }}
                     onClick={handleScrollBack}
                   >
@@ -182,8 +183,8 @@ const ProjectsWithPurpose = () => {
                       right: "10px",
                       transform: "translateY(-50%)",
                       zIndex: 1,
-                      backgroundColor: "#CCCCCC",
-                      "&:hover": { backgroundColor: "#FCA90D" },
+                      backgroundColor: "#CCD5",
+                      "&:hover": { backgroundColor: "#CCCCCC" },
                     }}
                     onClick={handleScrollForward}
                   >
