@@ -4,7 +4,7 @@ import { Box, Typography, Tooltip, Grid } from "@mui/material";
 const StoriesOfChange = () => {
   const stories = [
     {
-      image: "/sc4.jpg",
+      image: "/sc4.png",
       description: "DSF provides scholarships to students in public sector universities across Pakistan, including KPK, Punjab, Sindh, and other regions.",
       link: "/scholarships",
     },
