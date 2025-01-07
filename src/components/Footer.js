@@ -130,17 +130,17 @@ const Footer = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: { xs: 'center', md: 'center' },
-              flex: '1',
+              flex: 1,
               gap: 2,
             }}
           >
             <Typography
               variant="h6"
-              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: 'bold' }}
+              sx={{ fontFamily: 'Poppins', fontSize: '16px', fontWeight: 'bold', }}
             >
               Quick Links
             </Typography>
-            <Link href="/projects" color="inherit" sx={{ fontFamily: 'Poppins', fontSize: '16px' }}>
+            <Link href="/projects" color="inherit" sx={{ fontFamily: 'Poppins', fontSize: '16px', }}>
               Projects
             </Link>
             <Link href="/about" color="inherit" sx={{ fontFamily: 'Poppins', fontSize: '16px' }}>
@@ -163,7 +163,7 @@ const Footer = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: { xs: 'center', md: 'flex-start' },
-              flex: '1',
+              flex: 1,
               gap: 1,
             }}
           >

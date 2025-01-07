@@ -44,7 +44,7 @@ const BelovedSection = () => {
                   marginTop: '16px'
                 }}
               >
-                The heart of our foundation!
+                The Core of Our Foundation!
               </Typography>
               <Typography
                 sx={{
@@ -57,10 +57,7 @@ const BelovedSection = () => {
                   mb: 2,
                 }}
               >
-                Dr. Muhammad Sadiq (1950-2020) was a kind and caring person who wanted
-                to make a difference. He founded the Dr. Sadiq Foundation in 2010 to
-                help those in need and bring hope to underserved communities. His
-                legacy of love and compassion continues to inspire us today.
+                Dr. Muhammad Sadiq (1950-2020) was a visionary whose compassion and commitment to making a difference led to the establishment of Dr. Sadiq Foundation in 2010. His dedication to uplifting underserved communities and supporting those in need continues to inspire and guide our work. His legacy of kindness and generosity remains the driving force behind everything we do.
               </Typography>
               <Button
                 variant="contained"
@@ -90,7 +87,7 @@ const BelovedSection = () => {
             >
               <Box sx={{ zIndex: 0, position: 'relative', height: { xs: '200px', md: 'auto' } }}>
                 <img
-                  src="/DrSahb22.jpg"
+                  src="/DrSahb22.png"
                   alt="Dr. Muhammad Sadiq"
                   style={{
                     height: '100%',

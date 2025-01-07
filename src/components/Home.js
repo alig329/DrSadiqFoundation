@@ -90,19 +90,19 @@ const Homepage = () => {
   const ThreeThumbnails = () => {
     const images = [
       {
-        src        : "/thnail2.jpg",
+        src        : "/thnail2.png",
         alt        : "WE SEE!",
-        description: "We build strong communities by understanding and meeting their future needs. Our support goes beyond just financial aid. We are actively providing guidance and counseling to everyone, regardless of their background or status.",
+        description: "We build strong communities by understanding and addressing their future needs. Our support goes beyond financial aid; we actively provide guidance and counseling to everyone, regardless of their background or status....",
       },
       {
         src        : "/QMR2.png",
         alt        : "WE CARE!",
-        description: "We care for those in need, empowering youth and women through education and health awareness. We support vulnerable communities, including widows and orphans, and help create joyful moments, like dignified weddings for orphan girls.",
+        description: "We care for those in need, empowering youth and women through education and health awareness. We support vulnerable communities, including widows and orphans, and create joyful moments, such as dignified weddings for orphaned girls.",
       },
       {
         src        : "/bbh3.png",
         alt        : "WE SERVE!",
-        description: "We run a unique program, driven by our team's creative approach and commitment to social needs. We support those in need, using a thorough verification process to ensure help reaches those who deserve it most.",
+        description: "We run a unique program, driven by our team's creative approach and commitment to addressing social needs. We discreetly identify and support those in need, using a thorough verification process to ensure that help reaches those who deserve it most.",
       },
     ];
 
@@ -223,13 +223,13 @@ const Homepage = () => {
             <Box
               sx={{
                 position      : 'absolute',
-                top           : 0,
-                left          : 0,
-                width         : { xs: '100%', md: '40%' },
+                top           : 20,
+                left          : 15,
+                width         : { xs: '100%', md: '35%' },
                 height        : '100%',
                 display       : 'flex',
                 flexDirection : 'column',
-                justifyContent: 'center',
+                justifyContent: 'left',
                 p             : { xs: 2, md: 4 },
               }}
             >
@@ -254,10 +254,10 @@ const Homepage = () => {
                 }}
               >
                 Everyone deserves access to quality education, healthcare,
-                <br />
+                
                 and economic opportunities. At Dr. Sadiq Foundation, we
-                <br />
-                make this possible with empathy, kindness, and understanding.
+               
+                make this possible through empathy, kindness, and understanding.
               </Typography>
               <a
                 href  = "/donate"

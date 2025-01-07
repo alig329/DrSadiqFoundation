@@ -5,22 +5,22 @@ const StoriesOfChange = () => {
   const stories = [
     {
       image: "/sc4.jpg",
-      description: "DSF has offered scholarships to public sector universities of Pakistan, spread over KPK, Punjab, Sindh and...",
+      description: "DSF provides scholarships to students in public sector universities across Pakistan, including KPK, Punjab, Sindh, and other regions.",
       link: "/scholarships",
     },
     {
       image: "/sc2.jpg",
-      description: "Transforming lives through various welfare projects and initiatives focused on education, health, and skill development.",
+      description: "Transforming lives through impactful welfare projects and initiatives focused on education, health, and skill development.",
       link: "/foodprojects",
     },
     {
       image: "/sc1.jpg",
-      description: "DSF has been providing free medical care to the underprivileged communities of Pakistan through its...",
+      description: "DSF has been providing free medical care to underprivileged communities across Pakistan through its healthcare initiatives.",
       link: "/hospital",
     },
     {
       image: "/sc3.jpg",
-      description: "Making a meaningful difference in the community by supporting underprivileged families and individuals.",
+      description: "Making a meaningful impact in the community by supporting underprivileged families and individuals",
       link: "/medicalcamps",
     },
   ];
@@ -59,7 +59,7 @@ const StoriesOfChange = () => {
           maxWidth: "800px",
         }}
       >
-        Read here how Dr. Sadiq Foundation is transforming lives and making a meaningful difference in the community.
+        Discover how Dr. Sadiq Foundation is making a lasting impact by transforming lives and empowering communities through our dedicated efforts and initiatives.
       </Typography>
 
       {/* Stories Grid */}

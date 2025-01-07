@@ -49,12 +49,12 @@ const Hospital = () => {
                         marginTop: '20px',
                         padding: '10px 100px 10px 100px'
                     }}>
-                        The Dr. Sadiq Foundation (DSF) Hospital in Mandra, Tehsil Gujjar Khan, District Rawalpindi, is a groundbreaking healthcare initiative. Designed as a state-of-the-art teaching hospital, it will cater to the diverse medical needs of the region, providing quality care and training the next generation of medical professionals.
+                        The Dr. Sadiq Foundation (DSF) Hospital, located in Mandra, Tehsil Gujjar Khan, District Rawalpindi, represents a pioneering healthcare initiative. Designed as a state-of-the-art teaching hospital, it aims to meet the diverse medical needs of the region while providing high-quality care. The hospital will also play a vital role in training the next generation of medical professionals.
 
                         <List>
                             <ListItem>
                                 <Typography variant="body1" sx={{ color: '#027D40', fontWeight: 'bold' }}>
-                                    Capacity:<br/>
+                                Hospital Capacity:<br/>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: '#000000' }}>
                                     200 beds
@@ -70,10 +70,10 @@ const Hospital = () => {
                             </ListItem>
                             <ListItem>
                                 <Typography variant="body1" sx={{ color: '#027D40', fontWeight: 'bold' }}>
-                                    Current Phase:<br/>
+                                    Current Status:<br/>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: '#000000' }}>
-                                    Construction underway, following approval from the Tehsil Municipal Administration (TMA) Rawalpindi
+                                Construction is currently underway, following approval from the Tehsil Municipal Administration (TMA) Rawalpindi.
                                 </Typography>
                             </ListItem>
                             <ListItem>
@@ -96,10 +96,10 @@ const Hospital = () => {
                   lineHeight: '40px', 
                   color: '#000000',
                   marginTop: '60px' }}>
-                    Challenge
+                    Identified Barrier
                 </Typography>
                 <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '24px', md: '34px' }, color: '#000000', textAlign: 'justify', padding: '10px 100px' }}>
-                    Mandra faces severe healthcare challenges, including limited access to quality medical services and overcrowded facilities that delay treatments. The lack of specialized care in fields like cardiology and oncology forces residents to travel long distances, often compromising their health. Additionally, the absence of local medical training institutions leaves the region underserved by skilled professionals, further deepening the healthcare crisis.
+                Mandra faces significant healthcare challenges, including limited access to quality medical services and overcrowded facilities that result in delays in treatment. The absence of specialized care in areas such as cardiology and oncology forces residents to travel long distances, often putting their health at risk. Additionally, the lack of local medical training institutions leaves the region underserved by skilled professionals, further deepening the healthcare crisis. These issues underscore the urgent need for a comprehensive healthcare solution that can address both immediate and long-term medical needs for the community.
                 </Typography>
             </Box>
             <Box sx={{
@@ -165,10 +165,12 @@ const Hospital = () => {
                   color: '#000000',
                   marginTop: '60px'
                   }}>
-            WHY THERE IS A NEED FOR A HOSPITAL?
+                Why is There a Need for a Hospital?
                 </Typography>
                 <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '24px', md: '34px' }, color: '#000000', textAlign: 'justify', padding: '10px 100px' }}>
-                The DSF Hospital is crucial to addressing these challenges by providing advanced medical services and specialized care locally. It will ensure timely treatment, improve health outcomes, and promote preventive care. By establishing medical education programs, the hospital will train future professionals, empowering them to serve their communities effectively. This project will also boost the local economy through job creation and infrastructure development.
+                The DSF Hospital is essential to addressing the pressing healthcare challenges faced by the region. By offering advanced medical services and specialized care locally, it will ensure timely treatment and improve overall health outcomes. The hospital will also promote preventive care, helping to reduce the burden of diseases in the community.
+                  <br />
+                  In addition, by establishing medical education programs, the hospital will contribute to the training of future healthcare professionals, equipping them with the skills needed to serve their communities effectively. This initiative will not only enhance healthcare delivery but also boost the local economy through job creation and infrastructure development.
                 </Typography>
                 <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <img src='/angio.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '450px', objectFit: 'cover' }} />
@@ -181,10 +183,10 @@ const Hospital = () => {
                   lineHeight: '40px', 
                   color: '#000000',
                   marginTop: '60px' }}>
-                Our Goal
+                Our Vision for Healthcare Excellence
                 </Typography>
                 <Typography sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', sm: '16px', md: '18px' }, fontWeight: '500', lineHeight: { xs: '24px', md: '34px' }, color: '#000000', textAlign: 'justify', padding: '10px 100px' }}>
-                The DSF Hospital aims to deliver comprehensive healthcare services, including specialized treatments in cardiology, oncology, and neurology. It seeks to establish a robust medical education system to train healthcare professionals and support long-term sustainability. Ultimately, the hospital aspires to improve the quality of life in the region and serve as a hub for community development.
+                The DSF Hospital is dedicated to providing comprehensive healthcare services, with specialized treatments in cardiology, oncology, and neurology. Our goal is to establish a strong medical education system that will train healthcare professionals, ensuring the long-term sustainability of quality care. Ultimately, the hospital aspires to enhance the quality of life in the region, becoming a cornerstone for community development and well-being.
                 </Typography>
                 <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <iframe

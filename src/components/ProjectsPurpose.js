@@ -81,9 +81,7 @@ const ProjectsWithPurpose = () => {
               color: "rgba(255, 255, 255, 0.7)", // Mild and transparent color
             }}
           >
-            Our Foundation has a history of supporting those in need with
-            kindness and care. We are making a positive difference, one
-            compassionate project at a time.
+            Our Foundation has a long-standing commitment to supporting those in need with compassion and care. We are creating a positive impact, one meaningful project at a time.
           </Typography>
           <Button
             sx={{
