@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography, Tooltip, Grid } from "@mui/material";
+import { animate } from "@motionone/dom";
 
 const StoriesOfChange = () => {
   const stories = [
     {
       image: "/sc4.png",
-      description: "DSF provides scholarships to students in public sector universities across Pakistan, including KPK, Punjab, Sindh, and other regions.",
+      description: "DSF provides scholarships to students in public sector universities across Pakistan, including KPK, Punjab, Sindh, and...",
       link: "/scholarships",
     },
     {
@@ -24,6 +25,17 @@ const StoriesOfChange = () => {
       link: "/medicalcamps",
     },
   ];
+
+  useEffect(() => {
+      if (animate) {
+        // Apply rotation animation to all image boxes
+        document.querySelectorAll(".animated-card").forEach((element) => {
+          animate(element, { rotate: 360 }, { duration: 3, delay: 2 });
+        });
+      } else {
+        console.error("Motion library is not loaded.");
+      }
+    }, []);
 
   return (
     <Box
@@ -68,6 +80,7 @@ const StoriesOfChange = () => {
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Tooltip title="Read More" arrow>
               <Box
+                className="animated-card" // Added class for Motion animation
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -83,6 +96,7 @@ const StoriesOfChange = () => {
                     transform: "translateY(-10px)",
                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
                     cursor: "pointer",
+                    
                   },
                 }}
                 onClick={() => (window.location.href = story.link)}

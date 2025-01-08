@@ -3,13 +3,13 @@ import { Box, Typography, Card, CardContent } from '@mui/material';
 import { Fade, Slide } from '@mui/material';
 
 const designations = [
-  { name: 'Mr. Salman Sadiq', title: 'Chairman/Trustee' },
-  { name: 'Mr. Zubair Sadiq', title: 'Vice Chairman' },
-  { name: 'Mr. Muhammad Saad Sadiq', title: 'Information Secretary' },
-  { name: 'Mst. Rasheeda Begum', title: 'Relationship Officer' },
-  { name: 'Mrs. Habiba Salman', title: 'Secretary General' },
-  { name: 'Mrs. Ayesha Bilal', title: 'Audit Secretary' },
-  { name: 'Mrs. Saima Elahi', title: 'Finance Secretary' },
+  { name: 'Mr. Salman Sadiq', title: 'Trustee/Chairman' },
+  { name: 'Mr. Asif Zubair Sadiq', title: 'Trustee/Vice Chairman' },
+  { name: 'Mr. Saad Sadiq', title: 'Trustee/Information Secretary' },
+  { name: 'Mrs. Rasheeda Begum', title: 'Trustee/Relationship Officer' },
+  { name: 'Mrs. Habiba Salman', title: 'Trustee/Secretary General' },
+  { name: 'Mrs. Ayesha Bilal', title: 'Trustee/Audit Secretary' },
+  { name: 'Mrs. Saima Ellahi', title: 'Trustee/Finance Secretary' },
 ];
 
 const CaregiversSection = () => {
