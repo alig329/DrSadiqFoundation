@@ -47,22 +47,22 @@ const ProjectsWithPurpose = () => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: "97%",
         background: "#588BC6",
         color: "#FFFFFF",
         overflow: "hidden",
-        padding: "20px",
+        padding: "30px",
       }}
     >
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={4}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
           <Typography
             sx={{
               fontFamily: "Poppins",
               fontSize: { xs: "24px", md: "34px" },
               fontWeight: "500",
               lineHeight: "44px",
-              textAlign: "left",
+              textAlign: "justify",
               padding: "60px 20px 0px 20px",
               color: "rgba(255, 255, 255, 0.8)", // Mild and transparent color
             }}
@@ -89,11 +89,11 @@ const ProjectsWithPurpose = () => {
               fontFamily: "Poppins",
               fontSize: "14px",
               fontWeight: "700",
-              color: "#FFFFFF",
-              backgroundColor: "#ECA30C",
+              color: "#333",
+              backgroundColor: "#FFFFFF",
               borderRadius: "8px",
               margin: "20px 0px 0px 20px",
-              "&:hover": { backgroundColor: "#FCA90D" },
+              "&:hover": { backgroundColor: "#F1F1F1" },
             }}
             onClick={() => (window.location.href = "donate")}
           >

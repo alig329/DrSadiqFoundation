@@ -41,8 +41,8 @@ const Homepage = () => {
       setTimeout   (() => setIsFadingIn(false), 3000);  // Then fade-out
 
        // Move to the next line or loop back to the start
-      setTimeout(() => setCurrentLine((prev) => (prev + 1) % textLines.length), 3000);
-    }, 4000);
+      setTimeout(() => setCurrentLine((prev) => (prev + 1) % textLines.length), 1000);
+    }, 3000);
 
     return () => clearInterval(interval);
    });
@@ -61,6 +61,7 @@ const Homepage = () => {
        textAlign         : 'center',
       }}
     >
+      
       <Box
        sx={{
         position : "absolute",
@@ -70,15 +71,16 @@ const Homepage = () => {
         textAlign: "center",
        }}
       >
-       <Typography variant = "h4" sx = {{ mb: 2, fontWeight: "bold" }}>
+       <Typography variant = "h6" sx = {{ mb: 2, fontWeight: "bold", color: "rgba(255, 255, 255, 0.8)" }}>
         Compassion drives our Multiple Welfare Projects
        </Typography>
        <Typography
         key = {currentLine}
         sx  = {{
           opacity   : isFadingIn ? 1             : 0,
-          transition: "opacity 1s 1s ease-in-out",     // Smooth fade-in and fade-out
+          transition: "opacity 1s 1s ease-out",     // Smooth fade-in and fade-out
           mb        : 1,
+          color     : "rgba(255, 255, 255, 0.8)",
         }}
        >
         {textLines[currentLine]}
@@ -108,10 +110,10 @@ const Homepage = () => {
    ];
 
    const overlayStyles = [{
-    backgroundColor: "rgba(0, 128, 0, 0.6)"
+    backgroundColor: "rgba(49, 157, 167, 0.69)",
    },
-   { backgroundColor: "rgba(0, 128, 0, 0.6)" },
-   { backgroundColor: "rgba(0, 128, 0, 0.6)" },
+   { backgroundColor: "rgba(214, 148, 13, 0.6)" },
+   { backgroundColor: "rgba(134, 55, 115, 0.75)" },
    ];
    return (
     <Container sx={{
@@ -162,19 +164,20 @@ const Homepage = () => {
            }} >
             <Typography variant = "body2"
                     sx      = {{
-               color     : "#FFFFFF",
+               color     : "rgba(255, 255, 255, 0.8)",
                fontFamily: "Poppins, sans-serif",
-               fontSize  : "16px",
+               fontSize  : "12px",
                fontWeight: "500",
-               lineHeight: 1.5,
-               mb        : 2
+               lineHeight: 2.5,
+               mb        : 2,
+               textAlign : "center",
               }}>
               {image.description}
             </Typography>
             <Typography variant="h4" sx={{
               color     : "#FFFFFF",
               fontFamily: "Poppins, sans-serif",
-              fontSize  : "24px",
+              fontSize  : "18px",
               fontWeight: "bold",
               mb        : 3
             }}>
@@ -194,7 +197,7 @@ const Homepage = () => {
     <Box sx={{
       position      : 'relative',
       height        : '300px',
-      width         : '97%',
+      width         : '86%',
       justifyContent: 'center',
       alignItems    : 'center',
       margin        : 'auto',
@@ -204,7 +207,7 @@ const Homepage = () => {
       <Carousel
        navButtonsProps={{
         style: {
-          opacity: 0.5,
+          opacity: 0.3,
         },
        }}
        indicatorContainerProps={{
@@ -213,6 +216,7 @@ const Homepage = () => {
         },
        }}
       >
+        
        <Box sx = {{ height: '60vh', position: 'relative' }}>
         {/* Image Section */}
         <Box
@@ -225,12 +229,11 @@ const Homepage = () => {
            objectFit: 'auto',
           }}
         />
-
         {/* Typography Section */}
         <Box
           sx={{
            position      : 'absolute',
-           top           : 20,
+           top           : 60,
            left          : 15,
            width         : { xs: '100%', md: '35%' },
            height        : '100%',
@@ -241,12 +244,12 @@ const Homepage = () => {
           }}
         >
           <Typography
-           variant = "h2"
+           variant = "h3"
            sx      = {{
             fontWeight: 'bold',
-            color     : '#FFFFFF',
+            color     : 'rgba(255, 255, 255, 0.8)',
             mb        : 2,
-            fontSize  : { xs: '24px', md: '34px' },
+            fontSize  : { xs: '18px', md: '24px' },
            }}
           >
            FOUNDATION FOR A BRIGHTER NATION
@@ -254,10 +257,10 @@ const Homepage = () => {
           <Typography
            variant = "body1"
            sx      = {{
-            lineHeight: '1.6',
-            color     : '#FFFFFF',
+            lineHeight: '1.4',
+            color     : 'rgba(255, 255, 255, 0.8)',
             mb        : 2,
-            fontSize  : { xs: '14px', md: '18px' },
+            fontSize  : { xs: '12px', md: '16px' },
            }}
           >
            Everyone deserves access to quality education, healthcare,
@@ -269,7 +272,7 @@ const Homepage = () => {
           <a
            href  = "/donate"
            style = {{
-            color         : '#FFFFFF',
+            color         : 'rgba(255, 255, 255, 0.8)',
             textDecoration: 'underline',
             fontSize      : '16px',
             fontWeight    : '500',
@@ -302,7 +305,7 @@ const Homepage = () => {
           color    : '#FFFFFF',
           width    : { xs: '90%', md: '60%' }
         }}>
-          <Typography variant="h4" sx={{
+          <Typography variant="h5" sx={{
            fontFamily: 'Poppins',
            fontWeight: '600',
            mb        : 1
@@ -320,8 +323,8 @@ const Homepage = () => {
           </Typography>
           <Typography variant="body1" sx={{
            fontFamily: 'Poppins',
-           fontSize  : '18px',
-           fontWeight: '500',
+           fontSize  : '15px',
+           fontWeight: '400',
            lineHeight: '1.5'
           }}>
            Support the DSF Hospital project and help us heal and comfort other souls. Your donation will help bring quality healthcare closer to home.

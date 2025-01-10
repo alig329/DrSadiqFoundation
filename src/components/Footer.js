@@ -10,7 +10,7 @@ const Footer = () => {
       <Box
         sx={{
           width: '100%',
-          backgroundColor: '#333333',
+          backgroundColor: '#027D40',
           color: "rgba(255, 255, 255, 0.8)",
           padding: { xs: 0, md: 0 },
           display: 'flex',
@@ -194,7 +194,7 @@ const Footer = () => {
 
                 <Typography variant="body1">
                   <span  >Call Us <br /></span>
-                  051-111 500 505 |
+                  051-111 500 505 <br/>
                   051-4927546
                 </Typography>
               </Box>
@@ -216,7 +216,7 @@ const Footer = () => {
                 </Box>
                 <Typography variant="body1">
                   <span  >Mail Us <br /></span>
-                  chairman@drsf.org | admin@drsf.org
+                  chairman@drsf.org <br/> admin@drsf.org
                 </Typography>
               </Box>
 
@@ -238,9 +238,9 @@ const Footer = () => {
                 <Typography variant="body1">
                   <span  >Visit Us <br /></span>
                   33-C,
-                  Iran Road,
-                  Near Chandni Chowk,
-                  Satellite Town,
+                  Iran Road, <br />
+                  Near Chandni Chowk, <br/>
+                  Satellite Town, <br/>
                   Rawalpindi,
 
                   Pakistan
@@ -275,27 +275,36 @@ const Footer = () => {
               }}
             >
               <TextField
-                sx={{
-                  flex: 1,
-                  borderRadius: '5px 0 0 0',
-                  backgroundColor: '#027D40',
-                  borderColor: 'white',
-                  '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                  },
-                }}
-                placeholder="Enter your email"
-                variant="outlined"
-              />
+  sx={{
+    flex: 1,
+    borderRadius: '5px 0 0 0',
+    backgroundColor: '#027D40',
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#FFFFFF',
+      },
+      '&:hover fieldset': {
+        borderColor: '#888888', // Grey color on hover
+      },
+      '& .MuiInputBase-input::placeholder': {
+        color: '#FFFFFF', // White color for the placeholder
+      },
+    },
+  }}
+  placeholder="Enter your email"
+  variant="outlined"
+/>
+
               <Button
                 sx={{
                   height: '60.31px',
-                  backgroundColor: '#ECA30C',
-                  color: '#FFFFFF',
+                  backgroundColor: '#FFFFFF',
+                  color: '#1E293B',
                   borderRadius: '10px',
                   padding: '0 24px',
+                  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
                   letterSpacing: '0.8814226388931274px',
-                  '&:hover': { backgroundColor: '#cc8a09' },
+                  '&:hover': { backgroundColor: '#F3F4F6' },
                 }}
               >
                 Send

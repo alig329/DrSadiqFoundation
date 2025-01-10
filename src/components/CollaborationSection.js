@@ -33,23 +33,23 @@ const CollaborationSection = () => {
   return (
     <Box
       sx={{
-        width: "96.5%",
+        width: "86.5%",
         padding: { xs: 2, sm: 3 },
         alignItems: "center",
         margin: "0 auto",
         textAlign: "center",
-        backgroundColor: "#F1F1F1",
+        backgroundColor: "#FFFFFF",
       }}
     >
       <Typography
         variant="h4"
         sx={{
           fontFamily: "Poppins",
-          fontWeight: "500",
+          fontWeight: "600",
           textAlign: "center",
-          color: "#000000",
+          color: "rgba(51, 51, 51, 0.8)",
           marginBottom: { xs: 2, sm: 3 },
-          fontSize: { xs: "20px", sm: "28px", md: "36px" },
+          fontSize: { xs: "18px", sm: "24px", md: "28px" },
         }}
       >
         Collaboration for Sustainable Progress

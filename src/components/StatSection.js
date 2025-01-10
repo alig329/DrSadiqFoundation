@@ -14,16 +14,16 @@ const StatSection = () => {
   return (
     <Box
       sx={{
-        width: "98%",
+        width: "85%",
         color: "#588BC6",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
         alignItems: "center",
         borderRadius: "10px 0px 0px 0px",
-        padding: "20px",
+        padding: "0px",
         gap: "10px",
-        margin: "0 auto",
+        margin: "30px auto",
         marginTop: "20px",
         backdropFilter: "blur(10px)",
         border: "1px solid #21343014",
@@ -37,9 +37,9 @@ const StatSection = () => {
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Box sx={{ textAlign: "center" }}>
               <Typography
-                variant="h1"
+                variant="h3"
                 sx={{
-                  fontSize: "36px",
+                  fontSize: "28px",
                   fontWeight: "bold",
                   position: "relative",
                   display: "inline-block",
@@ -78,9 +78,9 @@ const StatSection = () => {
                 </svg>
               </Typography>
               <Typography
-                variant="subtitle1"
+                variant="subtitle2"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: "12px",
                   fontWeight: "bold",
                   color: "#213430",
                 }}
@@ -111,7 +111,7 @@ const StatSection = () => {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: "24px",
+            fontSize: "18px",
             fontWeight: "600",
             lineHeight: "20px",
             color: "#FFFFFF",
@@ -122,7 +122,7 @@ const StatSection = () => {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: "24px",
+            fontSize: "18px",
             fontWeight: "600",
             lineHeight: "20px",
             color: "#FFFFFF",
@@ -142,7 +142,7 @@ const StatSection = () => {
             display: "flex",
             alignItems: "left",
             justifyContent: "space-between",
-            padding: "0 10px",
+            padding: "0px",
             textTransform: "none",
             "&:hover": {
               textDecoration: "underline", // Apply hover effect to text
@@ -153,12 +153,12 @@ const StatSection = () => {
           Become a Member
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
+            width="30"
+            height="30"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth="5"
+            strokeWidth="4"
           >
             <path
               strokeLinecap="round"

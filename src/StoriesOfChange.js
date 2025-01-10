@@ -51,7 +51,7 @@ const StoriesOfChange = () => {
       <Typography
         sx={{
           fontFamily: "Poppins",
-          fontSize: { xs: "18px", md: "34px" },
+          fontSize: { xs: "18px", md: "24px" },
           fontWeight: "700",
           lineHeight: "30px",
           color: "rgba(0, 0, 0, 0.7)",
@@ -64,7 +64,7 @@ const StoriesOfChange = () => {
         sx={{
           fontFamily: "Poppins",
           fontSize: "18px",
-          fontWeight: "500",
+          fontWeight: "300",
           lineHeight: "1.5",
           color: "rgba(0, 0, 0, 0.7)",
           margin: "0 auto 30px",

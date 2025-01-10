@@ -4,7 +4,19 @@ import { motion } from 'framer-motion';
 
 const BelovedSection = () => {
   return (
-    <Box sx={{ backgroundColor: '#027D40', padding: '0px', marginTop: '0px' }}>
+    <Box sx={{ 
+      backgroundColor: '#027D40', 
+      width: '80%', 
+      overflow: 'hidden', 
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '8px',
+      padding: '20px',
+      margin: '20px auto',
+      boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+      
+    }}>  
       <Container>
         <Grid container spacing={0} alignItems="center">
           {/* Text Section */}
@@ -110,7 +122,7 @@ const BelovedSection = () => {
                   }}
                 >
                   <Typography variant="subtitle1">Dr. Muhammad Sadiq</Typography>
-                  <Typography variant="caption">(Late)</Typography>
+                  <Typography variant="caption">(Late) <br/></Typography>
                   <Typography variant="caption">Founding Chairman</Typography>
                 </Box>
               </Box>

@@ -27,24 +27,24 @@ const CaregiversSection = () => {
   return (
     <Box
       sx={{
-        width: '100%',
-        minHeight: '400px',
-        background: 'linear-gradient(to right, #006400, #2e8b57)',
-        padding: { xs: '30px 20px', md: '50px 40px' },
+        width: '97%',
+        minHeight: '300px',
+        background: '#F1F1F1',
+        padding: { xs: '20px 10px', md: '30px 20px' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        color: "rgba(255, 255, 255, 0.8)",
+        color: "rgba(51, 51, 51, 0.8)",
         textAlign: 'center',
       }}
     >
       <Typography
         sx={{
           fontFamily: 'Poppins',
-          fontSize: { xs: '22px', md: '36px' },
-          fontWeight: '700',
-          marginBottom: '20px',
+          fontSize: { xs: '18px', md: '24px' },
+          fontWeight: '600',
+          marginBottom: '14px',
         }}
       >
         Caregivers of Our Mission
@@ -52,7 +52,7 @@ const CaregiversSection = () => {
       <Typography
         sx={{
           fontFamily: 'Poppins',
-          fontSize: { xs: '18px', md: '24px' },
+          fontSize: { xs: '12px', md: '18px' },
           fontWeight: '500',
           textDecoration: 'underline',
           marginBottom: '30px',
@@ -60,7 +60,7 @@ const CaregiversSection = () => {
       >
         Board of Trustees Dr. Sadiq Foundation
       </Typography>
-      <Slide direction={direction} in={true} timeout={600}>
+      <Slide direction={direction} in={true} timeout={500}>
         <Card
           sx={{
             width: { xs: '100%', sm: '60%', md: '40%' },
