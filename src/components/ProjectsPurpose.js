@@ -47,7 +47,7 @@ const ProjectsWithPurpose = () => {
   return (
     <Box
       sx={{
-        width: "97%",
+        width: "95.5%",
         background: "#588BC6",
         color: "#FFFFFF",
         overflow: "hidden",
