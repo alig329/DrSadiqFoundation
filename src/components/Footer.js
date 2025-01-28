@@ -298,13 +298,16 @@ const Footer = () => {
               <Button
                 sx={{
                   height: '60.31px',
-                  backgroundColor: '#FFFFFF',
-                  color: '#1E293B',
+                  backgroundColor: '#FF9900',
+                  fontFamily: 'Poppins',
+                  fontSize: '16px',
+                  fontWeight: '700',
+                  color: '#F1F1F1',
                   borderRadius: '10px',
                   padding: '0 24px',
                   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
                   letterSpacing: '0.8814226388931274px',
-                  '&:hover': { backgroundColor: '#F3F4F6' },
+                  '&:hover': { backgroundColor: '#E68A00' },
                 }}
               >
                 Send

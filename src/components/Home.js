@@ -221,7 +221,7 @@ const Homepage = () => {
         {/* Image Section */}
         <Box
           component = "img"
-          src       = "1.jpg"
+          src       = "banner.png"
           alt       = "Image 1"
           sx        = {{
            width    : '100%',

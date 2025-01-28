@@ -19,6 +19,7 @@ import Dispensaries from './components/Dispensaries';
 import FoodProjects from './components/FoodProjects';
 import Vocational from './components/Vocational';
 import NewsPage from './components/NewsPage';
+import OurTeam from './components/OurTeam';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQScreen />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/team" element={<OurTeam />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/hospital" element={<Hospital />} />
         <Route path="/scholarships" element={<Scholarships />} />

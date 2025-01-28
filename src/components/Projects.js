@@ -5,14 +5,7 @@ import {
 
 const projectsData = {
   ongoing: [
-    {
-      title      : "DSF Hospital",
-      description: "DSFH has completed its documentation stage of 220-bedded hospital...",
-      image      : "/hosp1.png",
-      link       : "/hospital",
-      raised     : 80005,
-      goal       : 90000,
-    },
+    
     {
       title      : "Scholarships",
       description: "To Public Sector Universities of Pakistan, DSF has offered scholarships...",
@@ -21,14 +14,7 @@ const projectsData = {
       raised     : 75000,
       goal       : 150000,
     },
-    {
-      title      : "BBH Food Project",
-      description: "Started in February 2010. Since then, the project is fully functional with the manpower of 21 employees...",
-      image      : "/bbh2.png",
-      link       : "/foodprojects",
-      raised     : 50000,
-      goal       : 150000,
-    },
+    
     {
       title      : "Women Empowerment",
       description: "DSF has collaboration with various institutions for providing financial and management assistance...",
@@ -45,34 +31,27 @@ const projectsData = {
       raised     : 75000,
       goal       : 150000,
     },
-    {
-      title      : "Project ABC",
-      description: "Massa sed sed sed risus pretium quam. Bibendum neque egestas congue quisque egestas diam.",
-      image      : "https://via.placeholder.com/150",
-      link       : "/hospital",
-      raised     : 75000,
-      goal       : 150000,
-    }
+    
       // Add more ongoing projects...
   ],
   completed: [
     {
-      title      : "XYZ",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      image      : "https://via.placeholder.com/150",
-      category   : "Completed",
-      raised     : 101135,
+      title      : "BBH Food Project",
+      description: "Started in February 2010. Since then, the project is fully functional with the manpower of 21 employees...",
+      image      : "/bbh2.png",
+      link       : "/foodprojects",
+      raised     : 50000,
       goal       : 150000,
     },
   ],
   future: [
     {
-      title      : "Future Project",
-      description: "Details about the future project...",
-      image      : "https://via.placeholder.com/150",
-      category   : "Future",
-      raised     : 0,
-      goal       : 50000,
+      title      : "DSF Hospital",
+      description: "DSFH has completed its documentation stage of 220-bedded hospital...",
+      image      : "/hosp1.png",
+      link       : "/hospital",
+      raised     : 80005,
+      goal       : 90000,
     },
   ],
 };

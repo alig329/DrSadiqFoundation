@@ -30,7 +30,7 @@ const StoriesOfChange = () => {
       if (animate) {
         // Apply rotation animation to all image boxes
         document.querySelectorAll(".animated-card").forEach((element) => {
-          animate(element, { rotate: 360 }, { duration: 3, delay: 2 });
+          animate(element, { rotate: 360 }, { duration: 3, delay: 0 });
         });
       } else {
         console.error("Motion library is not loaded.");

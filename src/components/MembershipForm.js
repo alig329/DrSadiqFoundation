@@ -65,17 +65,15 @@ const MembershipForm = () => {
             <TextField fullWidth label="Area of Interest" variant="outlined" />
           </Grid>
           <Button
-          variant="contained"
           sx={{
-            backgroundColor: "#ECA30C",
-            color: "#fff",
-            marginTop: "10px",
-            padding: "1px",
-            fontSize: "12px",
-            borderRadius: '10px',
-            "&:hover": {
-              backgroundColor: "#cc8a09",
-            },
+            width: "100%",
+            fontFamily: "Poppins",
+            fontSize: "14px",
+            fontWeight: "700",
+            color: "#F1F1F1",
+            backgroundColor: "#FF9900",
+            borderRadius: "8px",
+            "&:hover": { backgroundColor: "#E68A00" },
           }}>
           Submit
         </Button>

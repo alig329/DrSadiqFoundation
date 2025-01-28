@@ -81,7 +81,7 @@ const BelovedSection = () => {
                   textTransform: 'none',
                   px: 3,
                   py: 1,
-                  '&:hover': { backgroundColor: '#E68A00' },
+                  '&:hover': { backgroundColor: '#E68A00' },  
                 }}
                 onClick={() => window.location.href = "read"}
               >

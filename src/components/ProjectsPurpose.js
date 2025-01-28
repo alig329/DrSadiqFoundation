@@ -62,7 +62,7 @@ const ProjectsWithPurpose = () => {
               fontSize: { xs: "24px", md: "34px" },
               fontWeight: "500",
               lineHeight: "44px",
-              textAlign: "justify",
+              textAlign: "center",
               padding: "60px 20px 0px 20px",
               color: "rgba(255, 255, 255, 0.8)", // Mild and transparent color
             }}
@@ -75,7 +75,7 @@ const ProjectsWithPurpose = () => {
               fontSize: { xs: "16px", md: "18px" },
               fontWeight: "300",
               lineHeight: "30px",
-              textAlign: "left",
+              textAlign: "center",
               marginTop: "10px",
               padding: "0px 20px",
               color: "rgba(255, 255, 255, 0.7)", // Mild and transparent color
@@ -86,14 +86,17 @@ const ProjectsWithPurpose = () => {
           <Button
             sx={{
               width: "140px",
+              top: "4%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
               fontFamily: "Poppins",
               fontSize: "14px",
               fontWeight: "700",
-              color: "#333",
-              backgroundColor: "#FFFFFF",
+              color: "#F1F1F1",
+              backgroundColor: "#FF9900",
               borderRadius: "8px",
               margin: "20px 0px 0px 20px",
-              "&:hover": { backgroundColor: "#F1F1F1" },
+              "&:hover": { backgroundColor: "#E68A00" },
             }}
             onClick={() => (window.location.href = "donate")}
           >

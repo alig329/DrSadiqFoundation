@@ -218,7 +218,16 @@ const ContactUs = () => {
                                 />
                             </Grid>
                             <Grid item xs={12}>
-                                <Button variant="contained" color="warning" fullWidth>
+                                <Button sx={{
+              width: "100%",
+              fontFamily: "Poppins",
+              fontSize: "14px",
+              fontWeight: "700",
+              color: "#F1F1F1",
+              backgroundColor: "#FF9900",
+              borderRadius: "8px",
+              "&:hover": { backgroundColor: "#E68A00" },
+            }}>
                                     Send Message
                                 </Button>
                             </Grid>

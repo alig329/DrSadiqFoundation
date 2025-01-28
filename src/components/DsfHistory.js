@@ -91,9 +91,9 @@ const DsfHistory = () => {
             fontSize: "18px",
             fontWeight: "500",
             color: "#FFFFFF",
-            backgroundColor: "#ECA30C",
+            backgroundColor: "#FF9900",
             borderRadius: "10px",
-            "&:hover": { backgroundColor: "#ECA90D" },
+            "&:hover": { backgroundColor: "#E68A00" },
             textAlign: "center",
             animationDuration: "0ms",
             margin: "20px 0px 0px 10px"
