@@ -26,8 +26,11 @@ const Navbar = () => {
       <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
         {/* Logo */}
         <Typography variant="h6">
-          <img src="/dsfLogo.JPG" alt="Company Logo" height="56.78px" />
-        </Typography>
+  <a href="/">
+    <img src="/dsfLogo.JPG" alt="Company Logo" height="56.78px" />
+  </a>
+</Typography>
+
 
         {/* Desktop Links */}
         <Box

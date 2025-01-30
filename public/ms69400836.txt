@@ -1,0 +1,5 @@
+{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "drsadiqfoundation.org",
+  "Id": "b8858448-7936-4a22-b0b2-c61228797ec5"
+}

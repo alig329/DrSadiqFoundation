@@ -6,7 +6,7 @@ const images = [
   "cmk2.png",
   "cmk3.png",
   "cmk4.png",
-  "cmk5.jpg",
+  "cmk5.png",
   "cmk6.png"
 ];
 

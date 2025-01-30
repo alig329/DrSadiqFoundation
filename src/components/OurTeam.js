@@ -31,7 +31,7 @@ const teamMembers = [
           name: "Kamran Mirza",
           role: "IT Manager",
           description: "Kamran Mirza handles the technological infrastructure, ensuring the organization's IT systems are secure and efficient.",
-          image: "/cmk5.jpg",
+          image: "/cmk5.png",
         },
         
         {
@@ -39,18 +39,6 @@ const teamMembers = [
           role: "HR Manager",
           description: "Malik Ehsan Elahi is responsible for managing human resources, including recruitment, training, and employee welfare.",
           image: "/cmk6.png",
-        },
-        {
-            name: "Mam Noshaba",
-            role: "Communication Officer",
-            description: "Mam Noshaba manages the organization's communication strategies, handling both internal and external communications.",
-            image: "/communication_officer.png",
-          },
-        {
-          name: "Muhammad Ali",
-          role: "Web Developer",
-          description: "Muhammad Ali is responsible for developing and maintaining the organization's websites, ensuring they are user-friendly and functional.",
-          image: "/web_developer.png",
         },
       ];
       

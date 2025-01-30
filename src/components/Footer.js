@@ -216,7 +216,7 @@ const Footer = () => {
                 </Box>
                 <Typography variant="body1">
                   <span  >Mail Us <br /></span>
-                  chairman@drsf.org <br/> admin@drsf.org
+                  info@drsadiqfoundation.org <br/> admin@drsf.org
                 </Typography>
               </Box>
 
