@@ -288,7 +288,7 @@ const Homepage = () => {
        {/* Second Carousel Item */}
        <SecondCarouselItem />
 
-       {/* Third Carousel Item */}
+       {/* Third Carousel Item 
        <Box sx={{
         height            : '60vh',
         backgroundImage   : 'url("/hostel.jpg")',
@@ -330,7 +330,7 @@ const Homepage = () => {
            Support the DSF Hospital project and help us heal and comfort other souls. Your donation will help bring quality healthcare closer to home.
           </Typography>
         </Box>
-       </Box>
+       </Box> */}
       </Carousel>
     </Box>
 

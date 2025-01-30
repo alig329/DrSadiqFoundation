@@ -102,29 +102,13 @@ function Projects() {
               </Typography>
             </Box>
           </CardContent>
-          <CardActions sx      = {{ justifyContent: 'space-between' }}>
+          <CardActions sx      = {{ justifyContent: 'center' }}>
           <Button      size    = "medium" color = "primary"
                        onClick = {() => window.location.href = project.link}
             >
               View Details
             </Button>
-            <Button
-              sx={{
-                width            : "150px",
-                fontFamily       : "Poppins",
-                fontSize         : "12px",
-                color            : "#FFFFFF",
-                backgroundColor  : "#ECA30C",
-                borderRadius     : "10px",
-                "&:hover"        : { backgroundColor: "#cc8a09" },
-                textAlign        : "center",
-                animationDuration: "0ms",
-                margin           : "10px"
-              }}
-              onClick = {() => window.location.href = "donate"}
-            >
-              Support The Cause
-            </Button>
+            
           </CardActions>
         </Card>
       </Grid>

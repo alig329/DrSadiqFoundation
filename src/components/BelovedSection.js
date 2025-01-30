@@ -12,7 +12,7 @@ const BelovedSection = () => {
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: '8px',
-      padding: '20px',
+      padding: '40px',
       margin: '20px auto',
       boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
       
@@ -29,7 +29,7 @@ const BelovedSection = () => {
               <Typography
                 sx={{
                   fontFamily: 'Poppins',
-                  fontSize: { xs: '20px', md: '28px' },
+                  fontSize: { xs: '18px', md: '24px' },
                   fontWeight: '500',
                   lineHeight: '1.4',
                   color: '#FFFFFF',
@@ -52,8 +52,8 @@ const BelovedSection = () => {
                   lineHeight: '2.0',
                   color: '#FFFFFF',
                   textDecoration: 'underline',
-                  fontWeight: '700',
-                  marginTop: '16px'
+                  fontWeight: '600',
+                  marginTop: '14px'
                 }}
               >
                 The Core of Our Foundation!
@@ -61,7 +61,7 @@ const BelovedSection = () => {
               <Typography
                 sx={{
                   fontFamily: 'Poppins',
-                  fontSize: { xs: '10px', md: '14px' },
+                  fontSize: { xs: '10px', md: '12px' },
                   lineHeight: '1.6',
                   color: '#FFFFFF',
                   textAlign: 'justify',
@@ -79,8 +79,8 @@ const BelovedSection = () => {
                   fontFamily: 'Poppins',
                   fontWeight: '500',
                   textTransform: 'none',
-                  px: 3,
-                  py: 1,
+                  px: 1,
+                  py: 0.5,
                   '&:hover': { backgroundColor: '#E68A00' },  
                 }}
                 onClick={() => window.location.href = "read"}
@@ -102,7 +102,7 @@ const BelovedSection = () => {
                   src="/DrSahb22.png"
                   alt="Dr. Muhammad Sadiq"
                   style={{
-                    height: '100%',
+                    height: '80%',
                     width: '100%',
                     objectFit: 'cover',
                     borderRadius: '8px',
