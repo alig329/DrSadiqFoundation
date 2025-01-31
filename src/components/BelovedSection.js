@@ -111,6 +111,7 @@ const BelovedSection = () => {
                 />
                 <Box
                   sx={{
+                    display: { xs: "none", md: "block" },
                     position: 'absolute',
                     top: '10px',
                     left: { xs: '5px', md: '10px' },

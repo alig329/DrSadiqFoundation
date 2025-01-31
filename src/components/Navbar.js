@@ -26,16 +26,15 @@ const Navbar = () => {
       <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
         {/* Logo */}
         <Typography variant="h6">
-  <a href="/">
-    <img src="/dsfLogo.JPG" alt="Company Logo" height="56.78px" />
-  </a>
-</Typography>
-
+          <a href="/">
+            <img src="/dsfLogo.JPG" alt="Company Logo" height="56.78px" />
+          </a>
+        </Typography>
 
         {/* Desktop Links */}
         <Box
           sx={{
-            display: { xs: "flex", md: "flex" },
+            display: { xs: "none", md: "flex" },
             gap: 0,
             alignItems: "center",
           }}
@@ -50,11 +49,47 @@ const Navbar = () => {
                 fontFamily: "Poppins, sans-serif",
                 fontSize: "12px",
                 fontWeight: "500",
-                padding: "10px 10px",
+                padding: "10px 20px",
+                position: "relative",
+                overflow: "hidden",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  backgroundColor: item.style?.backgroundColor || "transparent",
+                },
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  background: "linear-gradient(45deg, #027D40, #FFD15C)",
+                  opacity: 0,
+                  transition: "opacity 0.3s ease",
+                  zIndex: 1,
+                },
+                "&:hover::before": {
+                  opacity: 0.2,
+                },
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  bottom: 0,
+                  left: "50%",
+                  width: "0%",
+                  height: "2px",
+                  backgroundColor: "#027D40",
+                  transition: "all 0.3s ease",
+                  transform: "translateX(-50%)",
+                },
+                "&:hover::after": {
+                  width: "100%",
+                },
                 ...item.style,
               }}
             >
-              {item.label}
+              <span style={{ position: "relative", zIndex: 2 }}>{item.label}</span>
             </Button>
           ))}
         </Box>

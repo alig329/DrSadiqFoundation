@@ -49,17 +49,19 @@ const StoriesOfChange = () => {
     >
       {/* Title Section */}
       <Typography
-        sx={{
-          fontFamily: "Poppins",
-          fontSize: { xs: "18px", md: "24px" },
-          fontWeight: "700",
-          lineHeight: "30px",
-          color: "rgba(0, 0, 0, 0.7)",
-          marginBottom: "20px",
-        }}
-      >
-        Stories of Change
-      </Typography>
+  variant="h1"
+  sx={{
+    fontFamily: "Poppins",
+    fontSize: { xs: "32px", md: "48px" },
+    fontWeight: "600",
+    lineHeight: "58px",
+    color: "rgba(0, 0, 0, 0.7)",
+    marginBottom: "20px",
+  }}
+>
+  Stories of Change
+</Typography>
+
       <Typography
         sx={{
           fontFamily: "Poppins",
