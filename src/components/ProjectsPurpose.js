@@ -85,12 +85,12 @@ const ProjectsWithPurpose = () => {
           </Typography>
           <Button
             sx={{
-              width: "140px",
+              width: "110px",
               top: "4%",
-              left: "50%",
+              left: "45%",
               transform: "translate(-50%, -50%)",
               fontFamily: "Poppins",
-              fontSize: "14px",
+              fontSize: "12px",
               fontWeight: "700",
               color: "#F1F1F1",
               backgroundColor: "#FF9900",

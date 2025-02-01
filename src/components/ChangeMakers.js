@@ -60,7 +60,7 @@ const ChangeMakersSection = () => {
         <Typography
           sx={{
             fontFamily: 'Poppins',
-            fontSize: { xs: '36px', md: '70px' },
+            fontSize: { xs: '36px', md: '48px' },
             fontWeight: '700',
             lineHeight: { xs: '1.2', md: '87.76px' },
             textAlign: 'left',
@@ -77,25 +77,25 @@ const ChangeMakersSection = () => {
             fontSize: { xs: '14px', md: '18px' },
             fontWeight: '500',
             lineHeight: { xs: '1.5', md: '39px' },
-            textAlign: 'left',
+            textAlign: 'justify',
             color: '#000000',
-            marginBottom: '20px',
-            padding: '0px 0px 10px 30px'
+            marginRight: '20px',
+            padding: '0px 30px 20px 30px'
           }}
         >
           Our team is dedicated to making a positive impact in the lives of individuals and communities. With a shared vision and passion for creating change, we work together to design and implement initiatives that drive meaningful progress.
         </Typography>
         <Button
           sx={{
-            width: { xs: '50%', md: '200px' },
+            width: { xs: '50%', md: '150px' },
             height: '50px',
             fontFamily: 'Poppins',
-            fontSize: { xs: '16px', md: '18px' },
+            fontSize: { xs: '12px', md: '14px' },
             fontWeight: '500',
             color: '#FFFFFF',
-            backgroundColor: '#027D40',
+            backgroundColor: '#E68A00',
             borderRadius: '20px',
-            '&:hover': { backgroundColor: '#029D40' },
+            '&:hover': { backgroundColor: '#FF9900' },
             textAlign: 'center',
             marginLeft: '30px'
           }}

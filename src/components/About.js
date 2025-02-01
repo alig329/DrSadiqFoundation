@@ -285,7 +285,7 @@ const About = () => {
         <Typography
           sx={{
             fontFamily: 'Poppins',
-            fontSize: '48px',
+            fontSize: '34px',
             fontWeight: 600,
             lineHeight: '75px',
             textAlign: 'center',
@@ -300,7 +300,7 @@ const About = () => {
       <Box sx={{
         width: '100%',
 
-        height: '250px',
+        height: '150px',
 
         opacity: 1,
 
@@ -313,6 +313,10 @@ const About = () => {
         justifyContent: 'space-around',
 
         flexWrap: 'wrap',
+
+        padding: '10px',
+
+        marginBottom: '40px'
 
       }}>
         <Box sx={{
@@ -328,9 +332,9 @@ const About = () => {
 
         }}> <img src="/sp.png" alt="SpLogo"
           style={{
-            width: '176px',
+            width: '150px',
 
-            height: '150px',
+            height: '100px',
 
             borderRadius: '20px 0px 0px 0px',
 
@@ -338,11 +342,11 @@ const About = () => {
 
           }} />
           <Button sx={{
-            padding: "8px 16px",
+            padding: "5px 12px",
 
             fontFamily: "Poppins",
 
-            fontSize: "14px",
+            fontSize: "12px",
 
             fontWeight: "500",
 
@@ -369,19 +373,19 @@ const About = () => {
           gap: '10px',
 
         }}> <img src="/sbph.png" alt="SBPH Logo" style={{
-          width: '175px',
+          width: '150px',
 
-          height: '150px',
+          height: '100px',
 
           opacity: 1,
 
         }} />
           <Button sx={{
-            padding: "8px 16px",
+            padding: "5px 12px",
 
             fontFamily: "Poppins",
 
-            fontSize: "14px",
+            fontSize: "12px",
 
             fontWeight: "500",
 
@@ -407,18 +411,18 @@ const About = () => {
           gap: '10px',
 
         }}> <img src="/jaguar.png" alt="JaguarLogo" style={{
-          width: '175px',
+          width: '150px',
 
-          height: '150px',
+          height: '100px',
 
           opacity: 1,
 
         }} /> <Button sx={{
-          padding: "8px 16px",
+          padding: "5px 12px",
 
           fontFamily: "Poppins",
 
-          fontSize: "14px",
+          fontSize: "12px",
 
           fontWeight: "500",
 
@@ -441,19 +445,19 @@ const About = () => {
           gap: '10px',
 
         }}> <img src="/sppl.png" alt="SppLogo" style={{
-          width: '185px',
+          width: '150px',
 
-          height: '150px',
+          height: '100px',
 
           opacity: 1,
 
         }} />
           <Button sx={{
-            padding: "8px 16px",
+            padding: "5px 12px",
 
             fontFamily: "Poppins",
 
-            fontSize: "14px",
+            fontSize: "12px",
 
             fontWeight: "500",
 
@@ -474,314 +478,305 @@ const About = () => {
 
       {/* Positive impact section */}
 
-      <Box sx={{
-        backgroundColor: '#588BC6',
-        padding: '40px',
-        alignItems: 'stretch',
-        marginBottom: '80px'
-      }}>
-        <Typography variant="h2" sx={{
-          fontFamily: 'Poppins',
-          fontSize: {
-            xs: '20px',
-            sm: '30px',
-            md: '40px'
-          },
-          fontWeight: '500',
-          lineHeight: '80px',
-          color: '#FFFFFF',
-          textAlign: 'center',
-          marginBottom: '0px'
-        }}>
-          OUR POSITIVE IMPACT
-        </Typography>
-        <Typography sx={{
-          fontFamily: 'Poppins',
-          fontSize: {
-            xs: '14px',
-            sm: '16px',
-            md: '18px'
-          },
-          fontWeight: '500',
-          lineHeight: {
-            xs: '30px',
-            md: '54px'
-          },
-          color: '#FFFFFF',
-          textAlign: 'center',
-          padding: '0px 150px 0px 150px',
-          marginBottom: '80px'
-        }}>
-          As a Non-Profit Organization (NPO), we are driven by a desire to make a meaningful difference in the lives of others. Since our beginning, we have been working tirelessly to implement multiple welfare projects that benefit those in need. Some of our notable initiatives include:
-        </Typography>
+      <Box
+      sx={{
+        backgroundColor: "#588BC6",
+        padding: { xs: "20px", md: "40px" },
+        marginBottom: { xs: "40px", md: "80px" },
+      }}
+    >
+      {/* Section Heading */}
+      <Typography
+        variant="h2"
+        sx={{
+          fontFamily: "Poppins",
+          fontSize: { xs: "24px", sm: "30px", md: "40px" },
+          fontWeight: "500",
+          lineHeight: { xs: "40px", md: "80px" },
+          color: "#FFFFFF",
+          textAlign: "center",
+          marginBottom: { xs: "20px", md: "40px" },
+        }}
+      >
+        OUR POSITIVE IMPACT
+      </Typography>
 
-        {/* DSF-BBH*/}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: {
-            xs: 'column',
-            md: 'row'
-          },
-          alignItems: 'stretch',
-          marginBottom: '80px'
-        }}>
-          <Box sx={{
+      {/* Section Description */}
+      <Typography
+        sx={{
+          fontFamily: "Poppins",
+          fontSize: { xs: "14px", sm: "16px", md: "18px" },
+          fontWeight: "500",
+          lineHeight: { xs: "24px", md: "32px" },
+          color: "#FFFFFF",
+          textAlign: "justify",
+          padding: { xs: "0px 20px", md: "0px 150px" },
+          marginBottom: { xs: "40px", md: "80px" },
+        }}
+      >
+        As a Non-Profit Organization (NPO), we are driven by a desire to make a meaningful difference in the lives of others. Since our beginning, we have been working tirelessly to implement multiple welfare projects that benefit those in need. Some of our notable initiatives include:
+      </Typography>
+
+      {/* DSF-BBH Food Project */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "center",
+          gap: { xs: "20px", md: "40px" },
+          marginBottom: { xs: "40px", md: "80px" },
+        }}
+      >
+        <Box
+          sx={{
             flex: 1,
-            mb: {
-              xs: '20px',
-              md: 0
-            },
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-          }}>
-            <Typography variant="h2" sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '20px',
-                sm: '30px',
-                md: '40px'
-              },
-              fontWeight: '500',
-              lineHeight: '80px',
-              color: '#FFFFFF'
-            }}>
-              DSF-BBH FOOD PROJECT
-            </Typography>
-            <Typography sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '14px',
-                sm: '16px',
-                md: '18px'
-              },
-              fontWeight: '500',
-              lineHeight: {
-                xs: '30px',
-                md: '54px'
-              },
-              color: '#FFFFFF',
-              textAlign: 'left'
-            }}>
-              We provide three meals a day to approximately 400 patients at Benazir Bhutto Hospital, ensuring that they receive the nourishment they need to recover and thrive.
-            </Typography>
-          </Box>
-          <Box sx={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'stretch'
-          }}>
-            <img src='/bbh.png'
-              alt="Benazir Bhutto Hospital"
-              style={{
-                width: '90%',
-                height: '100%',
-                objectFit: 'cover'
-              }} />
-          </Box>
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "20px", sm: "24px", md: "32px" },
+              fontWeight: "500",
+              lineHeight: { xs: "30px", md: "40px" },
+              color: "#FFFFFF",
+              marginBottom: { xs: "10px", md: "20px" },
+            }}
+          >
+            DSF-BBH FOOD PROJECT
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
+              fontWeight: "500",
+              lineHeight: { xs: "24px", md: "32px" },
+              color: "#FFFFFF",
+              textAlign: "justify",
+            }}
+          >
+            We provide three meals a day to approximately 400 patients at Benazir Bhutto Hospital, ensuring that they receive the nourishment they need to recover and thrive.
+          </Typography>
         </Box>
-
-        {/* Free Dispensaries */}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: {
-            xs: 'column',
-            md: 'row-reverse'
-          },
-          alignItems: 'stretch',
-          marginBottom: '80px'
-        }}>
-          <Box sx={{
+        <Box
+          sx={{
             flex: 1,
-            mb: {
-              xs: '20px',
-              md: 0
-            },
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-          }}>
-            <Typography variant="h2" sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '20px',
-                sm: '30px',
-                md: '40px'
-              },
-              fontWeight: '500',
-              lineHeight: '80px',
-              color: '#FFFFFF'
-            }}>
-              FREE DISPENSARIES
-            </Typography>
-            <Typography sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '14px',
-                sm: '16px',
-                md: '18px'
-              },
-              fontWeight: '500',
-              lineHeight: {
-                xs: '30px',
-                md: '54px'
-              },
-              color: '#FFFFFF',
-              textAlign: 'left'
-            }}>
-              We operate two dispensaries, one in Dheri-Chakri and the other in Mial village, which offer free GP consultations and medicines to the general public. These dispensaries have benefited over 50,000 patients per annum, providing them with access to quality healthcare.
-            </Typography>
-          </Box>
-          <Box sx={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'stretch'
-          }}>
-            <img src='/Disp.png' alt="DSF Dispenceries"
-              style={{
-                width: '90%',
-                height: '100%',
-                objectFit: 'cover'
-              }} />
-          </Box>
-        </Box>
-
-        {/* Vocational Education and Skill Development */}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: {
-            xs: 'column',
-            md: 'row'
-          },
-          alignItems: 'stretch',
-          marginBottom: '80px'
-        }}>
-          <Box sx={{
-            flex: 1,
-            mb: {
-              xs: '20px',
-              md: 0
-            },
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-          }}>
-            <Typography variant="h2" sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '20px',
-                sm: '30px',
-                md: '40px'
-              },
-              fontWeight: '500',
-              lineHeight: '80px',
-              color: '#FFFFFF'
-            }}>
-              VOCATIONAL EDUCATION AND SKILL DEVELOPMENT
-            </Typography>
-            <Typography sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '14px',
-                sm: '16px',
-                md: '18px'
-              },
-              fontWeight: '500',
-              lineHeight: {
-                xs: '30px',
-                md: '54px'
-              },
-              color: '#FFFFFF',
-              textAlign: 'left'
-            }}>
-              We recognize the importance of empowering individuals with skills and knowledge to improve their socio-economic status. To this end, we patronize two Skill Development Centers in UC Sial Chakari and Chak Jalal Din, Rawalpindi, which provide trining and education to those who need it most.
-            </Typography>
-          </Box>
-          <Box sx={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'stretch'
-          }}>
-            <img src='/voc.png' alt="Vocational Training" style={{
-              width: '90%',
-              height: '100%',
-              objectFit: 'cover'
-            }} />
-          </Box>
-        </Box>
-
-        {/* Education */}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: {
-            xs: 'column',
-            md: 'row-reverse'
-          },
-          alignItems: 'stretch',
-          marginBottom: '80px'
-        }}>
-          <Box sx={{
-            flex: 1,
-            mb: {
-              xs: '20px',
-              md: 0
-            },
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-          }}>
-            <Typography variant="h2" sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '20px',
-                sm: '30px',
-                md: '40px'
-              },
-              fontWeight: '500',
-              lineHeight: '80px',
-              color: '#FFFFFF'
-            }}>
-              EDUCATION
-            </Typography>
-            <Typography sx={{
-              fontFamily: 'Poppins',
-              fontSize: {
-                xs: '14px',
-                sm: '16px',
-                md: '18px'
-              },
-              fontWeight: '500',
-              lineHeight: {
-                xs: '30px',
-                md: '54px'
-              },
-              color: '#FFFFFF',
-              textAlign: 'left'
-            }}>
-              Dr. Sadiq Foundation (DSF) is dedicated to empowering future generations through education. By providing scholarships to deserving students we aim to unlock their potential and create opportunities for a brighter future. With a steadfast commitment to fostering equality and academic excellence, DSF envisions a world where education becomes a catalyst for positive change and sustainable growth.
-            </Typography>
-          </Box>
-          <Box sx={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'stretch'
-          }}>
-            <img src='/edu.png' alt="DSF Education Projects" style={{
-              width: '90%',
-              height: '100%',
-              objectFit: 'cover'
-            }} />
-          </Box>
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="/bbh.png"
+            alt="Benazir Bhutto Hospital"
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              height: "auto",
+              borderRadius: "8px",
+            }}
+          />
         </Box>
       </Box>
+
+      {/* Free Dispensaries */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row-reverse" },
+          alignItems: "center",
+          gap: { xs: "20px", md: "40px" },
+          marginBottom: { xs: "40px", md: "80px" },
+        }}
+      >
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "20px", sm: "24px", md: "32px" },
+              fontWeight: "500",
+              lineHeight: { xs: "30px", md: "40px" },
+              color: "#FFFFFF",
+              marginBottom: { xs: "10px", md: "20px" },
+            }}
+          >
+            FREE DISPENSARIES
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
+              fontWeight: "500",
+              lineHeight: { xs: "24px", md: "32px" },
+              color: "#FFFFFF",
+              textAlign: "justify",
+            }}
+          >
+            We operate two dispensaries, one in Dheri-Chakri and the other in Mial village, which offer free GP consultations and medicines to the general public. These dispensaries have benefited over 50,000 patients per annum, providing them with access to quality healthcare.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="/Disp.png"
+            alt="DSF Dispensaries"
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              height: "auto",
+              borderRadius: "8px",
+            }}
+          />
+        </Box>
+      </Box>
+
+      {/* Vocational Education and Skill Development */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "center",
+          gap: { xs: "20px", md: "40px" },
+          marginBottom: { xs: "40px", md: "80px" },
+        }}
+      >
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "20px", sm: "24px", md: "32px" },
+              fontWeight: "500",
+              lineHeight: { xs: "30px", md: "40px" },
+              color: "#FFFFFF",
+              marginBottom: { xs: "10px", md: "20px" },
+            }}
+          >
+            VOCATIONAL EDUCATION AND SKILL DEVELOPMENT
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
+              fontWeight: "500",
+              lineHeight: { xs: "24px", md: "32px" },
+              color: "#FFFFFF",
+              textAlign: "justify",
+            }}
+          >
+            We recognize the importance of empowering individuals with skills and knowledge to improve their socio-economic status. To this end, we patronize two Skill Development Centers in UC Sial Chakari and Chak Jalal Din, Rawalpindi, which provide training and education to those who need it most.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="/voc.png"
+            alt="Vocational Training"
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              height: "auto",
+              borderRadius: "8px",
+            }}
+          />
+        </Box>
+      </Box>
+
+      {/* Education */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row-reverse" },
+          alignItems: "center",
+          gap: { xs: "20px", md: "40px" },
+          marginBottom: { xs: "40px", md: "80px" },
+        }}
+      >
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "20px", sm: "24px", md: "32px" },
+              fontWeight: "500",
+              lineHeight: { xs: "30px", md: "40px" },
+              color: "#FFFFFF",
+              marginBottom: { xs: "10px", md: "20px" },
+            }}
+          >
+            EDUCATION
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
+              fontWeight: "500",
+              lineHeight: { xs: "24px", md: "32px" },
+              color: "#FFFFFF",
+              textAlign: "justify",
+            }}
+          >
+            Dr. Sadiq Foundation (DSF) is dedicated to empowering future generations through education. By providing scholarships to deserving students, we aim to unlock their potential and create opportunities for a brighter future. With a steadfast commitment to fostering equality and academic excellence, DSF envisions a world where education becomes a catalyst for positive change and sustainable growth.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="/edu.png"
+            alt="DSF Education Projects"
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              height: "auto",
+              borderRadius: "8px",
+            }}
+          />
+        </Box>
+      </Box>
+    </Box>
 
       {/* Heart of our Story Section */}
 

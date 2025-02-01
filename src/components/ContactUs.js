@@ -3,6 +3,28 @@ import { Box, Typography, TextField, Button, Link, Grid } from "@mui/material";
 import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Email, Phone, LocationOn } from "@mui/icons-material";
 import TikTokIcon from '@mui/icons-material/MusicNote'; // For TikTok icon (using a close alternative)
 import StoriesOfChange from "../StoriesOfChange";
+import { keyframes } from "@emotion/react";
+
+// Define animations
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const scaleUp = keyframes`
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+`;
 
 const ContactUs = () => {
     return (
@@ -10,6 +32,7 @@ const ContactUs = () => {
             padding: "20px",
             backgroundColor: "#f5f5f5"
         }}>
+            {/* Header Section */}
             <Typography variant="h2" sx={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -19,29 +42,26 @@ const ContactUs = () => {
                 lineHeight: '60px',
                 marginTop: '10px',
                 color: '#000000',
+                animation: `${fadeIn} 1s ease-out`,
             }}>
-                JOIN THE <br/>CONVERSATION
+                JOIN THE <br />CONVERSATION
             </Typography>
             <Typography sx={{
                 fontFamily: 'Poppins',
-                fontSize: {
-                    xs: '14px',
-                    sm: '16px',
-                    md: '18px'
-                },
+                fontSize: { xs: '14px', sm: '16px', md: '18px' },
                 fontWeight: '500',
-                lineHeight: {
-                    xs: '30px',
-                    md: '54px'
-                },
+                lineHeight: { xs: '30px', md: '54px' },
                 color: '#000000',
                 textAlign: 'center',
-                padding: '10px 100px'
+                padding: '10px 100px',
+                animation: `${fadeIn} 1.5s ease-out`,
             }}>
                 At Dr. Sadiq Foundation,
                 we believe that everyone has a story to tell and a voice that deserves to be heard. We want to hear from you,
                 and we want to share our own stories and experiences with you.
             </Typography>
+
+            {/* Contact Section */}
             <Box
                 sx={{
                     backgroundColor: "#027D40",
@@ -50,12 +70,13 @@ const ContactUs = () => {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    flexDirection: "row",
-                    gap: "50px", // Adds space between items 
+                    flexDirection: { xs: "column", md: "row" },
+                    gap: "50px",
+                    animation: `${fadeIn} 2s ease-out`,
                 }}>
 
                 {/* Left Content */}
-                <Box>
+                <Box sx={{ animation: `${fadeIn} 2.5s ease-out` }}>
                     <Typography variant="h4" sx={{ fontWeight: 'bold' }} gutterBottom>
                         Get in Touch
                     </Typography>
@@ -77,6 +98,7 @@ const ContactUs = () => {
                                 alignItems: "center",
                                 gap: "10px",
                                 marginBottom: "20px",
+                                "&:hover": { transform: "scale(1.02)", transition: "transform 0.3s ease" },
                             }}
                         >
                             <Box
@@ -90,12 +112,8 @@ const ContactUs = () => {
                                     alignItems: "center",
                                 }}
                             >
-                                <Phone sx={{
-                                    fontSize: 30,
-                                    color: "#fff"
-                                }} />
+                                <Phone sx={{ fontSize: 30, color: "#fff" }} />
                             </Box>
-
                             <Typography variant="body1">
                                 <span style={{ fontWeight: 'bold' }}>Call Us <br /></span>
                                 051-111 500 505 | 051-4927546
@@ -109,6 +127,7 @@ const ContactUs = () => {
                                 alignItems: "center",
                                 gap: "10px",
                                 marginBottom: "20px",
+                                "&:hover": { transform: "scale(1.02)", transition: "transform 0.3s ease" },
                             }}
                         >
                             <Box
@@ -122,10 +141,7 @@ const ContactUs = () => {
                                     alignItems: "center",
                                 }}
                             >
-                                <Email sx={{
-                                    fontSize: 30,
-                                    color: "#fff"
-                                }} />
+                                <Email sx={{ fontSize: 30, color: "#fff" }} />
                             </Box>
                             <Typography variant="body1">
                                 <span style={{ fontWeight: 'bold' }}>Mail Us <br /></span>
@@ -140,6 +156,7 @@ const ContactUs = () => {
                                 alignItems: "center",
                                 gap: "10px",
                                 marginBottom: "20px",
+                                "&:hover": { transform: "scale(1.02)", transition: "transform 0.3s ease" },
                             }}
                         >
                             <Box
@@ -153,10 +170,7 @@ const ContactUs = () => {
                                     alignItems: "center",
                                 }}
                             >
-                                <LocationOn sx={{
-                                    fontSize: 30,
-                                    color: "#fff"
-                                }} />
+                                <LocationOn sx={{ fontSize: 30, color: "#fff" }} />
                             </Box>
                             <Typography variant="body1">
                                 <span style={{ fontWeight: 'bold' }}>Visit Us <br /></span>
@@ -178,10 +192,8 @@ const ContactUs = () => {
                         padding: "20px",
                         borderRadius: "8px",
                         boxShadow: 2,
-                        width: {
-                            xs: "100%",
-                            md: "50%"
-                        },
+                        width: { xs: "100%", md: "50%" },
+                        animation: `${scaleUp} 1s ease-out`,
                     }}
                 >
                     <Typography
@@ -219,15 +231,15 @@ const ContactUs = () => {
                             </Grid>
                             <Grid item xs={12}>
                                 <Button sx={{
-              width: "100%",
-              fontFamily: "Poppins",
-              fontSize: "14px",
-              fontWeight: "700",
-              color: "#F1F1F1",
-              backgroundColor: "#FF9900",
-              borderRadius: "8px",
-              "&:hover": { backgroundColor: "#E68A00" },
-            }}>
+                                    width: "100%",
+                                    fontFamily: "Poppins",
+                                    fontSize: "14px",
+                                    fontWeight: "700",
+                                    color: "#F1F1F1",
+                                    backgroundColor: "#FF9900",
+                                    borderRadius: "8px",
+                                    "&:hover": { backgroundColor: "#E68A00" },
+                                }}>
                                     Send Message
                                 </Button>
                             </Grid>
@@ -236,15 +248,13 @@ const ContactUs = () => {
                 </Box>
             </Box>
 
-
-
             {/* Section 2: Stay Connected */}
             <Box sx={{
                 backgroundColor: "#1565c0",
                 color: "#fff",
                 textAlign: "center",
                 padding: "30px",
-
+                animation: `${fadeIn} 2s ease-out`,
             }}>
                 <Typography variant="h4" fontWeight='bold' gutterBottom>
                     STAY CONNECTED
@@ -260,99 +270,28 @@ const ContactUs = () => {
                     gap: "20px",
                     marginTop: "20px",
                 }}>
-                    <Box sx={{
-                        display: 'flex',
-                        gap: 5
-                    }}>
-                        <Link
-                            href="https://www.facebook.com"
-                            target="_blank"
-                            sx={{
-                                color: 'white',
-                                '&:hover': { color: '#3b5998' } // Facebook blue color on hover
-                            }}>
-                            <Facebook sx={{
-                                fontSize: {
-                                    xs: 20,
-                                    md: 60
-                                }
-                            }} />
-                        </Link>
-                        <Link
-                            href="https://www.instagram.com"
-                            target="_blank"
-                            sx={{
-                                color: 'white',
-                                fontSize: '80',
-                                '&:hover': { color: '#E4405F' } // Instagram pink color on hover
-                            }}>
-                            <Instagram sx={{
-                                fontSize: {
-                                    xs: 20,
-                                    md: 60
-                                }
-                            }} />
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com"
-                            target="_blank"
-                            sx={{
-                                color: 'white',
-                                fontSize: '80',
-                                '&:hover': { color: '#0077B5' } // LinkedIn blue color on hover
-                            }}>
-                            <LinkedIn sx={{
-                                fontSize: {
-                                    xs: 20,
-                                    md: 60
-                                }
-                            }} />
-                        </Link>
-                        <Link
-                            href="https://twitter.com"
-                            target="_blank"
-                            sx={{
-                                color: 'white',
-                                fontSize: '80',
-                                '&:hover': { color: '#1DB1F2' } // Twitter blue color on hover
-                            }}>
-                            <Twitter sx={{
-                                fontSize: {
-                                    xs: 20,
-                                    md: 60
-                                }
-                            }} />
-                        </Link>
-                        <Link
-                            href="https://www.tiktok.com"
-                            target="_blank"
-                            sx={{
-                                color: 'white',
-                                fontSize: '80',
-                                '&:hover': { color: '#000000' } // TikTok blue color on hover
-                            }}>
-                            <TikTokIcon sx={{
-                                fontSize: {
-                                    xs: 20,
-                                    md: 60
-                                }
-                            }} />
-                        </Link>
-                        <Link
-                            href="https://www.youtube.com"
-                            target="_blank"
-                            sx={{
-                                color: 'white',
-
-                                '&:hover': { color: '#FF0000' } // YouTube red color on hover
-                            }}>
-                            <YouTube sx={{
-                                fontSize: {
-                                    xs: 20,
-                                    md: 60
-                                }
-                            }} />
-                        </Link>
+                    <Box sx={{ display: 'flex', gap: 5 }}>
+                        {[
+                            { icon: <Facebook />, color: '#3b5998', href: "https://www.facebook.com/drsadiqfoundationdsf/" },
+                            { icon: <Instagram />, color: '#E4405F', href: "https://www.instagram.com/drsadiqfoundation/" },
+                            { icon: <LinkedIn />, color: '#0077B5', href: "https://www.linkedin.com/company/drsadiqfoundation" },
+                            { icon: <Twitter />, color: '#1DB1F2', href: "https://x.com/drsadiqfdn" },
+                            { icon: <TikTokIcon />, color: '#000000', href: "https://www.tiktok.com/@drsadiqfoundation" },
+                            { icon: <YouTube />, color: '#FF0000', href: "https://www.youtube.com/@DrSadiqFoundation" },
+                        ].map((social, index) => (
+                            <Link
+                                key={index}
+                                href={social.href}
+                                target="_blank"
+                                sx={{
+                                    color: 'white',
+                                    '&:hover': { color: social.color },
+                                    transition: "color 0.3s ease",
+                                }}
+                            >
+                                {React.cloneElement(social.icon, { sx: { fontSize: { xs: 20, md: 60 } } })}
+                            </Link>
+                        ))}
                     </Box>
                 </Box>
             </Box>
@@ -362,7 +301,8 @@ const ContactUs = () => {
                 backgroundColor: "#027D40",
                 color: "#fff",
                 textAlign: "center",
-                padding: "30px"
+                padding: "30px",
+                animation: `${fadeIn} 2.5s ease-out`,
             }}>
                 <Typography variant="h4" fontWeight='bold' gutterBottom>
                     VOLUNTEER WITH US
@@ -371,18 +311,23 @@ const ContactUs = () => {
                     We're always looking for passionate and dedicated individuals to join our team. Whether you have a few hours a week or a few days a month,
                     we'd love to have you volunteer with us.
                 </Typography>
-                <Typography variant="body1" sx={{
+                <a 
+                href="/volunteer"
+                style={{
                     textDecoration: "underline",
-
-                    cursor: "pointer"
+                    cursor: "pointer",
+                    color: "#FFD15C",
+                    "&:hover": { color: "#F1F1F1", transition: "color 0.3s ease" },
                 }}>
-                    Click Here To Fill The Form
-                </Typography>
+                    Fill The Form
+
+                </a>
                 <Box sx={{
                     marginTop: "30px",
                     backgroundColor: "#1565c0",
                     padding: "20px",
-                    borderRadius: "8px"
+                    borderRadius: "8px",
+                    animation: `${scaleUp} 1s ease-out`,
                 }}>
                     <Typography variant="h4" fontWeight='bold' gutterBottom>
                         EVENTS
@@ -395,13 +340,14 @@ const ContactUs = () => {
                     </Typography>
                     <Typography variant="body1" sx={{
                         textDecoration: "underline",
-                        cursor: "pointer"
+                        cursor: "pointer",
+                        "&:hover": { color: "#FFD15C", transition: "color 0.3s ease" },
                     }}>
                         Event Calendar
                     </Typography>
                 </Box>
             </Box>
-            < StoriesOfChange/>
+            <StoriesOfChange />
         </Box>
     );
 };
