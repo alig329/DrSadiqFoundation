@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, TextField, Button, Link, Grid } from "@mui/material";
 import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Email, Phone, LocationOn } from "@mui/icons-material";
 import TikTokIcon from '@mui/icons-material/MusicNote'; // For TikTok icon (using a close alternative)
@@ -27,6 +27,49 @@ const scaleUp = keyframes`
 `;
 
 const ContactUs = () => {
+     // State for the message form
+  const [messageForm, setMessageForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+
+  // Handle changes to form fields
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setMessageForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("https://dsfbackend.vercel.app/api/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(messageForm)
+      });
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setMessageForm({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        const errorData = await res.json();
+        alert("Failed to send message: " + errorData.error);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred while sending your message.");
+    }
+  };
+
     return (
         <Box sx={{
             padding: "20px",
@@ -186,67 +229,95 @@ const ContactUs = () => {
                 </Box>
 
                 {/* Right Content: Contact Form */}
-                <Box
-                    sx={{
-                        backgroundColor: "#fff",
-                        padding: "20px",
-                        borderRadius: "8px",
-                        boxShadow: 2,
-                        width: { xs: "100%", md: "50%" },
-                        animation: `${scaleUp} 1s ease-out`,
-                    }}
+        <Box sx={{
+          backgroundColor: "#fff",
+          padding: "20px",
+          borderRadius: "8px",
+          boxShadow: 2,
+          width: { xs: "100%", md: "50%" },
+          animation: `${scaleUp} 1s ease-out`,
+        }}>
+          <Typography variant="h5" sx={{ color: "#000", fontWeight: "bold" }} gutterBottom>
+            Fill the Form Below
+          </Typography>
+          <form onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField 
+                  fullWidth 
+                  label="Your Name" 
+                  variant="outlined" 
+                  name="name"
+                  value={messageForm.name}
+                  onChange={handleChange}
+                  required
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField 
+                  fullWidth 
+                  label="Your Email" 
+                  variant="outlined"
+                  name="email"
+                  value={messageForm.email}
+                  onChange={handleChange}
+                  required
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField 
+                  fullWidth 
+                  label="Your Phone" 
+                  variant="outlined" 
+                  name="phone"
+                  value={messageForm.phone}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField 
+                  fullWidth 
+                  label="Enter Subject" 
+                  variant="outlined"
+                  name="subject"
+                  value={messageForm.subject}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  label="Enter Your Message"
+                  multiline
+                  rows={4}
+                  variant="outlined"
+                  name="message"
+                  value={messageForm.message}
+                  onChange={handleChange}
+                  required
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Button 
+                  type="submit"
+                  sx={{
+                    width: "100%",
+                    fontFamily: "Poppins",
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    color: "#F1F1F1",
+                    backgroundColor: "#FF9900",
+                    borderRadius: "8px",
+                    "&:hover": { backgroundColor: "#E68A00" },
+                  }}
                 >
-                    <Typography
-                        variant="h5"
-                        sx={{
-                            color: "#000",
-                            fontWeight: "bold"
-                        }}
-                        gutterBottom
-                    >
-                        Fill the Form Below
-                    </Typography>
-                    <form>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <TextField fullWidth label="Your Name" variant="outlined" />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <TextField fullWidth label="Your Email" variant="outlined" />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <TextField fullWidth label="Your Phone" variant="outlined" />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <TextField fullWidth label="Enter Subject" variant="outlined" />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    fullWidth
-                                    label="Enter Your Message"
-                                    multiline
-                                    rows={4}
-                                    variant="outlined"
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button sx={{
-                                    width: "100%",
-                                    fontFamily: "Poppins",
-                                    fontSize: "14px",
-                                    fontWeight: "700",
-                                    color: "#F1F1F1",
-                                    backgroundColor: "#FF9900",
-                                    borderRadius: "8px",
-                                    "&:hover": { backgroundColor: "#E68A00" },
-                                }}>
-                                    Send Message
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    </form>
-                </Box>
-            </Box>
+                  Send Message
+                </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </Box>
+      </Box>
 
             {/* Section 2: Stay Connected */}
             <Box sx={{

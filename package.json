@@ -25,13 +25,15 @@
     "react-slick": "^0.30.3",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
+    "typescript": "^5.7.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && node deploy.js"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ftp-deploy": "^2.4.7"
   }
 }

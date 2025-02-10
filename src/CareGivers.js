@@ -3,7 +3,7 @@ import { Box, Typography, Card, CardContent } from '@mui/material';
 import { Fade, Slide } from '@mui/material';
 
 const designations = [
-  { name: 'Mr. Salman Sadiq', title: 'Chairman' },
+  { name: 'Mr. Salmaan Sadiq', title: 'Chairman' },
   { name: 'Mr. Asif Zubair Sadiq', title: 'Vice Chairman' },
   { name: 'Mr. Saad Sadiq', title: 'Information Secretary' },
   { name: 'Mrs. Rasheeda Begum', title: 'Relationship Officer' },

@@ -6,7 +6,7 @@ const teamMembers = [
         {
           name: "Salmaan Sadiq",
           role: "Chairman",
-          description: "Salman Sadiq leads the foundation with a vision to create a brighter future for all.",
+          description: "Salmaan Sadiq leads the foundation with a vision to create a brighter future for all.",
           image: "/ceo.jpeg",
         },
         {

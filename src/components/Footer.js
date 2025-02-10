@@ -1,10 +1,39 @@
 import React from 'react';
+import { useState } from 'react';
 import { Box, Typography, Link, TextField, Button, IconButton } from '@mui/material';
 import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Phone, Email, LocationOn } from '@mui/icons-material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TikTokIcon from '@mui/icons-material/MusicNote'; // For TikTok icon (using a close alternative)
 
 const Footer = () => {
+  const [subscriberEmail, setSubscriberEmail] = useState("");
+
+  // Function to handle subscription
+  const handleSubscribe = async () => {
+    if (!subscriberEmail) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    try {
+      const res = await fetch("https://dsfbackend.vercel.app/api/subscribers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: subscriberEmail }),
+      });
+      if (res.ok) {
+        alert("Thank you for subscribing to our newsletter. You'll receive our monthly newsletter via this email address. Stay tuned!\nTeam Dr. Sadiq Foundation");
+        setSubscriberEmail(""); // Clear the field
+      } else {
+        const errorData = await res.json();
+        alert("Subscription failed: " + errorData.error);
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      alert("An error occurred while subscribing.");
+    }
+  };
+
+
   return (
     <>
       <Box
@@ -182,7 +211,6 @@ const Footer = () => {
                   alignItems: "center",
                   gap: "5px",
                   marginBottom: "20px",
-
                 }}
               >
                 <Box>
@@ -193,9 +221,14 @@ const Footer = () => {
                 </Box>
 
                 <Typography variant="body1">
-                  <span  >Call Us <br /></span>
-                  051-111 500 505 <br/>
-                  051-4927546
+                  <span>Call Us <br /></span>
+                  <Link href="tel:051-111-500-505" sx={{ color: 'inherit', textDecoration: 'none' }}>
+                    051-111 500 505
+                  </Link>
+                  <br />
+                  <Link href="tel:051-4927546" sx={{ color: 'inherit', textDecoration: 'none' }}>
+                    051-4927546
+                  </Link>
                 </Typography>
               </Box>
 
@@ -215,8 +248,14 @@ const Footer = () => {
                   }} />
                 </Box>
                 <Typography variant="body1">
-                  <span  >Mail Us <br /></span>
-                  info@drsadiqfoundation.org <br/> admin@drsf.org
+                  <span>Mail Us <br /></span>
+                  <Link href="mailto:info@drsadiqfoundation.org" sx={{ color: 'inherit', textDecoration: 'none' }}>
+                    info@drsadiqfoundation.org
+                  </Link>
+                  <br />
+                  <Link href="mailto:admin@drsf.org" sx={{ color: 'inherit', textDecoration: 'none' }}>
+                    admin@drsf.org
+                  </Link>
                 </Typography>
               </Box>
 
@@ -236,86 +275,95 @@ const Footer = () => {
                   }} />
                 </Box>
                 <Typography variant="body1">
-                  <span  >Visit Us <br /></span>
-                  33-C,
-                  Iran Road, <br />
-                  Near Chandni Chowk, <br/>
-                  Satellite Town, <br/>
-                  Rawalpindi,
-
-                  Pakistan
+                  <span>Visit Us <br /></span>
+                  <Link
+                    href="https://maps.app.goo.gl/RMzhi667iqcFU9sUA"
+                    target="_blank"
+                    sx={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    33-C, Iran Road, <br />
+                    Near Chandni Chowk, <br />
+                    Satellite Town, <br />
+                    Rawalpindi, Pakistan
+                  </Link>
                 </Typography>
               </Box>
             </Box>
           </Box>
-          <Box
+
+           {/* Newsletter Subscription Section */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          mt: 4,
+          mr: '30px'
+        }}
+      >
+        <Typography
+          variant="h6"
+          sx={{ fontFamily: 'Poppins', fontSize: '20px', fontWeight: '600' }}
+        >
+          Subscribe to Our Newsletter
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            mt: 2,
+            gap: 1,
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center',
+          }}
+        >
+          <TextField
+            value={subscriberEmail}
+            onChange={(e) => setSubscriberEmail(e.target.value)}
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlign: 'center',
-              mt: 4,
-              mr: '30px'
+              flex: 1,
+              borderRadius: '5px 0 0 0',
+              backgroundColor: '#027D40',
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: '#FFFFFF',
+                },
+                '&:hover fieldset': {
+                  borderColor: '#888888', // Grey color on hover
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: '#FFFFFF', // White color for the placeholder
+                },
+              },
+            }}
+            placeholder="Enter your email"
+            variant="outlined"
+          />
+          <Button
+            onClick={handleSubscribe}
+            sx={{
+              height: '60.31px',
+              backgroundColor: '#FF9900',
+              fontFamily: 'Poppins',
+              fontSize: '16px',
+              fontWeight: '700',
+              color: '#F1F1F1',
+              borderRadius: '10px',
+              padding: '0 24px',
+              boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+              letterSpacing: '0.8814226388931274px',
+              '&:hover': { backgroundColor: '#E68A00' },
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{ fontFamily: 'Poppins', fontSize: '20px', fontWeight: '600' }}
-            >
-              Subscribe to Our Newsletter
-            </Typography>
-            <Box
-              sx={{
-                display: 'flex',
-                mt: 2,
-                gap: 1,
-                flexDirection: { xs: 'column', md: 'row' },
-                alignItems: 'center',
-              }}
-            >
-              <TextField
-  sx={{
-    flex: 1,
-    borderRadius: '5px 0 0 0',
-    backgroundColor: '#027D40',
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: '#FFFFFF',
-      },
-      '&:hover fieldset': {
-        borderColor: '#888888', // Grey color on hover
-      },
-      '& .MuiInputBase-input::placeholder': {
-        color: '#FFFFFF', // White color for the placeholder
-      },
-    },
-  }}
-  placeholder="Enter your email"
-  variant="outlined"
-/>
-
-              <Button
-                sx={{
-                  height: '60.31px',
-                  backgroundColor: '#FF9900',
-                  fontFamily: 'Poppins',
-                  fontSize: '16px',
-                  fontWeight: '700',
-                  color: '#F1F1F1',
-                  borderRadius: '10px',
-                  padding: '0 24px',
-                  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-                  letterSpacing: '0.8814226388931274px',
-                  '&:hover': { backgroundColor: '#E68A00' },
-                }}
-              >
-                Send
-              </Button>
-            </Box>
-          </Box>
+            Send
+          </Button>
         </Box>
+      </Box>
+        </Box>
+        
 
+        {/* WhatsApp Button */}
         <Box sx={{
           position: 'fixed',
           bottom: '10px',
@@ -334,8 +382,6 @@ const Footer = () => {
             }} />
           </IconButton>
         </Box>
-
-
       </Box>
 
       {/* Footer Bottom */}

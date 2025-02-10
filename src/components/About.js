@@ -182,7 +182,7 @@ const About = () => {
           }}>
             <img
               src="/ceo.jpeg"
-              alt="Salman Sadiq"
+              alt="Salmaan Sadiq"
               style={{
                 width: '100%',
 
@@ -232,7 +232,7 @@ const About = () => {
 
               marginBottom: '10px'
             }}>
-              Salman Sadiq,
+              Salmaan Sadiq,
 
             </Typography>
 
