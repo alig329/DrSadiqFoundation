@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, TextField, Button, Link, Grid } from "@mui/material";
+import { Box, Typography, TextField, Button, Link, Grid, Modal } from "@mui/material";
 import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Email, Phone, LocationOn } from "@mui/icons-material";
 import TikTokIcon from '@mui/icons-material/MusicNote'; // For TikTok icon (using a close alternative)
 import StoriesOfChange from "../StoriesOfChange";
@@ -36,6 +36,8 @@ const ContactUs = () => {
     message: ""
   });
 
+  const [modalInfo, setModalInfo] = useState({ open: false, message: "", success: false });
+
   // Handle changes to form fields
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,7 +54,7 @@ const ContactUs = () => {
         body: JSON.stringify(messageForm)
       });
       if (res.ok) {
-        alert("Message sent successfully!");
+        setModalInfo({ open: true, message: "Message sent successfully!", success: true });
         setMessageForm({
           name: "",
           email: "",
@@ -62,12 +64,17 @@ const ContactUs = () => {
         });
       } else {
         const errorData = await res.json();
-        alert("Failed to send message: " + errorData.error);
+        setModalInfo({ open: true, message: "Failed to send message: " + errorData.error, success: false });
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("An error occurred while sending your message.");
+      setModalInfo({ open: true, message: "An error occurred while sending your message.", success: false });
     }
+  };
+
+  // Function to close the modal
+  const handleClose = () => {
+    setModalInfo({ ...modalInfo, open: false });
   };
 
     return (
@@ -238,7 +245,7 @@ const ContactUs = () => {
           animation: `${scaleUp} 1s ease-out`,
         }}>
           <Typography variant="h5" sx={{ color: "#000", fontWeight: "bold" }} gutterBottom>
-            Fill the Form Below
+            Send Us A Message
           </Typography>
           <form onSubmit={handleSubmit}>
             <Grid container spacing={2}>
@@ -306,9 +313,9 @@ const ContactUs = () => {
                     fontSize: "14px",
                     fontWeight: "700",
                     color: "#F1F1F1",
-                    backgroundColor: "#FF9900",
+                    backgroundColor: "#027D40",
                     borderRadius: "8px",
-                    "&:hover": { backgroundColor: "#E68A00" },
+                    "&:hover": { backgroundColor: "#029D70" },
                   }}
                 >
                   Send Message
@@ -316,6 +323,34 @@ const ContactUs = () => {
               </Grid>
             </Grid>
           </form>
+          
+          {/* Success/Error Modal */}
+      <Modal open={modalInfo.open} onClose={handleClose} aria-labelledby="modal-title" aria-describedby="modal-description">
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: { xs: "50%", sm: "400px" },
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 1,
+            borderRadius: "8px",
+            textAlign: "center",
+          }}
+        >
+          <Typography id="modal-title" variant="h6" component="h2" color={modalInfo.success ? "green" : "red"}>
+            {modalInfo.success ? "Success!" : "Error!"}
+          </Typography>
+          <Typography id="modal-description" sx={{ mt: 2 }}>
+            {modalInfo.message}
+          </Typography>
+          <Button onClick={handleClose} sx={{ mt: 3, backgroundColor: modalInfo.success ? "#027D40" : "red", color: "#fff", "&:hover": { backgroundColor: modalInfo.success ? "#029D70" : "orange" } }}>
+            Close
+          </Button>
+        </Box>
+      </Modal>
         </Box>
       </Box>
 

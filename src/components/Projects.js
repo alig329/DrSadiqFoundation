@@ -9,7 +9,7 @@ const projectsData = {
     {
       title      : "Scholarships",
       description: "To Public Sector Universities of Pakistan, DSF has offered scholarships...",
-      image      : "/edu.png",
+      image      : "https://i.ibb.co/ztkT3sS/edu.jpg",
       link       : "/scholarships",
       raised     : 75000,
       goal       : 150000,
@@ -18,7 +18,7 @@ const projectsData = {
     {
       title      : "Women Empowerment",
       description: "DSF has collaboration with various institutions for providing financial and management assistance...",
-      image      : "/women.png",
+      image      : "https://i.ibb.co/wFpRR1ZV/women.jpg",
       link       : "/vocational",
       raised     : 55000,
       goal       : 150000,
@@ -26,7 +26,7 @@ const projectsData = {
     {
       title      : "Dispensaries",
       description: "We operate two dispensaries in the Chakri Region, providing healthcare services to people in the region.",
-      image      : "/disp2.png",
+      image      : "https://i.ibb.co/sJwQYr2Z/disp2.jpg",
       link       : "/dispensaries",
       raised     : 75000,
       goal       : 150000,
@@ -38,7 +38,7 @@ const projectsData = {
     {
       title      : "BBH Food Project",
       description: "Started in February 2010. Since then, the project is fully functional with the manpower of 21 employees...",
-      image      : "/bbh2.png",
+      image      : "https://i.ibb.co/rgtFss8/bbh.jpg",
       link       : "/foodprojects",
       raised     : 50000,
       goal       : 150000,
@@ -48,7 +48,7 @@ const projectsData = {
     {
       title      : "DSF Hospital",
       description: "DSFH has completed its documentation stage of 220-bedded hospital...",
-      image      : "/hosp1.png",
+      image      : "https://i.ibb.co/3Yh50F5S/hosp1.jpg",
       link       : "/hospital",
       raised     : 80005,
       goal       : 90000,

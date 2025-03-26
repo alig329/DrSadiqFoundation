@@ -50,8 +50,8 @@ const Homepage = () => {
    return (
     <Box
       sx={{
-       height            : '60vh',
-       backgroundImage   : 'url("/banner2.png")',
+       height            : '50vh',
+       backgroundImage   : 'url("https://i.ibb.co/FLwRP3CR/banner2.png")',
        backgroundSize    : 'cover',
        backgroundPosition: 'center',
        display           : 'flex',
@@ -93,17 +93,17 @@ const Homepage = () => {
   const ThreeThumbnails = () => {
    const images = [
     {
-      src        : "/thnail2.png",
+      src        : "https://i.ibb.co/r2vwLPvq/thnail2.jpg",
       alt        : "WE SEE!",
       description: "We build strong communities by understanding and addressing their future needs. Our support goes beyond financial aid; we actively provide guidance and counseling to everyone, regardless of their background or status....",
     },
     {
-      src        : "/QMR2.png",
+      src        : "https://i.ibb.co/MF3W7Cf/QMR2.jpg",
       alt        : "WE CARE!",
       description: "We care for those in need, empowering youth and women through education and health awareness. We support vulnerable communities, including widows and orphans, and create joyful moments, such as dignified weddings for orphaned girls.",
     },
     {
-      src        : "/bbh3.png",
+      src        : "https://i.ibb.co/fz7k6RBB/bbh3.jpg",
       alt        : "WE SERVE!",
       description: "We run a unique program, driven by our team's creative approach and commitment to addressing social needs. We discreetly identify and support those in need, using a thorough verification process to ensure that help reaches those who deserve it most.",
     },
@@ -217,11 +217,11 @@ const Homepage = () => {
        }}
       >
         
-       <Box sx = {{ height: '60vh', position: 'relative' }}>
+       <Box sx = {{ height: '50vh', position: 'relative' }}>
         {/* Image Section */}
         <Box
           component = "img"
-          src       = "banner.png"
+          src       = "https://i.ibb.co/N6R4bBWT/banner.png"
           alt       = "Image 1"
           sx        = {{
            width    : '100%',

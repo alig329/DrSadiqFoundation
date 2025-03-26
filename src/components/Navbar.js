@@ -27,7 +27,7 @@ const Navbar = () => {
         {/* Logo */}
         <Typography variant="h6">
           <a href="/">
-            <img src="/dsfLogo.JPG" alt="Company Logo" height="56.78px" />
+            <img src="https://i.ibb.co/wF0v39gF/dsfLogo.jpg" alt="Company Logo" height="56.78px" />
           </a>
         </Typography>
 

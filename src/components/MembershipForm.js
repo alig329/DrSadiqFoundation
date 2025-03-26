@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, TextField, Typography, Button, Grid, MenuItem } from "@mui/material";
+import { Box, TextField, Typography, Button, Grid, MenuItem, Modal } from "@mui/material";
 
 const MembershipForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +14,8 @@ const MembershipForm = () => {
     interest: "",
     volunteerDescription: "" // New field for additional description when "Other" is selected
   });
+
+  const [modalInfo, setModalInfo] = useState({ open: false, message: "", success: false });
 
   // Update state on field change
   const handleChange = (e) => {
@@ -31,7 +33,11 @@ const MembershipForm = () => {
         body: JSON.stringify(formData)
       });
       if (response.ok) {
-        alert("Membership form saved successfully!");
+        setModalInfo({
+          open: true,
+          message: "Membership form submitted successfully!",
+          success: true,
+        });
         // Reset form data
         setFormData({
           name: "",
@@ -47,12 +53,25 @@ const MembershipForm = () => {
         });
       } else {
         const errorData = await response.json();
-        alert("Failed to save membership form: " + errorData.error);
+        setModalInfo({
+          open: true,
+          message: errorData.error || "Failed to submit.",
+          success: false,
+        });
       }
     } catch (error) {
       console.error("Error submitting membership form:", error);
-      alert("An error occurred while submitting the membership form.");
+      setModalInfo({
+        open: true,
+        message: "An error occurred. Please try again later.",
+        success: false,
+      });
     }
+  };
+
+  // Function to close the modal
+  const handleClose = () => {
+    setModalInfo({ ...modalInfo, open: false });
   };
 
   return (
@@ -243,7 +262,7 @@ const MembershipForm = () => {
         }}
       >
         <img
-          src="member.png"
+          src="https://i.ibb.co/fYq3B5k3/member.jpg"
           alt="Membership"
           style={{
             width: "500px",
@@ -251,6 +270,34 @@ const MembershipForm = () => {
             objectFit: "cover",
           }}
         />
+
+        {/* Success/Error Modal */}
+        <Modal open={modalInfo.open} onClose={handleClose} aria-labelledby="modal-title" aria-describedby="modal-description">
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: { xs: "50%", sm: "400px" },
+                    bgcolor: "background.paper",
+                    boxShadow: 24,
+                    p: 1,
+                    borderRadius: "8px",
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography id="modal-title" variant="h6" component="h2" color={modalInfo.success ? "green" : "red"}>
+                    {modalInfo.success ? "Success!" : "Error!"}
+                  </Typography>
+                  <Typography id="modal-description" sx={{ mt: 2 }}>
+                    {modalInfo.message}
+                  </Typography>
+                  <Button onClick={handleClose} sx={{ mt: 3, backgroundColor: modalInfo.success ? "#027D40" : "red", color: "#fff", "&:hover": { backgroundColor: modalInfo.success ? "#029D70" : "orange" } }}>
+                    Close
+                  </Button>
+                </Box>
+              </Modal>
       </Box>
       </Box>
 

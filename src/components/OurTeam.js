@@ -7,38 +7,38 @@ const teamMembers = [
           name: "Salmaan Sadiq",
           role: "Chairman",
           description: "Salmaan Sadiq leads the foundation with a vision to create a brighter future for all.",
-          image: "/ceo.jpeg",
+          image: "https://i.ibb.co/VpSLm76W/ceo.png",
         },
         {
           name: "Dr. Abdul Qayyum",
           role: "Project Manager",
           description: "Dr. Abdul Qayyum oversees the operations ensuring everything runs smoothly.",
-          image: "/cmk1.png",
+          image: "https://i.ibb.co/ZpDrK3pZ/cmk1.jpg",
         },
         {
           name: "Muahmmad Irfan",
           role: "Welfare Officer",
           description: "Muhammad Irfan manages the financial aspects of the foundation.",
-          image: "/cmk2.png",
+          image: "https://i.ibb.co/kgSDL4YH/cmk2.jpg",
         },
         {
           name: "Muhammad Asim",
           role: "Admin Officer",
           description: "Muhammad Asim is responsible for managing administrative tasks and ensuring smooth office operations.",
-          image: "/cmk3.png",
+          image: "https://i.ibb.co/TxyKF0gR/cmk3.jpg",
         },
         {
           name: "Kamran Mirza",
           role: "IT Manager",
           description: "Kamran Mirza handles the technological infrastructure, ensuring the organization's IT systems are secure and efficient.",
-          image: "/cmk5.png",
+          image: "https://i.ibb.co/WN9hm6Nq/cmk5.png",
         },
         
         {
           name: "Malik Ehsan Elahi",
           role: "HR Manager",
           description: "Malik Ehsan Elahi is responsible for managing human resources, including recruitment, training, and employee welfare.",
-          image: "/cmk6.png",
+          image: "https://i.ibb.co/B5H5YvMb/cmk6.jpg",
         },
       ];
       

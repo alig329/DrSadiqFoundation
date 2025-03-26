@@ -1,36 +1,55 @@
 import React from 'react';
 import { useState } from 'react';
-import { Box, Typography, Link, TextField, Button, IconButton } from '@mui/material';
+import { useForm } from 'react-hook-form';
+import { Box, Typography, Link, TextField, Button, IconButton, Modal } from '@mui/material';
 import { Facebook, Instagram, Twitter, LinkedIn, YouTube, Phone, Email, LocationOn } from '@mui/icons-material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TikTokIcon from '@mui/icons-material/MusicNote'; // For TikTok icon (using a close alternative)
 
 const Footer = () => {
-  const [subscriberEmail, setSubscriberEmail] = useState("");
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+  const [modalInfo, setModalInfo] = useState({ open: false, message: "", success: false });
 
   // Function to handle subscription
-  const handleSubscribe = async () => {
-    if (!subscriberEmail) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+  const onSubmit = async (data) => {
     try {
       const res = await fetch("https://dsfbackend.vercel.app/api/subscribers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: subscriberEmail }),
+        body: JSON.stringify({ email: data.email }),
       });
+  
+      const result = await res.json();
+  
       if (res.ok) {
-        alert("Thank you for subscribing to our newsletter. You'll receive our monthly newsletter via this email address. Stay tuned!\nTeam Dr. Sadiq Foundation");
-        setSubscriberEmail(""); // Clear the field
+        setModalInfo({
+          open: true,
+          message: "Thank you for subscribing to Our Newsletter",
+          success: true,
+        });
+        reset();
       } else {
-        const errorData = await res.json();
-        alert("Subscription failed: " + errorData.error);
+        setModalInfo({
+          open: true,
+          message: result.error || "Failed to subscribe. Please try again.",
+          success: false,
+        });
       }
     } catch (error) {
       console.error("Subscription error:", error);
-      alert("An error occurred while subscribing.");
+      setModalInfo({
+        open: true,
+        message: "An error occurred while subscribing. Please try again later.",
+        success: false,
+      });
     }
+  };
+  
+
+  // Function to close the modal
+  const handleClose = () => {
+    setModalInfo({ ...modalInfo, open: false });
   };
 
 
@@ -69,7 +88,7 @@ const Footer = () => {
             }}
           >
             <img
-              src="/LogoWhite.png"
+              src="https://i.ibb.co/D3kpDSt/Logo-White.png"
               alt="Company Logo"
               style={{ width: '250px', height: '80px', objectFit: 'cover' }}
             />
@@ -254,7 +273,7 @@ const Footer = () => {
                   </Link>
                   <br />
                   <Link href="mailto:admin@drsf.org" sx={{ color: 'inherit', textDecoration: 'none' }}>
-                    admin@drsf.org
+                    admin@drsadiqfoundation.org
                   </Link>
                 </Typography>
               </Box>
@@ -309,56 +328,68 @@ const Footer = () => {
         >
           Subscribe to Our Newsletter
         </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            mt: 2,
-            gap: 1,
+        <form onSubmit={handleSubmit(onSubmit)} style={{
+           display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            alignItems: 'center',
-          }}
-        >
-          <TextField
-            value={subscriberEmail}
-            onChange={(e) => setSubscriberEmail(e.target.value)}
-            sx={{
-              flex: 1,
-              borderRadius: '5px 0 0 0',
-              backgroundColor: '#027D40',
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: '#FFFFFF',
-                },
-                '&:hover fieldset': {
-                  borderColor: '#888888', // Grey color on hover
-                },
-                '& .MuiInputBase-input::placeholder': {
-                  color: '#FFFFFF', // White color for the placeholder
-                },
-              },
-            }}
-            placeholder="Enter your email"
-            variant="outlined"
-          />
-          <Button
-            onClick={handleSubscribe}
-            sx={{
-              height: '60.31px',
-              backgroundColor: '#FF9900',
-              fontFamily: 'Poppins',
-              fontSize: '16px',
-              fontWeight: '700',
-              color: '#F1F1F1',
-              borderRadius: '10px',
-              padding: '0 24px',
-              boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-              letterSpacing: '0.8814226388931274px',
-              '&:hover': { backgroundColor: '#E68A00' },
-            }}
-          >
-            Send
-          </Button>
-        </Box>
+             gap: '10px',
+              justifyContent: 'center',
+               alignItems: 'center',
+                marginTop: '10px',
+                 marginBottom: '10px'
+              }}>
+            <TextField
+              type="email"
+              label="Email Address"
+              variant="outlined"
+              size="small"
+              sx={{ backgroundColor: 'white', borderRadius: '5px' }}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                  message: "Enter a valid email address"
+                }
+              })}
+              error={!!errors.email}
+              helperText={errors.email?.message}
+            />
+            <Button type="submit"
+             variant="contained" 
+             sx={{
+               backgroundColor: "#FF9900",
+                color: "#FFFFFF",
+                 fontWeight: "bold"
+                  }}>
+              Subscribe
+            </Button>
+          </form>
+        {/* Success/Error Modal */}
+              <Modal open={modalInfo.open} onClose={handleClose} aria-labelledby="modal-title" aria-describedby="modal-description">
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: { xs: "50%", sm: "400px" },
+                    bgcolor: "background.paper",
+                    boxShadow: 24,
+                    p: 1,
+                    borderRadius: "8px",
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography id="modal-title" variant="h6" component="h2" color={modalInfo.success ? "green" : "red"}>
+                    {modalInfo.success ? "Success!" : "Error!"}
+                  </Typography>
+                  <Typography id="modal-description" sx={{ mt: 2 }}>
+                    {modalInfo.message}
+                  </Typography>
+                  <Button onClick={handleClose} sx={{ mt: 3, backgroundColor: modalInfo.success ? "#027D40" : "red", color: "#fff", "&:hover": { backgroundColor: modalInfo.success ? "#029D70" : "orange" } }}>
+                    Close
+                  </Button>
+                </Box>
+              </Modal>
       </Box>
         </Box>
         

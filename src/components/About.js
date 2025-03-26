@@ -181,7 +181,7 @@ const About = () => {
             padding: '80px'
           }}>
             <img
-              src="/ceo.jpeg"
+              src="/ceo.png"
               alt="Salmaan Sadiq"
               style={{
                 width: '100%',

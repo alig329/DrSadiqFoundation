@@ -63,12 +63,12 @@ const CollaborationSection = () => {
         }}
       >
         {[
-          "/5arid.png",
-          "/khaybar.png",
-          "/gomal.png",
-          "/alkhid.png",
-          "/psh.png",
-          "/nsu.png",
+          "https://i.ibb.co/mr67DJ1C/5arid.png",
+          "https://i.ibb.co/TMPVtzyh/khaybar.png",
+          "https://i.ibb.co/XfGJ5fwM/gomal.png",
+          "https://i.ibb.co/5hswtqtp/alkhid.png",
+          "https://i.ibb.co/h1wym1Ny/psh.png",
+          "https://i.ibb.co/TMkppWdt/nsu.png",
         ].map((src, index) => (
           <Grid item xs={6} sm={4} md={2} key={index}>
             <Box

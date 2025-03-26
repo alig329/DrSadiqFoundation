@@ -62,7 +62,8 @@ const DonationForm = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        backgroundImage: "url('bg.png')",
+        backgroundImage: "url('https://i.ibb.co/Z7S80qW/bg.jpg')",
+        backgroundfilter: "blur(25px)",
         backgroundSize: "cover",
         padding: "50px",
       }}

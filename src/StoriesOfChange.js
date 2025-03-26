@@ -5,22 +5,22 @@ import { animate } from "@motionone/dom";
 const StoriesOfChange = () => {
   const stories = [
     {
-      image: "/sc4.png",
+      image: "https://i.ibb.co/0pbwr3Rh/sc4.png",
       description: "DSF provides scholarships to students in public sector universities across Pakistan, including KPK, Punjab, Sindh, and...",
       link: "/scholarships",
     },
     {
-      image: "/sc2.jpg",
+      image: "https://i.ibb.co/Y7W9v9m1/sc2.jpg",
       description: "Transforming lives through impactful welfare projects and initiatives focused on education, health, and skill development.",
       link: "/foodprojects",
     },
     {
-      image: "/sc1.jpg",
+      image: "https://i.ibb.co/C51FH0cW/sc1.jpg",
       description: "DSF has been providing free medical care to underprivileged communities across Pakistan through its healthcare initiatives.",
       link: "/hospital",
     },
     {
-      image: "/sc3.jpg",
+      image: "https://i.ibb.co/5W4F2YXz/sc3.jpg",
       description: "Making a meaningful impact in the community by supporting underprivileged families and individuals",
       link: "/medicalcamps",
     },
