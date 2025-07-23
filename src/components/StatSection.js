@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 const StatSection = () => {
   const stats = [
     { number: 4852, subtitle: "Scholarships" },
-    { number: 2200000, subtitle: "Beneficiaries" },
+    { number: 5200000, subtitle: "Beneficiaries" },
     { number: 939000000, subtitle: "Financial Assistance" },
     { number: 5153, subtitle: "Families Supported" },
   ];

@@ -99,7 +99,7 @@ const BelovedSection = () => {
             >
               <Box sx={{ zIndex: 0, position: 'relative', height: { xs: '200px', md: 'auto' } }}>
                 <img
-                  src="https://i.ibb.co/rRhTPV1R/DrSahb22.jpg"
+                  src="https://i.ibb.co/Cs9G6Ph5/DrSahb22.webp"
                   alt="Dr. Muhammad Sadiq"
                   style={{
                     height: '80%',

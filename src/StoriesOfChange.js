@@ -10,17 +10,17 @@ const StoriesOfChange = () => {
       link: "/scholarships",
     },
     {
-      image: "https://i.ibb.co/Y7W9v9m1/sc2.jpg",
+      image: "https://i.ibb.co/35sjB2CM/sc2.webp",
       description: "Transforming lives through impactful welfare projects and initiatives focused on education, health, and skill development.",
       link: "/foodprojects",
     },
     {
-      image: "https://i.ibb.co/C51FH0cW/sc1.jpg",
+      image: "https://i.ibb.co/XPcpF6J/sc1.jpg",
       description: "DSF has been providing free medical care to underprivileged communities across Pakistan through its healthcare initiatives.",
       link: "/hospital",
     },
     {
-      image: "https://i.ibb.co/5W4F2YXz/sc3.jpg",
+      image: "https://i.ibb.co/wNSpLWPp/sc3.webp",
       description: "Making a meaningful impact in the community by supporting underprivileged families and individuals",
       link: "/medicalcamps",
     },
@@ -59,7 +59,7 @@ const StoriesOfChange = () => {
     marginBottom: "20px",
   }}
 >
-  Stories of Change
+  Dr. Sadiq Foundation at a Glance
 </Typography>
 
       <Typography

@@ -39,7 +39,7 @@ const CaregiversSection = () => {
         textAlign: 'center',
       }}
     >
-      <Typography
+      <Typography variant='h1'
         sx={{
           fontFamily: 'Poppins',
           fontSize: { xs: '18px', md: '24px' },

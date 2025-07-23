@@ -7,39 +7,33 @@ const teamMembers = [
           name: "Salmaan Sadiq",
           role: "Chairman",
           description: "Salmaan Sadiq leads the foundation with a vision to create a brighter future for all.",
-          image: "https://i.ibb.co/VpSLm76W/ceo.png",
+          image: "https://i.ibb.co/DPm4mrv1/ceo.png",
         },
         {
           name: "Dr. Abdul Qayyum",
           role: "Project Manager",
           description: "Dr. Abdul Qayyum oversees the operations ensuring everything runs smoothly.",
-          image: "https://i.ibb.co/ZpDrK3pZ/cmk1.jpg",
+          image: "https://i.ibb.co/21q9t1bV/cmk1.webp",
         },
         {
           name: "Muahmmad Irfan",
           role: "Welfare Officer",
           description: "Muhammad Irfan manages the financial aspects of the foundation.",
-          image: "https://i.ibb.co/kgSDL4YH/cmk2.jpg",
-        },
-        {
-          name: "Muhammad Asim",
-          role: "Admin Officer",
-          description: "Muhammad Asim is responsible for managing administrative tasks and ensuring smooth office operations.",
-          image: "https://i.ibb.co/TxyKF0gR/cmk3.jpg",
+          image: "https://i.ibb.co/VcKFP6bF/cmk2.webp",
         },
         {
           name: "Kamran Mirza",
           role: "IT Manager",
           description: "Kamran Mirza handles the technological infrastructure, ensuring the organization's IT systems are secure and efficient.",
-          image: "https://i.ibb.co/WN9hm6Nq/cmk5.png",
+          image: "https://i.ibb.co/DPnzH6gr/cmk5.png",
+        },
+        {
+          name: "Muhammad Ali",
+          role: "Admin Officer",
+          description: "Muhammad Ali is responsible for managing administrative tasks and ensuring smooth office operations.",
+          image: "https://i.ibb.co/HpdyV208/cmk7.webp",
         },
         
-        {
-          name: "Malik Ehsan Elahi",
-          role: "HR Manager",
-          description: "Malik Ehsan Elahi is responsible for managing human resources, including recruitment, training, and employee welfare.",
-          image: "https://i.ibb.co/B5H5YvMb/cmk6.jpg",
-        },
       ];
       
 
@@ -81,9 +75,9 @@ const OurTeam = () => {
                   src={member.image}
                   alt={member.name}
                   sx={{
+                    objectFit: member.name === "Muhammad Ali" ? "contain" : "cover",
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
                     transition: "transform 0.3s ease-in-out",
                     "&:hover": { transform: "scale(1.05)" },
                   }}

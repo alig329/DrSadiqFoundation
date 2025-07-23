@@ -27,7 +27,16 @@ const Navbar = () => {
         {/* Logo */}
         <Typography variant="h6">
           <a href="/">
-            <img src="https://i.ibb.co/wF0v39gF/dsfLogo.jpg" alt="Company Logo" height="56.78px" />
+            <img src="https://i.ibb.co/fVFDBYsh/dsfLogo.webp" alt="Dr. Sadiq Foundation" 
+              style={{
+              width: '250px',
+              height: '60px',
+              objectFit: 'cover', 
+              transition: 'box-shadow 0.4s ease-in-out',
+            }}
+              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 20px rgba(39, 34, 34, 0.7)'}
+              onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+            />
           </a>
         </Typography>
 

@@ -9,7 +9,7 @@ const projectsData = {
     {
       title      : "Scholarships",
       description: "To Public Sector Universities of Pakistan, DSF has offered scholarships...",
-      image      : "https://i.ibb.co/ztkT3sS/edu.jpg",
+      image      : "https://i.ibb.co/cKDJw2FV/edu.webp",
       link       : "/scholarships",
       raised     : 75000,
       goal       : 150000,

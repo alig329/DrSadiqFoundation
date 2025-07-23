@@ -181,7 +181,7 @@ const About = () => {
             padding: '80px'
           }}>
             <img
-              src="/ceo.png"
+              src="https://i.ibb.co/DPm4mrv1/ceo.png"
               alt="Salmaan Sadiq"
               style={{
                 width: '100%',
@@ -359,7 +359,7 @@ const About = () => {
 
             },
 
-          }} component="a" href="https://www.google.com" target="_blank" >
+          }} component="a" href="https://sadiqpoultry.com" target="_blank" >
             Visit Website
           </Button>
         </Box>
@@ -372,7 +372,7 @@ const About = () => {
 
           gap: '10px',
 
-        }}> <img src="/sbph.png" alt="SBPH Logo" style={{
+        }}> <img src="https://i.ibb.co/s99DRjHt/sbph.png" alt="SB Pharma" style={{
           width: '150px',
 
           height: '100px',
@@ -410,7 +410,7 @@ const About = () => {
 
           gap: '10px',
 
-        }}> <img src="/jaguar.png" alt="JaguarLogo" style={{
+        }}> <img src="https://i.ibb.co/pv5vwpBB/jaguar.png" alt="Jaguar Developers" style={{
           width: '150px',
 
           height: '100px',
@@ -444,7 +444,7 @@ const About = () => {
 
           gap: '10px',
 
-        }}> <img src="/sppl.png" alt="SppLogo" style={{
+        }}> <img src="https://i.ibb.co/mCJNqWxT/sp.png" alt="Sadiq Poultry Private Limited" style={{
           width: '150px',
 
           height: '100px',
@@ -570,7 +570,7 @@ const About = () => {
           }}
         >
           <img
-            src="/bbh.png"
+            src="https://i.ibb.co/LzVgxyMV/bbh.webp"
             alt="Benazir Bhutto Hospital"
             style={{
               width: "100%",
@@ -635,7 +635,7 @@ const About = () => {
           }}
         >
           <img
-            src="/Disp.png"
+            src="https://i.ibb.co/93g8KQCk/Disp.webp"
             alt="DSF Dispensaries"
             style={{
               width: "100%",
@@ -700,7 +700,7 @@ const About = () => {
           }}
         >
           <img
-            src="/voc.png"
+            src="https://i.ibb.co/kk3X9kF/voc.webp"
             alt="Vocational Training"
             style={{
               width: "100%",
@@ -765,7 +765,7 @@ const About = () => {
           }}
         >
           <img
-            src="/edu.png"
+            src="https://i.ibb.co/cKDJw2FV/edu.webp"
             alt="DSF Education Projects"
             style={{
               width: "100%",

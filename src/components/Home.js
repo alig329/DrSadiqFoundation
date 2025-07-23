@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import CaregiversSection from '../CareGivers';
@@ -24,34 +23,13 @@ const slideUp = keyframes`
 
 const Homepage = () => {
   const SecondCarouselItem = () => {
-   const textLines = [
-    "At Dr. Sadiq Foundation, we actively make a difference in the lives of those who need it most.",
-    "Food Projects: Providing 3 meals to an average of 400 patients daily",
-    "Dispensaries: Offering free medicine to 50,000 patients annually",
-    "Skill Development Centers: Teaching skills to build a better future",
-    "Scholarships: Fulfilling the education needs of brilliant students",
-   ];
-
-   const [currentLine, setCurrentLine] = useState(0);
-   const [isFadingIn, setIsFadingIn]   = useState(true);
-
-   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFadingIn(true);                              // Start with fade-in
-      setTimeout   (() => setIsFadingIn(false), 3000);  // Then fade-out
-
-       // Move to the next line or loop back to the start
-      setTimeout(() => setCurrentLine((prev) => (prev + 1) % textLines.length), 1000);
-    }, 3000);
-
-    return () => clearInterval(interval);
-   });
+  
 
    return (
     <Box
       sx={{
-       height            : '50vh',
-       backgroundImage   : 'url("https://i.ibb.co/FLwRP3CR/banner2.png")',
+       height            : '65vh',
+       backgroundImage   : 'url("https://i.ibb.co/bRLB5SDL/banner2.webp")',
        backgroundSize    : 'cover',
        backgroundPosition: 'center',
        display           : 'flex',
@@ -62,48 +40,26 @@ const Homepage = () => {
       }}
     >
       
-      <Box
-       sx={{
-        position : "absolute",
-        top      : "80%",
-        left     : "50%",
-        transform: "translate(-50%, -50%)",
-        textAlign: "center",
-       }}
-      >
-       <Typography variant = "h6" sx = {{ mb: 2, fontWeight: "bold", color: "rgba(255, 255, 255, 0.8)" }}>
-        Compassion drives our Multiple Welfare Projects
-       </Typography>
-       <Typography
-        key = {currentLine}
-        sx  = {{
-          opacity   : isFadingIn ? 1             : 0,
-          transition: "opacity 1s 1s ease-out",     // Smooth fade-in and fade-out
-          mb        : 1,
-          color     : "rgba(255, 255, 255, 0.8)",
-        }}
-       >
-        {textLines[currentLine]}
-       </Typography>
-      </Box>
+      
     </Box>
    );
   };
 
+  
   const ThreeThumbnails = () => {
    const images = [
     {
-      src        : "https://i.ibb.co/r2vwLPvq/thnail2.jpg",
+      src        : "https://i.ibb.co/qYvGYH2R/thnail2.jpg",
       alt        : "WE SEE!",
       description: "We build strong communities by understanding and addressing their future needs. Our support goes beyond financial aid; we actively provide guidance and counseling to everyone, regardless of their background or status....",
     },
     {
-      src        : "https://i.ibb.co/MF3W7Cf/QMR2.jpg",
+      src        : "https://i.ibb.co/PzG0DtGS/QMR2.webp",
       alt        : "WE CARE!",
       description: "We care for those in need, empowering youth and women through education and health awareness. We support vulnerable communities, including widows and orphans, and create joyful moments, such as dignified weddings for orphaned girls.",
     },
     {
-      src        : "https://i.ibb.co/fz7k6RBB/bbh3.jpg",
+      src        : "https://i.ibb.co/NdmcXNG0/bbh3.jpg",
       alt        : "WE SERVE!",
       description: "We run a unique program, driven by our team's creative approach and commitment to addressing social needs. We discreetly identify and support those in need, using a thorough verification process to ensure that help reaches those who deserve it most.",
     },
@@ -133,7 +89,7 @@ const Homepage = () => {
            height      : "300px",
            overflow    : "hidden",
            borderRadius: "0px",
-           animation   : `${slideUp} 1s ${index * 0.2}s ease-in-out forwards`,
+           animation   : `${slideUp} 1s ${index * 0.3}s ease-in-out forwards`,
           }} >
            <Box
             component = "img"
@@ -186,28 +142,25 @@ const Homepage = () => {
            </Box>
           </Box>
         </motion.div>
-        </Grid>))}
+        </Grid>
+      ))
+      }
       </Grid>
     </Container>);
   };
-
+ 
   return (
    <div>
     {/* Hero Section */}
-    <Box sx={{
+    <header sx={{
       position      : 'relative',
-      height        : '300px',
-      width         : '86%',
       justifyContent: 'center',
       alignItems    : 'center',
-      margin        : 'auto',
-      marginTop     : '0px',
-      marginBottom  : '20vh'
     }} className="hero-section">
       <Carousel
        navButtonsProps={{
         style: {
-          opacity: 0.3,
+          opacity: 0.4,
         },
        }}
        indicatorContainerProps={{
@@ -217,12 +170,12 @@ const Homepage = () => {
        }}
       >
         
-       <Box sx = {{ height: '50vh', position: 'relative' }}>
+       <Box sx = {{ height: '65vh', position: 'relative' }}>
         {/* Image Section */}
         <Box
           component = "img"
-          src       = "https://i.ibb.co/N6R4bBWT/banner.png"
-          alt       = "Image 1"
+          src       = "https://i.ibb.co/93sMtqyS/banner.webp"
+          alt       = "Dr. Sadiq Founation's Banner "
           sx        = {{
            width    : '100%',
            height   : '100%',
@@ -235,12 +188,12 @@ const Homepage = () => {
            position      : 'absolute',
            top           : 60,
            left          : 15,
-           width         : { xs: '100%', md: '35%' },
+           width         : { xs: '35%', md: '35%', lg: '35%', xl: '35%' },
            height        : '100%',
            display       : 'flex',
            flexDirection : 'column',
            justifyContent: 'left',
-           p             : { xs: 2, md: 4 },
+           p             : { xs: 2, md: 2, lg: 2, xl: 2 },
           }}
         >
           <Typography
@@ -257,7 +210,7 @@ const Homepage = () => {
           <Typography
            variant = "body1"
            sx      = {{
-            lineHeight: '1.4',
+            lineHeight: '2',
             color     : 'rgba(255, 255, 255, 0.8)',
             mb        : 2,
             fontSize  : { xs: '12px', md: '16px' },
@@ -271,11 +224,11 @@ const Homepage = () => {
           </Typography>
           <a
            href  = "/donate"
-           style = {{
+            style = {{
             color         : 'rgba(255, 255, 255, 0.8)',
             textDecoration: 'underline',
             fontSize      : '16px',
-            fontWeight    : '500',
+            fontWeight    : '600',
            }}
           >
            Join Us in this kind act
@@ -288,52 +241,53 @@ const Homepage = () => {
        {/* Second Carousel Item */}
        <SecondCarouselItem />
 
-       {/* Third Carousel Item 
-       <Box sx={{
-        height            : '60vh',
-        backgroundImage   : 'url("/hostel.jpg")',
-        backgroundSize    : 'cover',
-        backgroundPosition: 'center',
-        position          : 'relative'
-       }}>
-        <Box sx={{
-          position : 'absolute',
-          top      : '80%',
-          left     : '50%',
-          transform: 'translate(-50%, -50%)',
-          textAlign: 'center',
-          color    : '#FFFFFF',
-          width    : { xs: '90%', md: '60%' }
-        }}>
-          <Typography variant="h5" sx={{
-           fontFamily: 'Poppins',
-           fontWeight: '600',
-           mb        : 1
-          }}>
-           Let’s Heal & Help!
-          </Typography>
-          <Typography variant="body1" sx={{
-           fontFamily: 'Poppins',
-           fontSize  : '18px',
-           fontWeight: '500',
-           lineHeight: '1.5',
-           mb        : 2
-          }}>
-           DSF Hospital project
-          </Typography>
-          <Typography variant="body1" sx={{
-           fontFamily: 'Poppins',
-           fontSize  : '15px',
-           fontWeight: '400',
-           lineHeight: '1.5'
-          }}>
-           Support the DSF Hospital project and help us heal and comfort other souls. Your donation will help bring quality healthcare closer to home.
-          </Typography>
-        </Box>
-       </Box> */}
+       
       </Carousel>
-    </Box>
+    </header>
 
+<Container 
+  maxWidth="md" 
+  sx={{ 
+    my: 6, 
+    py: 5, 
+    textAlign: 'center', 
+    backgroundColor: '#FFF', 
+    borderRadius: 4,
+    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.05)', 
+    fontFamily: 'Poppins, sans-serif',
+  }}
+>
+  <Typography 
+    variant="h1" 
+    gutterBottom 
+    sx={{ 
+      fontWeight: 700, 
+      color: 'rgb(3, 87, 3)',
+      fontSize: { xs: '24px', md: '46px' },
+      lineHeight: 1.2,
+    }}
+  >
+    Making a Difference Every Day
+  </Typography>
+  
+  <Typography 
+    variant="body1" 
+    sx={{ 
+      fontSize: '18px', 
+      fontWeight: 400, 
+      color: '#444', 
+      lineHeight: 1.8,
+      maxWidth: '80%',
+      margin: '0 auto',
+    }}
+  >
+    Dr. Sadiq Foundation has impacted thousands of lives across Pakistan through education,
+    medical aid, empowerment, and food programs. <br />
+    <strong>We invite you to be a part of this transformative journey.</strong>
+  </Typography>
+</Container>
+
+<section>
     <ThreeThumbnails />
     <StatSection />
     <BelovedSection />
@@ -341,6 +295,8 @@ const Homepage = () => {
     <StoriesOfChange />
     <CaregiversSection />
     <ProjectsWithPurpose />
+</section>
+    
    </div>
   );
 };

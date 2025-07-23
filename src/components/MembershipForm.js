@@ -12,18 +12,18 @@ const MembershipForm = () => {
     country: "",
     province: "",
     interest: "",
-    volunteerDescription: "" // New field for additional description when "Other" is selected
+    volunteerDescription: "" // description field appears when "Other" is selected
   });
 
   const [modalInfo, setModalInfo] = useState({ open: false, message: "", success: false });
 
-  // Update state on field change
+  // Updation of state on field change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission
+  // to Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -69,7 +69,7 @@ const MembershipForm = () => {
     }
   };
 
-  // Function to close the modal
+  // func to close the modal
   const handleClose = () => {
     setModalInfo({ ...modalInfo, open: false });
   };
@@ -262,8 +262,8 @@ const MembershipForm = () => {
         }}
       >
         <img
-          src="https://i.ibb.co/fYq3B5k3/member.jpg"
-          alt="Membership"
+          src="https://i.ibb.co/gMWP1Vh6/member.webp"
+          alt="Salmaan Sadiq Greeting"
           style={{
             width: "500px",
             height: "600px",

@@ -14,7 +14,7 @@ const DsfHistory = () => {
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'column' }, alignItems: 'stretch', marginBottom: '40px' }}>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <img src='https://i.ibb.co/FLwRP3CR/banner2.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
+          <img src='https://i.ibb.co/bRLB5SDL/banner2.webp' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
         </Box>
         <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', lineHeight: '40px', color: '#000000', marginTop: '60px' }}>
           Challenge
@@ -29,7 +29,7 @@ const DsfHistory = () => {
             <Box sx={{ width: "100%", height: "400px", overflow: "hidden", borderRadius: "1px" }}>
               {/* Image 1 */}
               <Box component="img"
-                src="https://i.ibb.co/KcLCj0m0/sch2.jpg"
+                src="https://i.ibb.co/pjckXG7y/sch2.webp"
                 alt="Image 1"
                 sx={{
                   width: "100%",
@@ -45,7 +45,7 @@ const DsfHistory = () => {
             <Box sx={{ width: "100%", height: "400px", overflow: "hidden", borderRadius: "1px" }}>
               {/* Image 2 */}
               <Box component="img"
-                src="https://i.ibb.co/KcDMN269/sch3.jpg"
+                src="https://i.ibb.co/WNSY77DC/sch3.webp"
                 alt="Image 2"
                 sx={{
                   width: "100%",

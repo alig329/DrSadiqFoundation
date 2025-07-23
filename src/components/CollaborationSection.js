@@ -42,7 +42,7 @@ const CollaborationSection = () => {
       }}
     >
       <Typography
-        variant="h4"
+        variant="h1"
         sx={{
           fontFamily: "Poppins",
           fontWeight: "600",
@@ -63,26 +63,29 @@ const CollaborationSection = () => {
         }}
       >
         {[
-          "https://i.ibb.co/mr67DJ1C/5arid.png",
-          "https://i.ibb.co/TMPVtzyh/khaybar.png",
-          "https://i.ibb.co/XfGJ5fwM/gomal.png",
-          "https://i.ibb.co/5hswtqtp/alkhid.png",
-          "https://i.ibb.co/h1wym1Ny/psh.png",
-          "https://i.ibb.co/TMkppWdt/nsu.png",
+          "https://i.ibb.co/wF3X2zTV/5arid.png",
+          "https://i.ibb.co/WNpwZxyR/khaybar.webp",
+          "https://i.ibb.co/cKTfdGPN/gomal.webp",
+          "https://i.ibb.co/ZpNz69r0/alkhid.png",
+          "https://i.ibb.co/cX6L86QQ/psh.webp",
+          "https://i.ibb.co/99tm0ZVD/nsu.webp",
         ].map((src, index) => (
           <Grid item xs={6} sm={4} md={2} key={index}>
             <Box
               component="img"
               src={src}
               alt={`badge-${index}`}
-              className="animated-badge" // Added class for Motion animation
+              width={300}
+              height={150}
+              className="animated-badge"
               sx={{
-                maxWidth: "100%",
-                height: "auto",
+                maxWidth: "100%",      // Makes image responsive
+                height: "auto",        // Preserves aspect ratio
                 padding: { xs: 1, sm: 2 },
-                animation: `${slideDownInteractive} 2s ${index * 0.5}s ease-in-out forwards`, // Interactive animation
+                animation: `${slideDownInteractive} 2s ${index * 0.5}s ease-in-out forwards`,
               }}
             />
+
           </Grid>
         ))}
       </Grid>

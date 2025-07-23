@@ -5,22 +5,22 @@ const projects = [
   {
     title: "Health & Wellness",
     description: "We operate two dispensaries in the Chakri Region, providing healthcare services to people in the region and surrounding areas.",
-    image: "https://i.ibb.co/C51FH0cW/sc1.jpg",
+    image: "https://i.ibb.co/XPcpF6J/sc1.jpg",
   },
   {
     title: "Education Support",
     description: "Every year, we offer scholarships to students in 11 public universities across KPK, Punjab, and Sindh. The universities manage the selection process.",
-    image: "https://i.ibb.co/j9t0GtCS/thnail1.png",
+    image: "https://i.ibb.co/Kzjt7gcG/thnail1.jpg",
   },
   {
     title: "Community Help",
     description: "Our food-distribution project began in February 2010. Today, we have 21 employees working together to make it a success. We provide three meals a day to patients.",
-    image: "https://i.ibb.co/ybk1sY6/QMR3.jpg",
+    image: "https://i.ibb.co/ns2XGZyQ/QMR3.webp",
   },
   {
     title: "Social Empowerment",
     description: "We support women's empowerment by offering vocational education in rural areas of Rawalpindi district. We partner with local institutions to promote economic sustainability.",
-    image: "https://i.ibb.co/qMjLv4Zx/QMR4.jpg",
+    image: "https://i.ibb.co/fY158N3H/QMR4.webp",
   },
 ];
 const ProjectsWithPurpose = () => {

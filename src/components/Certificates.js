@@ -35,9 +35,9 @@ const parallax = keyframes`
 `;
 
 const certificates = [
-  { name: "Punjab Healthcare Commission", imageUrl: "https://i.ibb.co/rGTWBzCg/phc.png" },
-  { name: "Pakistan Care for Philanthropy", imageUrl: "https://i.ibb.co/n86sGvSY/pcp.jpg" },
-  { name: "PCP Certification", imageUrl: "https://i.ibb.co/jkVLwGVJ/pcp1.png" },
+  { name: "Punjab Healthcare Commission", imageUrl: "https://i.ibb.co/pjZfLJnX/phc.webp" },
+  { name: "Pakistan Centre for Philanthropy", imageUrl: "https://i.ibb.co/PssXQJbN/pcp.webp" },
+  { name: "PCP Certification", imageUrl: "https://i.ibb.co/pjHf0dMW/pcp1.webp" },
 ];
 
 const Certificates = () => {
