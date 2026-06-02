@@ -399,12 +399,28 @@ const Footer = () => {
                   </Typography>
                 </Box>
 
-                {/* Location Section */}
+                
+              </Box>
+            </Box>
+
+            {/* Newsletter Subscription Section */}
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                mt: 1,
+                mr: '30px'
+              }}
+            >
+              {/* Location Section */}
                 <Box
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "5px",
+                    gap: "2px",
                     marginBottom: "20px",
                   }}
                 >
@@ -428,21 +444,6 @@ const Footer = () => {
                     </Link>
                   </Typography>
                 </Box>
-              </Box>
-            </Box>
-
-            {/* Newsletter Subscription Section */}
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                mt: 4,
-                mr: '30px'
-              }}
-            >
               <Typography
                 variant="h6"
                 sx={{ fontFamily: 'Poppins', fontSize: '20px', fontWeight: '600' }}
@@ -595,7 +596,7 @@ const Footer = () => {
           variant="body2"
           sx={{ fontFamily: 'Poppins', fontSize: '12px', fontWeight: '500' }}
         >
-          Dr. Sadiq Foundation&copy; 2024 All Rights Reserved.
+          Dr. Sadiq Foundation&copy; {new Date().getFullYear()} All Rights Reserved.
         </Typography>
       </Box>
     </footer>

@@ -3,18 +3,18 @@ import { Box, Typography, Grid, Button } from '@mui/material';
 
 const Vocational = () => {
   return (
-    <Box        sx      = {{ backgroundColor: '#FFFFFF', padding: '40px', alignItems: 'stretch', marginBottom: '0px' }}>
-    <Box        sx      = {{ backgroundColor: '#027D40', padding: '40px', alignItems: 'stretch', marginBottom: '40px' }}>
-    <Typography variant = "h2" sx = {{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', sm: '12px', md: '16px' }, fontWeight: '500', lineHeight: '60px', color: '#FFFFFF' }}>
+    <Box sx={{ backgroundColor: '#FFFFFF', padding: '5px', alignItems: 'stretch' }}>
+      <Box sx={{ backgroundColor: '#027D40', padding: '5px', alignItems: 'stretch', marginBottom: { xs: '1px', md: '10px' } }}>
+        <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', md: '14px' }, fontWeight: { xs: '300', md: '500' }, lineHeight: { xs: '20px', md: '40px' }, color: '#FFFFFF' }}>
           Empowering Women, Transforming Lives
         </Typography>
-        <Typography variant = "h1" sx = {{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: '40px' }}>
+        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '16px', md: '34px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: { xs: '1px', md: '20px' } }}>
           DSF'S VOCATIONAL TRAINING INITIATIVE
         </Typography>
       </Box>
       <Box sx  = {{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'column' }, alignItems: 'stretch', marginBottom: '40px' }}>
       <Box sx  = {{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <img src = '/voc1.png' alt = "Dr. Muhammad Sadiq" style = {{ width: '90%', height: '500px', objectFit: 'cover' }} />
+      <img src = 'https://i.ibb.co/R433LcYs/voc1.webp' alt = "Dr. Muhammad Sadiq" style = {{ width: '90%', height: '500px', objectFit: 'cover' }} />
         </Box>
         <Typography variant = "h2" sx = {{ display: 'flex', justifyContent: 'center', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', lineHeight: '40px', color: '#000000', marginTop: '60px' }}>
           Challenge
@@ -29,7 +29,7 @@ const Vocational = () => {
       <Box  sx           = {{ width: "100%", height: "400px", overflow: "hidden", borderRadius: "1px" }}>
               {/* Image 1 */}
               <Box component = "img"
-                   src       = "voc2.png"
+                   src       = "https://i.ibb.co/tTgf2Qg6/voc2.webp"
                    alt       = "Image 1"
                    sx        = {{
                   width       : "100%",
@@ -45,7 +45,7 @@ const Vocational = () => {
           <Box  sx      = {{ width: "100%", height: "400px", overflow: "hidden", borderRadius: "1px" }}>
               {/* Image 2 */}
               <Box component = "img"
-                   src       = "voc3.png"
+                   src       = "https://i.ibb.co/SwvZtz7Z/voc3.webp"
                    alt       = "Image 2"
                    sx        = {{
                   width       : "100%",
@@ -69,21 +69,17 @@ const Vocational = () => {
 
 
       <Box sx = {{ flex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <iframe
-          width       = "90%"
-          height      = "450px"
-          src         = "https://www.youtube.com/embed/BDuJM8Yr4uo?rel=0"
-          frameBorder = "0"
-          allow       = "accelerometer;
-           autoplay; 
-           clipboard-write;
-            encrypted-media; 
-            gyroscope; 
-            picture-in-picture"
-          allowFullScreen
-          title = "YouTube Video"
-          style = {{ borderRadius: '1px' }}
-        />
+       <iframe
+  width="90%"
+  height="450px"
+  src="https://www.youtube.com/embed/BDuJM8Yr4uo?rel=0"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  title="YouTube Video"
+  style={{ borderRadius: '1px' }}
+/>
+
         <Button
           sx={{
             width            : "250px",

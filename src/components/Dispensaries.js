@@ -3,18 +3,18 @@ import { Box, Typography, Grid, Button } from '@mui/material';
 
 const Dispensaries = () => {
   return (
-    <Box sx={{ backgroundColor: '#FFFFFF', padding: '40px', alignItems: 'stretch', marginBottom: '0px' }}>
-      <Box sx={{ backgroundColor: '#027D40', padding: '40px', alignItems: 'stretch', marginBottom: '40px' }}>
-        <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', sm: '12px', md: '16px' }, fontWeight: '500', lineHeight: '60px', color: '#FFFFFF' }}>
+     <Box sx={{ backgroundColor: '#FFFFFF', padding: '5px', alignItems: 'stretch' }}>
+      <Box sx={{ backgroundColor: '#027D40', padding: '5px', alignItems: 'stretch', marginBottom: { xs: '1px', md: '10px' } }}>
+        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '14px', md: '16px' },  textAlign: 'center', color: '#FFFFFF', marginBottom: { xs: '1px', md: '20px' } }}>
             Ensuring Quality Healthcare For All
         </Typography>
-        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: '40px' }}>
+        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: '20px' }}>
             DSF DISPENSARIES
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'column' }, alignItems: 'stretch', marginBottom: '40px' }}>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <img src='/sc1.jpg' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
+          <img src='https://i.ibb.co/XPcpF6J/sc1.jpg' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
         </Box>
         <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', lineHeight: '40px', color: '#000000', marginTop: '60px' }}>
           Challenge
@@ -29,7 +29,7 @@ const Dispensaries = () => {
             <Box sx={{ width: "100%", height: "400px", overflow: "hidden", borderRadius: "1px" }}>
               {/* Image 1 */}
               <Box component="img"
-                src="mandra2.png"
+                src="https://i.ibb.co/kV3RLFvF/mandra2.webp"
                 alt="Image 1"
                 sx={{
                   width: "100%",
@@ -45,7 +45,7 @@ const Dispensaries = () => {
             <Box sx={{ width: "100%", height: "400px", overflow: "hidden", borderRadius: "1px" }}>
               {/* Image 2 */}
               <Box component="img"
-                src="disp3.png"
+                src="https://i.ibb.co/Hp1Nj75H/thnail2.webp"
                 alt="Image 2"
                 sx={{
                   width: "100%",

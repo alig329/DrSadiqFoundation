@@ -4,18 +4,18 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const Scholarships = () => {
   return (
-    <Box sx={{ backgroundColor: '#FFFFFF', padding: '40px', alignItems: 'stretch', marginBottom: '0px' }}>
-      <Box sx={{ backgroundColor: '#027D40', padding: '40px', alignItems: 'stretch', marginBottom: '40px' }}>
-        <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', sm: '12px', md: '16px' }, fontWeight: '500', lineHeight: '60px', color: '#FFFFFF' }}>
+     <Box sx={{ backgroundColor: '#FFFFFF', padding: '5px', alignItems: 'stretch' }}>
+      <Box sx={{ backgroundColor: '#027D40', padding: '5px', alignItems: 'stretch', marginBottom: { xs: '1px', md: '10px' } }}>
+        <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', md: '14px' }, fontWeight: { xs: '300', md: '500' }, lineHeight: { xs: '20px', md: '40px' }, color: '#FFFFFF' }}>
           Supporting Dreams, Shaping Futures:
         </Typography>
-        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: '40px' }}>
+        <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '16px', md: '34px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: { xs: '1px', md: '20px' } }}>
           DSF SCHOLARSHIPS
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: { xs: 'column', md: 'column' }, alignItems: 'stretch', marginBottom: '40px' }}>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <img src='https://i.ibb.co/wT60xCd/sch1.jpg' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
+          <img src='https://i.ibb.co/RTs0ZSgj/sch1.webp' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '500px', objectFit: 'cover' }} />
         </Box>
         <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', lineHeight: '40px', color: '#000000', marginTop: '60px' }}>
         Identified Barrier

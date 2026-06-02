@@ -245,47 +245,48 @@ const Homepage = () => {
       </Carousel>
     </header>
 
-<Container 
-  maxWidth="md" 
-  sx={{ 
-    my: 6, 
-    py: 5, 
-    textAlign: 'center', 
-    backgroundColor: '#FFF', 
+<Container
+  maxWidth="md"
+  sx={{
+    my: 4,
+    py: 2,
+    textAlign: "center",
+    backgroundColor: "#fff",
     borderRadius: 4,
-    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.05)', 
-    fontFamily: 'Poppins, sans-serif',
+    boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+    fontFamily: "Poppins, sans-serif",
   }}
 >
-  <Typography 
-    variant="h1" 
-    gutterBottom 
-    sx={{ 
-      fontWeight: 700, 
-      color: 'rgb(3, 87, 3)',
-      fontSize: { xs: '24px', md: '46px' },
-      lineHeight: 1.2,
+  <Typography
+    variant="h2"
+    gutterBottom
+    sx={{
+      fontWeight: 700,
+      color: "#027D40",
+      fontSize: { xs: "24px", md: "42px" },
+      lineHeight: 1.3,
     }}
   >
     Making a Difference Every Day
   </Typography>
-  
-  <Typography 
-    variant="body1" 
-    sx={{ 
-      fontSize: '18px', 
-      fontWeight: 400, 
-      color: '#444', 
+
+  <Typography
+    variant="body1"
+    sx={{
+      fontSize: { xs: "14px", md: "18px" },
+      fontWeight: 400,
+      color: "#444",
       lineHeight: 1.8,
-      maxWidth: '80%',
-      margin: '0 auto',
+      maxWidth: "80%",
+      mx: "auto",
     }}
   >
-    Dr. Sadiq Foundation has impacted thousands of lives across Pakistan through education,
-    medical aid, empowerment, and food programs. <br />
+    Dr. Sadiq Foundation has impacted thousands of lives across Pakistan through
+    education, medical aid, empowerment, and food programs. <br />
     <strong>We invite you to be a part of this transformative journey.</strong>
   </Typography>
 </Container>
+
 
 <section>
     <ThreeThumbnails />

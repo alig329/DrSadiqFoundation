@@ -52,9 +52,9 @@ const StoriesOfChange = () => {
   variant="h1"
   sx={{
     fontFamily: "Poppins",
-    fontSize: { xs: "32px", md: "48px" },
+    fontSize: { xs: "24px", md: "36px" },
     fontWeight: "600",
-    lineHeight: "58px",
+    lineHeight: "48px",
     color: "rgba(0, 0, 0, 0.7)",
     marginBottom: "20px",
   }}

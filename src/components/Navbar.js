@@ -5,136 +5,138 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [aboutAnchorEl, setAboutAnchorEl] = React.useState(null);
+
   const isMenuOpen = Boolean(anchorEl);
+  const isAboutOpen = Boolean(aboutAnchorEl);
 
   const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
   const handleMenuClose = () => setAnchorEl(null);
 
+  const handleAboutOpen = (event) => setAboutAnchorEl(event.currentTarget);
+  const handleAboutClose = () => setAboutAnchorEl(null);
+
   const menuItems = [
     { label: "Home", to: "/" },
-    { label: "History", to: "/history" },
     { label: "Projects", to: "/projects" },
     { label: "Success Stories", to: "/stories" },
     { label: "Certificates", to: "/certificates" },
     { label: "Contact Us", to: "/contact" },
-    { label: "Donate", to: "/donate", style: { backgroundColor: "#FFD15C" } },
-    { label: "Become a Volunteer", to: "/volunteer", style: { backgroundColor: "#FFAA5C" } },
+    { label: "Donate", to: "/donate", style: { backgroundColor: "#FFD15C", color: "#fff", borderRadius: "6px" } },
+    { label: "Become a Volunteer", to: "/volunteer", style: { backgroundColor: "#FFAA5C", color: "#fff", borderRadius: "6px" } },
   ];
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF", boxShadow: "none" }}>
-      <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#FFFFFF", boxShadow: "0px 2px 6px rgba(0,0,0,0.1)" }}>
+      <Toolbar sx={{ justifyContent: "space-between", alignItems: "center", px: { xs: 2, md: 6 } }}>
         {/* Logo */}
-        <Typography variant="h6">
-          <a href="/">
-            <img src="https://i.ibb.co/fVFDBYsh/dsfLogo.webp" alt="Dr. Sadiq Foundation" 
+        <Typography variant="h6" sx={{ display: "flex", alignItems: "center" }}>
+          <a href="/" style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src="https://i.ibb.co/fVFDBYsh/dsfLogo.webp"
+              alt="Dr. Sadiq Foundation"
               style={{
-              width: '250px',
-              height: '60px',
-              objectFit: 'cover', 
-              transition: 'box-shadow 0.4s ease-in-out',
-            }}
-              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 20px rgba(39, 34, 34, 0.7)'}
-              onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+                width: "200px",
+                height: "50px",
+                objectFit: "contain",
+                transition: "transform 0.3s ease-in-out",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
           </a>
         </Typography>
 
         {/* Desktop Links */}
-        <Box
-          sx={{
-            display: { xs: "none", md: "flex" },
-            gap: 0,
-            alignItems: "center",
-          }}
-        >
-          {menuItems.map((item, index) => (
+        <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1, alignItems: "center" }}>
+          {menuItems.slice(0, 5).map((item, index) => (
             <Button
               key={index}
               component={Link}
               to={item.to}
               sx={{
-                color: "#000000",
-                fontFamily: "Poppins, sans-serif",
-                fontSize: "12px",
+                color: "#000",
+                fontFamily: "Poppins",
+                fontSize: "14px",
                 fontWeight: "500",
-                padding: "10px 20px",
-                position: "relative",
-                overflow: "hidden",
-                transition: "all 0.3s ease",
-                "&:hover": {
-                  transform: "scale(1.05)",
-                  backgroundColor: item.style?.backgroundColor || "transparent",
-                },
-                "&::before": {
-                  content: '""',
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  background: "linear-gradient(45deg, #027D40, #FFD15C)",
-                  opacity: 0,
-                  transition: "opacity 0.3s ease",
-                  zIndex: 1,
-                },
-                "&:hover::before": {
-                  opacity: 0.2,
-                },
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
-                  bottom: 0,
-                  left: "50%",
-                  width: "0%",
-                  height: "2px",
-                  backgroundColor: "#027D40",
-                  transition: "all 0.3s ease",
-                  transform: "translateX(-50%)",
-                },
-                "&:hover::after": {
-                  width: "100%",
-                },
+                px: "16px",
+                py: "8px",
+                textTransform: "none",
+                "&:hover": { backgroundColor: "rgba(0,0,0,0.05)" },
                 ...item.style,
               }}
             >
-              <span style={{ position: "relative", zIndex: 2 }}>{item.label}</span>
+              {item.label}
+            </Button>
+          ))}
+
+          {/* About Us Dropdown */}
+          <Button
+            onClick={handleAboutOpen}
+            sx={{
+              color: "#000",
+              fontFamily: "Poppins",
+              fontSize: "14px",
+              fontWeight: "500",
+              px: "16px",
+              py: "8px",
+              textTransform: "none",
+              "&:hover": { backgroundColor: "rgba(0,0,0,0.05)" },
+            }}
+          >
+            About Us
+          </Button>
+          <Menu anchorEl={aboutAnchorEl} open={isAboutOpen} onClose={handleAboutClose}>
+            <MenuItem component={Link} to="/about" onClick={handleAboutClose}>About Us</MenuItem>
+            <MenuItem component={Link} to="/history" onClick={handleAboutClose}>History</MenuItem>
+            <MenuItem component={Link} to="/team" onClick={handleAboutClose}>Our Team</MenuItem>
+          </Menu>
+
+          {menuItems.slice(5).map((item, index) => (
+            <Button
+              key={index}
+              component={Link}
+              to={item.to}
+              sx={{
+                fontFamily: "Poppins",
+                fontSize: "14px",
+                fontWeight: "500",
+                px: "16px",
+                py: "8px",
+                textTransform: "none",
+                ...item.style,
+              }}
+            >
+              {item.label}
             </Button>
           ))}
         </Box>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu */}
         <Box sx={{ display: { xs: "block", md: "none" } }}>
           <IconButton
             edge="start"
-            color="#000000"
             aria-label="menu"
             onClick={handleMenuOpen}
+            sx={{ color: "#000" }} // Ensures visibility
           >
-            <MenuIcon />
+            <MenuIcon sx={{ fontSize: "28px" }} />
           </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            open={isMenuOpen}
-            onClose={handleMenuClose}
-            sx={{ display: { xs: "block", md: "none" } }}
-          >
+          <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
             {menuItems.map((item, index) => (
               <MenuItem
                 key={index}
                 component={Link}
                 to={item.to}
                 onClick={handleMenuClose}
-                sx={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "12px",
-                  fontWeight: "500",
-                  ...item.style,
-                }}
+                sx={{ fontFamily: "Poppins", fontSize: "14px", fontWeight: "500", ...item.style }}
               >
                 {item.label}
               </MenuItem>
             ))}
+            <MenuItem disabled sx={{ fontFamily: "Poppins", fontSize: "14px", fontWeight: "600" }}>About Us</MenuItem>
+            <MenuItem component={Link} to="/history" onClick={handleMenuClose}>History</MenuItem>
+            <MenuItem component={Link} to="/team" onClick={handleMenuClose}>Our Team</MenuItem>
           </Menu>
         </Box>
       </Toolbar>

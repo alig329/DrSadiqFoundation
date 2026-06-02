@@ -4,12 +4,12 @@ import { Box, Grid, Typography, Button, List, ListItem } from '@mui/material';
 
 const Hospital = () => {
     return (
-        <Box sx={{ backgroundColor: '#FFFFFF', padding: '40px', alignItems: 'stretch', marginBottom: '0px' }}>
-            <Box sx={{ backgroundColor: '#027D40', padding: '40px', alignItems: 'stretch', marginBottom: '40px' }}>
-                <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', sm: '12px', md: '16px' }, fontWeight: '500', lineHeight: '60px', color: '#FFFFFF' }}>
-                    DSF's Commitment to Community Health
+        <Box sx={{ backgroundColor: '#FFFFFF', padding: '5px', alignItems: 'stretch' }}>
+      <Box sx={{ backgroundColor: '#027D40', padding: '5px', alignItems: 'stretch', marginBottom: { xs: '1px', md: '10px' } }}>
+        <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', fontSize: { xs: '12px', md: '14px' }, fontWeight: { xs: '300', md: '500' }, lineHeight: { xs: '20px', md: '40px' }, color: '#FFFFFF' }}>
+                   DSF's Commitment to Community Health
                 </Typography>
-                <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '20px', sm: '30px', md: '40px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: '40px' }}>
+                <Typography variant="h1" sx={{ fontFamily: 'Poppins', fontSize: { xs: '16px', md: '34px' }, fontWeight: 'bold', textAlign: 'center', color: '#FFFFFF', marginBottom: { xs: '1px', md: '20px' } }}>
                     DR. SADIQ FOUNDATION HOSPITAL, MANDRA
                 </Typography>
             </Box>
@@ -22,7 +22,7 @@ const Hospital = () => {
                     flexDirection: 'column', 
                     alignItems: 'center'  
                     }}>
-                    <img src='/hospital.png'
+                    <img src='https://i.ibb.co/KxLjGGw9/8.webp'
                      alt="DSF Hospital"
                       style={{ 
                         width: '90%', 
@@ -119,7 +119,7 @@ const Hospital = () => {
                         }} >
                             {/* Image 1 */}
                             <Box component="img"
-                                src="mandra1.png"
+                                src="https://i.ibb.co/R4bvWKgh/mandra1.jpg"
                                 alt="Image 1"
                                 sx={{
                                     width: "100%",
@@ -140,7 +140,7 @@ const Hospital = () => {
                         }} >
                             {/* Image 2 */}
                             <Box component="img"
-                                src="mandra2.png"
+                                src="https://i.ibb.co/kV3RLFvF/mandra2.webp"
                                 alt="Image 2"
                                 sx={{
                                     width: "100%",
@@ -173,7 +173,7 @@ const Hospital = () => {
                   In addition, by establishing medical education programs, the hospital will contribute to the training of future healthcare professionals, equipping them with the skills needed to serve their communities effectively. This initiative will not only enhance healthcare delivery but also boost the local economy through job creation and infrastructure development.
                 </Typography>
                 <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <img src='/angio.png' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '450px', objectFit: 'cover' }} />
+                    <img src='https://i.ibb.co/NnygrH08/angio.webp' alt="Dr. Muhammad Sadiq" style={{ width: '90%', height: '450px', objectFit: 'cover' }} />
                 </Box>
                 <Typography variant="h2" sx={{ 
                     display: 'flex',
