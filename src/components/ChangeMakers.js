@@ -1,13 +1,13 @@
 import React from 'react';
-import { Box, Typography, Button} from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 
 const images = [
   "https://i.ibb.co/21q9t1bV/cmk1.webp",
   "https://i.ibb.co/VcKFP6bF/cmk2.webp",
-  "https://i.ibb.co/wZx816SJ/cmk3.webp",
+
   "https://i.ibb.co/DPnzH6gr/cmk5.png",
-  "https://i.ibb.co/JjTGzfMv/cmk6.webp",
-  "https://i.ibb.co/HpdyV208/cmk7.webp",
+
+  "https://i.ibb.co/r8NkysX/cmk4-0.webp",
 ];
 
 const ChangeMakersSection = () => {
@@ -26,7 +26,7 @@ const ChangeMakersSection = () => {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: { xs: '1fr 1fr', md: '1fr 1fr 1fr' },
+          gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
           gridTemplateRows: '1fr 1fr',
           gap: '10px',
           flex: 1

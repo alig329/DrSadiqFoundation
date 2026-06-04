@@ -22,20 +22,20 @@ const StoriesOfChange = () => {
     {
       image: "https://i.ibb.co/wNSpLWPp/sc3.webp",
       description: "Making a meaningful impact in the community by supporting underprivileged families and individuals",
-      link: "/medicalcamps",
+      link: "/scholarships",
     },
   ];
 
   useEffect(() => {
-      if (animate) {
-        // Apply rotation animation to all image boxes
-        document.querySelectorAll(".animated-card").forEach((element) => {
-          animate(element, { rotate: 360 }, { duration: 3, delay: 0 });
-        });
-      } else {
-        console.error("Motion library is not loaded.");
-      }
-    }, []);
+    if (animate) {
+      // Apply rotation animation to all image boxes
+      document.querySelectorAll(".animated-card").forEach((element) => {
+        animate(element, { rotate: 360 }, { duration: 3, delay: 0 });
+      });
+    } else {
+      console.error("Motion library is not loaded.");
+    }
+  }, []);
 
   return (
     <Box
@@ -49,18 +49,18 @@ const StoriesOfChange = () => {
     >
       {/* Title Section */}
       <Typography
-  variant="h1"
-  sx={{
-    fontFamily: "Poppins",
-    fontSize: { xs: "24px", md: "36px" },
-    fontWeight: "600",
-    lineHeight: "48px",
-    color: "rgba(0, 0, 0, 0.7)",
-    marginBottom: "20px",
-  }}
->
-  Dr. Sadiq Foundation at a Glance
-</Typography>
+        variant="h1"
+        sx={{
+          fontFamily: "Poppins",
+          fontSize: { xs: "24px", md: "36px" },
+          fontWeight: "600",
+          lineHeight: "48px",
+          color: "rgba(0, 0, 0, 0.7)",
+          marginBottom: "20px",
+        }}
+      >
+        Dr. Sadiq Foundation at a Glance
+      </Typography>
 
       <Typography
         sx={{
@@ -98,7 +98,7 @@ const StoriesOfChange = () => {
                     transform: "translateY(-10px)",
                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
                     cursor: "pointer",
-                    
+
                   },
                 }}
                 onClick={() => (window.location.href = story.link)}

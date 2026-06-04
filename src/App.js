@@ -20,6 +20,7 @@ import FoodProjects from './components/FoodProjects';
 import Vocational from './components/Vocational';
 import NewsPage from './components/NewsPage';
 import OurTeam from './components/OurTeam';
+import CaregiversSection from './CareGivers';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/dispensaries" element={<Dispensaries />} />
         <Route path="/foodprojects" element={<FoodProjects />} />
         <Route path="/vocational" element={<Vocational />} />
+        <Route path="/trustees" element={<CaregiversSection />} />
       </Routes>
       <Footer />
     </Router>

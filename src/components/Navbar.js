@@ -72,7 +72,7 @@ const Navbar = () => {
 
           {/* About Us Dropdown */}
           <Button
-            onClick={handleAboutOpen}
+            onMouseEnter={handleAboutOpen}
             sx={{
               color: "#000",
               fontFamily: "Poppins",
@@ -86,9 +86,15 @@ const Navbar = () => {
           >
             About Us
           </Button>
-          <Menu anchorEl={aboutAnchorEl} open={isAboutOpen} onClose={handleAboutClose}>
-            <MenuItem component={Link} to="/about" onClick={handleAboutClose}>About Us</MenuItem>
+          <Menu anchorEl={aboutAnchorEl}
+            open={isAboutOpen}
+            onMouseLeave={handleAboutClose}
+            MenuListProps={{
+              onMouseLeave: handleAboutClose,
+            }}>
+            <MenuItem component={Link} to="/about" onClick={handleAboutClose}>Vision/Mission</MenuItem>
             <MenuItem component={Link} to="/history" onClick={handleAboutClose}>History</MenuItem>
+            <MenuItem component={Link} to="/trustees" onClick={handleAboutClose}>Trustees</MenuItem>
             <MenuItem component={Link} to="/team" onClick={handleAboutClose}>Our Team</MenuItem>
           </Menu>
 
@@ -117,7 +123,7 @@ const Navbar = () => {
           <IconButton
             edge="start"
             aria-label="menu"
-            onClick={handleMenuOpen}
+            onMouseEnter={handleMenuOpen}
             sx={{ color: "#000" }} // Ensures visibility
           >
             <MenuIcon sx={{ fontSize: "28px" }} />
@@ -135,7 +141,9 @@ const Navbar = () => {
               </MenuItem>
             ))}
             <MenuItem disabled sx={{ fontFamily: "Poppins", fontSize: "14px", fontWeight: "600" }}>About Us</MenuItem>
+            <MenuItem component={Link} to="/about" onClick={handleAboutClose}>Vision/Mission</MenuItem>
             <MenuItem component={Link} to="/history" onClick={handleMenuClose}>History</MenuItem>
+            <MenuItem component={Link} to="/trustees" onClick={handleAboutClose}>Trustees</MenuItem>
             <MenuItem component={Link} to="/team" onClick={handleMenuClose}>Our Team</MenuItem>
           </Menu>
         </Box>
